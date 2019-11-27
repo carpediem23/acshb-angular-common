@@ -4,13 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { LayoutModule } from '../../../../dist/acshb-common';
+import { ComponentsModule } from '../../../../dist/acshb-common';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LayoutModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
