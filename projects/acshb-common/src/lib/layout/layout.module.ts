@@ -8,6 +8,6 @@ import { WrapperComponent } from './wrapper/wrapper.component';
   imports: [
     CommonModule
   ],
-  exports: [ToolbarComponent]
+  exports: [ToolbarComponent, WrapperComponent]
 })
 export class LayoutModule { }
