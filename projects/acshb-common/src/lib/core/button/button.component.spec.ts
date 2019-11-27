@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AcshbCommonComponent } from './acshb-common.component';
+import { ButtonComponent } from './button.component';
 
-describe('AcshbCommonComponent', () => {
-  let component: AcshbCommonComponent;
-  let fixture: ComponentFixture<AcshbCommonComponent>;
+describe('ButtonComponent', () => {
+  let component: ButtonComponent;
+  let fixture: ComponentFixture<ButtonComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AcshbCommonComponent ]
+      declarations: [ ButtonComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AcshbCommonComponent);
+    fixture = TestBed.createComponent(ButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

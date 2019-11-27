@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
-import { AcshbCommonComponent } from './acshb-common.component';
+import { CoreModule } from './core/core.module';
 
 
 
 @NgModule({
-  declarations: [AcshbCommonComponent],
+  declarations: [],
   imports: [
+    CoreModule
   ],
-  exports: [AcshbCommonComponent]
+  exports: []
 })
 export class AcshbCommonModule { }
