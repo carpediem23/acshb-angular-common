@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { LayoutModule } from 'acshb-common';
-import { ComponentsModule } from 'acshb-common';
+import { ComponentsModule } from '../../../acshb-common/src/lib/components/components.module';
 
 @NgModule({
   declarations: [

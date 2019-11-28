@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ButtonComponent } from './button/button.component';
+import { IconComponent } from './icon/icon.component';
 
 @NgModule({
-  declarations: [ButtonComponent],
+  declarations: [ButtonComponent, IconComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FontAwesomeModule
   ],
-  exports: [ButtonComponent]
+  exports: [ButtonComponent, IconComponent]
 })
 export class ComponentsModule { }
