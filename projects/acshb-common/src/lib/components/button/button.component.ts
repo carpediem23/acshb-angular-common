@@ -9,7 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {
-  @Input() title: string;
+  @Input() text: string;
   @Input() className: string;
   @Input() disabled: boolean;
   @Input() loading: boolean;
