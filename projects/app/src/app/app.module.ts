@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 
 import { LayoutModule } from '../../../acshb-common/src/lib/layout/layout.module';
 import { ComponentsModule } from '../../../acshb-common/src/lib/components/components.module';
+import { TestViewComponent } from './test-view/test-view.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestViewComponent
   ],
   imports: [
     BrowserModule,

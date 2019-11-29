@@ -11,8 +11,7 @@ import {
 @Component({
   selector: 'acshb-dropdown',
   templateUrl: './dropdown.component.html',
-  styleUrls: ['./dropdown.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./dropdown.component.scss']
 })
 export class DropdownComponent {
   @Input() data = [];

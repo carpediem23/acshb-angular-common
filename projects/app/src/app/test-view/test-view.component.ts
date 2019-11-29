@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-test-view',
+  templateUrl: './test-view.component.html',
+  styleUrls: ['./test-view.component.scss']
+})
+export class TestViewComponent implements OnInit {
+  ngOnInit() {}
+
+  onClicked(e: MouseEvent) {
+    console.log(e);
+  }
+
+  onSelected(d) {
+    console.log(d);
+  }
+}
