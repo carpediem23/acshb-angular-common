@@ -1,9 +1,18 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewEncapsulation,
+  OnInit,
+  HostListener
+} from '@angular/core';
 
 @Component({
   selector: 'acshb-dropdown',
   templateUrl: './dropdown.component.html',
-  styleUrls: ['./dropdown.component.scss']
+  styleUrls: ['./dropdown.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class DropdownComponent {
   @Input() data = [];
@@ -15,8 +24,13 @@ export class DropdownComponent {
     this.selectcallback.emit(d);
   }
 
-  onToggle() {
-    console.log('osman');
-    //this.toggle = !this.toggle;
+  onToggle(e) {
+    e.stopPropagation();
+    this.toggle = !this.toggle;
+  }
+
+  @HostListener('document:click', [])
+  onBodyClick(e) {
+    this.toggle = false;
   }
 }
