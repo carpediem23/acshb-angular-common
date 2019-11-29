@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { LayoutModule } from 'acshb-common';
-import { ComponentsModule } from 'acshb-common';
+import { LayoutModule } from '../../../acshb-common/src/lib/layout/layout.module';
+import { ComponentsModule } from '../../../acshb-common/src/lib/components/components.module';
 
 @NgModule({
   declarations: [

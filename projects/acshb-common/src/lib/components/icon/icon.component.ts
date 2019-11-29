@@ -9,11 +9,11 @@ import * as FA from '@fortawesome/free-solid-svg-icons';
 export class IconComponent implements OnInit {
   @Input() icon: string;
   @Input() color: string;
-  public selectedIcon: object;
+  public selectedIcon;
   public selectedColor;
 
   ngOnInit(): void {
-    this.selectedIcon = FA[this.icon];
-    this.selectedColor = this.color ? {stroke: this.color, color: this.color} : {};
+    this.selectedIcon = this.icon ? FA[this.icon] : FA.faCoffee;
+    this.selectedColor = this.color ? {stroke: this.color, color: this.color} : {stroke: 'black', color: 'black'};
   }
 }
