@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
+
+
 
 @Component({
   selector: 'acshb-button',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {
-
+  @Input() title: string;
+  @Input() className: string;
+  @Input() disabled: boolean;
+  @Input() loading: boolean;
+  @Output() clicked = new EventEmitter();
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
+  onClicked(e: MouseEvent) {
+    this.clicked.emit(e);
+  }
 }

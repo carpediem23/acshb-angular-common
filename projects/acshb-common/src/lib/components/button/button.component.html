@@ -1,1 +1,7 @@
-<p>button works!</p>
+<button [className]="className" (click)="onClicked($event)" [disabled]="disabled ||loading">
+    <span *ngIf="loading">
+        <acshb-icon icon="faSpinner" color="#FFF" [spin]="true"></acshb-icon>
+    </span>
+    <ng-content></ng-content>
+    {{title}}
+</button>

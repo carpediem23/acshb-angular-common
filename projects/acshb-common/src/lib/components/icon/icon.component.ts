@@ -9,6 +9,7 @@ import * as FA from '@fortawesome/free-solid-svg-icons';
 export class IconComponent implements OnInit {
   @Input() icon: string;
   @Input() color: string;
+  @Input() spin: boolean;
   public selectedIcon;
   public selectedColor;
 
