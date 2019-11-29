@@ -11,4 +11,8 @@ export class AppComponent {
   onClicked(e: MouseEvent) {
     console.log(e);
   }
+
+  onSelected(d) {
+    console.log(d);
+  }
 }
