@@ -5,9 +5,10 @@ import { ButtonComponent } from './button/button.component';
 import { IconComponent } from './icon/icon.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { CardComponent } from './card/card.component';
+import { AccordionComponent } from './accordion/accordion.component';
 
 @NgModule({
-  declarations: [ButtonComponent, IconComponent, DropdownComponent, CardComponent],
+  declarations: [ButtonComponent, IconComponent, DropdownComponent, CardComponent, AccordionComponent],
   imports: [
     CommonModule,
     FontAwesomeModule
