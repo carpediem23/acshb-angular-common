@@ -1,0 +1,40 @@
+// ACSHB-CARD START
+.acshb-card {
+    .acshb-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h6, a {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            &:hover, &:focus {
+                text-decoration: none;
+            }
+        }
+
+        h6 {
+            span {
+                &:last-child {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+    .acshb-card-toggled {
+        display: none;
+    }
+}
+// ACSHB-CARD END
+
+// ACSHB-CARD DROPDOWN
+.acshb-dropdown {
+    .dropdown-item {
+        cursor: pointer;
+    }
+}
+// ACSHB-CARD DROPDOWN

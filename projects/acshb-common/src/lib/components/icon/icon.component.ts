@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import * as FA from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,7 +6,7 @@ import * as FA from '@fortawesome/free-solid-svg-icons';
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss']
 })
-export class IconComponent implements OnInit {
+export class IconComponent implements OnInit, OnChanges {
   @Input() icon: string;
   @Input() color: string;
   @Input() spin: boolean;
@@ -16,5 +16,9 @@ export class IconComponent implements OnInit {
   ngOnInit(): void {
     this.selectedIcon = this.icon ? FA[this.icon] : FA.faCoffee;
     this.selectedColor = this.color ? {stroke: this.color, color: this.color} : {stroke: 'black', color: 'black'};
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.selectedIcon = this.icon ? FA[this.icon] : FA.faCoffee;
   }
 }

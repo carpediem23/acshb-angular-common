@@ -1,0 +1,18 @@
+<div class="acshb-card card" role="region">
+    <div class="card-header">
+        <div class="acshb-card-header">
+            <h6>
+                <span *ngIf="this.icon ? true : false">
+                    <acshb-icon [icon]="icon"></acshb-icon>
+                </span>
+                <span>{{this.title}}</span>
+            </h6>
+            <a href="/" role="button" aria-label="Paneli Aç / Kapat" (click)="onToggleClick($event)">
+                <acshb-icon [icon]="toggle ? toggleIconTypes.Up : toggleIconTypes.Down"></acshb-icon>
+            </a>
+        </div>
+    </div>
+    <div class="card-body" [ngClass]="{'acshb-card-toggled': toggle}">
+        <ng-content></ng-content>
+    </div>
+</div>
