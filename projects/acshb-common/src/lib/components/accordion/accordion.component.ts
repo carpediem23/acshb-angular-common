@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IconTypes } from '../../enums/icon-types.enum';
 
 @Component({
   selector: 'acshb-accordion',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accordion.component.scss']
 })
 export class AccordionComponent implements OnInit {
+  @Input() title: string;
+  private iconTypes = IconTypes;
+  private toggle = false;
 
   constructor() { }
 

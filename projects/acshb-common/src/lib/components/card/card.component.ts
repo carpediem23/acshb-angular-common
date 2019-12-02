@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CardIconTypes } from './card.enum';
+import { IconTypes } from '../../enums/icon-types.enum';
 
 @Component({
   selector: 'acshb-card',
@@ -9,7 +9,7 @@ import { CardIconTypes } from './card.enum';
 export class CardComponent implements OnInit {
   @Input() title: string;
   @Input() icon: string;
-  private toggleIconTypes = CardIconTypes;
+  private iconTypes = IconTypes;
   public toggle = false;
 
   constructor() { }

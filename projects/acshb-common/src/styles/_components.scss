@@ -31,10 +31,17 @@
 }
 // ACSHB-CARD END
 
-// ACSHB-CARD DROPDOWN
+// ACSHB-DROPDOWN START
 .acshb-dropdown {
     .dropdown-item {
         cursor: pointer;
     }
 }
-// ACSHB-CARD DROPDOWN
+// ACSHB-DROPDOWN END
+
+// ACSHB-ACCORDION START
+.acshb-accordion {
+    .acshb-accordion-header {}
+    .acshb-accordion-body {}
+}
+// ACSHB-ACCORDION END

@@ -13,6 +13,6 @@ import { AccordionComponent } from './accordion/accordion.component';
     CommonModule,
     FontAwesomeModule
   ],
-  exports: [ButtonComponent, IconComponent, DropdownComponent, CardComponent]
+  exports: [ButtonComponent, IconComponent, DropdownComponent, CardComponent, AccordionComponent]
 })
 export class ComponentsModule { }
