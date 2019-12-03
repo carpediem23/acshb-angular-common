@@ -1,6 +1,6 @@
-<div class="acshb-card card" role="region">
+<div class="acshb-frame card" role="region">
     <div class="card-header">
-        <div class="acshb-card-header">
+        <div class="acshb-frame-header">
             <h6>
                 <span *ngIf="this.icon ? true : false">
                     <acshb-icon [icon]="icon"></acshb-icon>
@@ -12,7 +12,7 @@
             </a>
         </div>
     </div>
-    <div class="card-body" [ngClass]="{'acshb-card-toggled': toggle}">
+    <div class="card-body" [ngClass]="{'acshb-frame-toggled': toggle}">
         <ng-content></ng-content>
     </div>
 </div>

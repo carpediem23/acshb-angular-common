@@ -1,6 +1,6 @@
-// ACSHB-CARD START
-.acshb-card {
-    .acshb-card-header {
+// ACSHB-FRAME START
+.acshb-frame {
+    .acshb-frame-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -25,11 +25,11 @@
         }
     }
 
-    .acshb-card-toggled {
+    .acshb-frame-toggled {
         display: none;
     }
 }
-// ACSHB-CARD END
+// ACSHB-FRAME END
 
 // ACSHB-DROPDOWN START
 .acshb-dropdown {

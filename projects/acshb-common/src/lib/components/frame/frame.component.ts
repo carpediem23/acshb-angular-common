@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { IconTypes } from '../../enums/icon-types.enum';
 
 @Component({
-  selector: 'acshb-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  selector: 'acshb-frame',
+  templateUrl: './frame.component.html',
+  styleUrls: ['./frame.component.scss']
 })
-export class CardComponent implements OnInit {
+export class FrameComponent implements OnInit {
   @Input() title: string;
   @Input() icon: string;
   private iconTypes = IconTypes;
