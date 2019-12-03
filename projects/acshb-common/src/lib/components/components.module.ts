@@ -6,13 +6,14 @@ import { IconComponent } from './icon/icon.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { FrameComponent } from './frame/frame.component';
 import { AccordionComponent } from './accordion/accordion.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
-  declarations: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent],
+  declarations: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent],
   imports: [
     CommonModule,
     FontAwesomeModule
   ],
-  exports: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent]
+  exports: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent]
 })
 export class ComponentsModule { }

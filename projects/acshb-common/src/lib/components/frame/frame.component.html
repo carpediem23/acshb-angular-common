@@ -1,4 +1,5 @@
 <div class="acshb-frame card" role="region">
+    <div *ngIf="bordered" class="acshb-card-status bg-primary"></div>
     <div class="card-header">
         <div class="acshb-frame-header">
             <h6>
@@ -12,7 +13,8 @@
             </a>
         </div>
     </div>
-    <div class="card-body" [ngClass]="{'acshb-frame-toggled': toggle}">
+    <div class="acshb-card-body card-body" [ngClass]="{'acshb-frame-toggled': toggle}">
+        <acshb-loader *ngIf="loading"></acshb-loader>
         <ng-content></ng-content>
     </div>
 </div>

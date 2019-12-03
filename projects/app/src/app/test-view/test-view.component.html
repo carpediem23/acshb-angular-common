@@ -3,7 +3,17 @@
     <acshb-button className="btn btn-primary" text="Osman" (clicked)="onClicked($event)"></acshb-button>
     <acshb-dropdown [data]="[{key: 0, value: 0, title: 'osman'}, {key: 1, value: 1, title: 'alptuğ'}]"
         (selectcallback)="onSelected($event)" color="primary"></acshb-dropdown>
-    <acshb-frame title="2016 Bütçe Personel Giderleri (₺)" icon="faChartBar">
+    <acshb-frame title="2016 Bütçe Personel Giderleri (₺) - Default" icon="faChartBar">
+        <h5>Special title treatment</h5>
+        <p>With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </acshb-frame>
+    <acshb-frame title="2016 Bütçe Personel Giderleri (₺) - Bordered" icon="faChartBar" bordered="true">
+        <h5>Special title treatment</h5>
+        <p>With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </acshb-frame>
+    <acshb-frame title="2016 Bütçe Personel Giderleri (₺) - Loading" icon="faChartBar" bordered="true" loading="true">
         <h5>Special title treatment</h5>
         <p>With supporting text below as a natural lead-in to additional content.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>

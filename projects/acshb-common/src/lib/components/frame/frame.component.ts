@@ -9,7 +9,9 @@ import { IconTypes } from '../../enums/icon-types.enum';
 export class FrameComponent implements OnInit {
   @Input() title: string;
   @Input() icon: string;
-  private iconTypes = IconTypes;
+  @Input() loading: boolean;
+  @Input() bordered: boolean;
+  public iconTypes = IconTypes;
   public toggle = false;
 
   constructor() { }
