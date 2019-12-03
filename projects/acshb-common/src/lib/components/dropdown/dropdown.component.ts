@@ -28,8 +28,8 @@ export class DropdownComponent {
     this.toggle = !this.toggle;
   }
 
-  @HostListener('document:click', [])
-  onBodyClick(e) {
+  @HostListener('window:click', ['$event'])
+  onBodyClick(e): void {
     this.toggle = false;
   }
 }
