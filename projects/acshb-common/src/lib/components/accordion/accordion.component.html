@@ -1,11 +1,11 @@
 <div class="acshb-accordion">
-    <div class="acshb-accordion-header">
-        <h6>Başlık</h6>
+    <div class="acshb-accordion-header" (click)="onToggleClick($event)">
+        <h6>{{title}}</h6>
         <a href="#">
-            <acshb-icon icon="faArrowDown"></acshb-icon>
+            <acshb-icon [icon]="toggle ? iconTypes.Up: iconTypes.Down"></acshb-icon>
         </a>
     </div>
-    <div class="acshb-accordion-body">
+    <div *ngIf="this.toggle" class="acshb-accordion-body animated fadeInDown" [ngClass]="{'show': toggle}">
         <ng-content></ng-content>
     </div>
 </div>

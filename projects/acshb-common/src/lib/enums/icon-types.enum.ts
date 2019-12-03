@@ -1,4 +1,4 @@
 export enum IconTypes {
-    Up = 'faArrowUp',
-    Down = 'faArrowDown'
+    Up = 'faAngleUp',
+    Down = 'faAngleDown'
 }

@@ -19,7 +19,7 @@
         h6 {
             span {
                 &:last-child {
-                    margin-left: 1rem;
+                    margin-left: 1em;
                 }
             }
         }
@@ -41,7 +41,26 @@
 
 // ACSHB-ACCORDION START
 .acshb-accordion {
-    .acshb-accordion-header {}
-    .acshb-accordion-body {}
+    position: relative;
+
+    .acshb-accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+
+        &:hover, &:focus {
+            cursor: pointer;
+        }
+
+        h6, a {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .acshb-accordion-body {
+        padding: 1em;
+        animation-duration: .25s;
+    }
 }
 // ACSHB-ACCORDION END

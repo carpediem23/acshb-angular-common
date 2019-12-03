@@ -9,11 +9,14 @@ import { IconTypes } from '../../enums/icon-types.enum';
 export class AccordionComponent implements OnInit {
   @Input() title: string;
   private iconTypes = IconTypes;
-  private toggle = false;
+  public toggle = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onToggleClick(e) {
+    this.toggle = !this.toggle;
+  }
 }
