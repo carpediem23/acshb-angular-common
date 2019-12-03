@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertService } from 'projects/acshb-common/src/lib/alert/alert.service';
+import { ButtonComponent } from 'projects/acshb-common/src/lib/components/button/button.component';
 
 @Component({
   selector: 'app-test-view',
@@ -6,13 +8,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-view.component.scss']
 })
 export class TestViewComponent implements OnInit {
-  ngOnInit() {}
+  constructor(private alertService: AlertService) {
+
+  }
+
+  ngOnInit() { }
 
   onClicked(e: MouseEvent) {
-    console.log(e);
+    alert(e);
   }
 
   onSelected(d) {
     console.log(d);
+  }
+
+  onAlertSuccess() {
+    this.alertService.success('İşlem başarıyla gerçekleşti.', 'Başlık', '0');
+  }
+
+  onAlertInfo() {
+    this.alertService.info('İşlem yapınız.', 'Başlık', '0');
+  }
+
+  onAlertWarning() {
+    this.alertService.warning('İşlem başarıyla gerçekleşti, ancak hatalar meydana geldi.', 'Başlık', '0');
+  }
+
+  onAlertError() {
+    this.alertService.error('İşlem yapılırken hata meydana geldi', 'Başlık', '0');
   }
 }

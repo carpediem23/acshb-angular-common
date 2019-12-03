@@ -198,3 +198,67 @@
   }
 }
 // ACSHB-LOADER END
+
+// ACSHB-ALERT START
+.acshb-alert-container {
+  position: fixed;
+  right: 0;
+  min-width: 250px;
+  min-height: 200px;
+  z-index: 99;
+
+  .acshb-alert-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+
+    .acshb-alert {
+      position: relative;
+      opacity: 1;
+
+      .toast-header {
+        justify-content: space-between;
+        color: $white;
+        font-weight: normal;
+
+        button {
+          color: $white;
+        }
+      }
+    }
+
+    .acshb-alert-success {
+      border-color: theme-color("success");
+
+      .toast-header {
+        background-color: theme-color("success");
+      }
+    }
+
+    .acshb-alert-error {
+      border-color: theme-color("danger");
+
+      .toast-header {
+        background-color: theme-color("danger");
+      }
+    }
+
+    .acshb-alert-info {
+      border-color: theme-color("info");
+
+      .toast-header {
+        background-color: theme-color("info");
+      }
+    }
+
+    .acshb-alert-warning {
+      border-color: theme-color("warning");
+
+      .toast-header {
+        background-color: theme-color("warning");
+      }
+    }
+  }
+}
+// ACSHB-ALERT END
