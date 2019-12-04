@@ -5,7 +5,9 @@ import { filter } from 'rxjs/operators';
 
 import { Alert, AlertType } from './alert.model';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class AlertService {
     private subject = new Subject<Alert>();
     private keepAfterRouteChange = false;

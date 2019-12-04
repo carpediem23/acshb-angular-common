@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertService } from 'projects/acshb-common/src/lib/alert/alert.service';
-import { ButtonComponent } from 'projects/acshb-common/src/lib/components/button/button.component';
+import { AlertService } from 'acshb-common';
 
 @Component({
   selector: 'app-test-view',
@@ -9,7 +8,6 @@ import { ButtonComponent } from 'projects/acshb-common/src/lib/components/button
 })
 export class TestViewComponent implements OnInit {
   constructor(private alertService: AlertService) {
-
   }
 
   ngOnInit() { }

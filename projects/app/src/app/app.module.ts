@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { LayoutModule } from '../../../acshb-common/src/lib/layout/layout.module';
-import { ComponentsModule } from '../../../acshb-common/src/lib/components/components.module';
-import { AlertModule } from '../../../acshb-common/src/lib/alert/alert.module';
+import { LayoutModule } from 'acshb-common';
+import { ComponentsModule } from 'acshb-common';
+import { AlertModule } from 'acshb-common';
 import { TestViewComponent } from './test-view/test-view.component';
 
 @NgModule({
