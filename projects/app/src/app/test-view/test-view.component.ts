@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertService } from 'acshb-common';
+import { AlertService } from 'projects/acshb-common/src/lib/alert/alert.service';
 
 @Component({
   selector: 'app-test-view',
@@ -21,18 +21,18 @@ export class TestViewComponent implements OnInit {
   }
 
   onAlertSuccess() {
-    this.alertService.success('İşlem başarıyla gerçekleşti.', 'Başlık', '0');
+    this.alertService.success('İşlem başarıyla gerçekleşti.', 'Başlık', true, '0');
   }
 
   onAlertInfo() {
-    this.alertService.info('İşlem yapınız.', 'Başlık', '0');
+    this.alertService.info('İşlem yapınız.', 'Başlık', true, '0');
   }
 
   onAlertWarning() {
-    this.alertService.warning('İşlem başarıyla gerçekleşti, ancak hatalar meydana geldi.', 'Başlık', '0');
+    this.alertService.warning('İşlem başarıyla gerçekleşti, ancak hatalar meydana geldi.', 'Başlık', false, '0');
   }
 
   onAlertError() {
-    this.alertService.error('İşlem yapılırken hata meydana geldi', 'Başlık', '0');
+    this.alertService.error('İşlem yapılırken hata meydana geldi', 'Başlık', false, '0');
   }
 }

@@ -33,20 +33,20 @@ export class AlertService {
         return this.subject.asObservable().pipe();
     }
 
-    success(message: string, title?: string, alertId?: string) {
-        this.alert(new Alert({ message, title, type: AlertType.Success, alertId }));
+    success(message: string, title?: string, timer?: boolean, alertId?: string) {
+        this.alert(new Alert({ message, title, timer, type: AlertType.Success, alertId }));
     }
 
-    error(message: string, title?: string, alertId?: string) {
-        this.alert(new Alert({ message, title, type: AlertType.Error, alertId }));
+    error(message: string, title?: string, timer?: boolean, alertId?: string) {
+        this.alert(new Alert({ message, title, timer, type: AlertType.Error, alertId }));
     }
 
-    info(message: string, title?: string, alertId?: string) {
-        this.alert(new Alert({ message, title, type: AlertType.Info, alertId }));
+    info(message: string, title?: string, timer?: boolean, alertId?: string) {
+        this.alert(new Alert({ message, title, timer, type: AlertType.Info, alertId }));
     }
 
-    warning(message: string, title?: string, alertId?: string) {
-        this.alert(new Alert({ message, title, type: AlertType.Warning, alertId }));
+    warning(message: string, title?: string, timer?: boolean, alertId?: string) {
+        this.alert(new Alert({ message, title, timer, type: AlertType.Warning, alertId }));
     }
 
     alert(alert: Alert) {
