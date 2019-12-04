@@ -11,7 +11,7 @@ import { ToastrComponent } from './toastr/toastr.component';
   imports: [
     CommonModule
   ],
-  exports: [AlertComponent]
+  exports: [AlertComponent, ToastrComponent]
 })
 export class AlertModule {
   static forRoot(): ModuleWithProviders {
