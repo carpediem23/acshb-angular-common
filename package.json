@@ -23,7 +23,6 @@
     "@fortawesome/angular-fontawesome": "^0.5.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "acshb-common": "file:dist/acshb-common/acshb-common-0.0.1.tgz",
     "animate.css": "^3.7.2",
     "bootstrap": "^4.4.1",
     "rxjs": "~6.4.0",
