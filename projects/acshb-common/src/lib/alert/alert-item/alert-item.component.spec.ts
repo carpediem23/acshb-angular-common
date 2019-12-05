@@ -1,20 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ToastrComponent } from './toastr.component';
+import { AlertItemComponent } from './alert-item.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('ToastrComponent', () => {
-  let component: ToastrComponent;
-  let fixture: ComponentFixture<ToastrComponent>;
+  let component: AlertItemComponent;
+  let fixture: ComponentFixture<AlertItemComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ToastrComponent ]
+      declarations: [ AlertItemComponent ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ToastrComponent);
+    fixture = TestBed.createComponent(AlertItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

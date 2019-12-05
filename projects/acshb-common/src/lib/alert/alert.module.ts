@@ -2,16 +2,16 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AlertComponent } from './alert.component';
 import { AlertService } from './alert.service';
-import { ToastrComponent } from './toastr/toastr.component';
+import { AlertItemComponent } from './alert-item/alert-item.component';
 
 
 
 @NgModule({
-  declarations: [AlertComponent, ToastrComponent],
+  declarations: [AlertComponent, AlertItemComponent],
   imports: [
     CommonModule
   ],
-  exports: [AlertComponent, ToastrComponent]
+  exports: [AlertComponent, AlertItemComponent]
 })
 export class AlertModule {
   static forRoot(): ModuleWithProviders {

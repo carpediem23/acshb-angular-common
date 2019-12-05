@@ -2,11 +2,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Alert } from '../alert.model';
 
 @Component({
-  selector: 'acshb-toastr',
-  templateUrl: './toastr.component.html',
-  styleUrls: ['./toastr.component.scss']
+  selector: 'acshb-alert-item',
+  templateUrl: './alert-item.component.html',
+  styleUrls: ['./alert-item.component.scss']
 })
-export class ToastrComponent implements OnInit {
+export class AlertItemComponent implements OnInit {
   @Input() alert: Alert;
   @Input() className: string;
   @Output() timerEndCallback = new EventEmitter();
@@ -14,8 +14,6 @@ export class ToastrComponent implements OnInit {
   duration = 5000;
   percent = 100;
   timeout;
-
-  constructor() { }
 
   ngOnInit() {
     if (this.alert.timer) {

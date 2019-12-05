@@ -1,5 +1,5 @@
 <div *ngIf="alerts.length > 0" class="acshb-alert-container" aria-live="polite" aria-atomic="true">
     <div class="acshb-alert-wrapper p-4">
-        <acshb-toastr *ngFor="let alert of alerts" [alert]="alert" className="acshb-alert mb-4 toast {{cssClass(alert)}}" (timerEndCallback)="removeAlert(alert)" (closeCallback)="removeAlert(alert)"></acshb-toastr>
+        <acshb-alert-item *ngFor="let alert of alerts" [alert]="alert" className="acshb-alert mb-4 toast {{cssClass(alert)}}" (timerEndCallback)="removeAlert(alert)" (closeCallback)="removeAlert(alert)"></acshb-alert-item>
     </div>
 </div>
