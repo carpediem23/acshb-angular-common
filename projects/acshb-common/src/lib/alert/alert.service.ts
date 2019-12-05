@@ -4,10 +4,19 @@ import { Observable, Subject } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 import { Alert, AlertType } from './alert.model';
-
+/**
+ *
+ *
+ * @export
+ * @class AlertService
+ * @description bu alert servisidir. nasıl çalıştığını anlatabiliriz.
+ * 
+ */
 @Injectable({
     providedIn: 'root'
 })
+
+
 export class AlertService {
     private subject = new Subject<Alert>();
     private keepAfterRouteChange = false;
@@ -22,13 +31,13 @@ export class AlertService {
                 }
             }
         });
-    }
-
-    // enable subscribing to alerts observable
-    /* onAlert(alertId?: string): Observable<Alert> {
-        return this.subject.asObservable().pipe(filter(x => x && x.alertId === alertId));
-    } */
-
+	}
+	
+	/**
+	 * 
+	 * @param alertId 
+	 * @description method açıklaması
+	 */
     onAlert(alertId?: string): Observable<Alert> {
         return this.subject.asObservable().pipe();
     }
