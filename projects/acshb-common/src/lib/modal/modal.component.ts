@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, Input, EventEmitter, Output, HostListener, OnInit, SimpleChanges } from '@angular/core';
+import { Component, ViewEncapsulation, Input, EventEmitter, Output, OnInit } from '@angular/core';
 
 @Component({
   selector: 'acshb-modal',
@@ -18,7 +18,7 @@ export class ModalComponent implements OnInit {
     this.checkModalAndHadleScroll();
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(): void {
     this.checkModalAndHadleScroll();
   }
 
