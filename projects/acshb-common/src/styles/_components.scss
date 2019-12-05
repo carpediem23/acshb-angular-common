@@ -263,3 +263,21 @@
   }
 }
 // ACSHB-ALERT END
+
+// ACSHB-TOOLBAR START
+.acshb-toolbar {
+  img {
+    height: 75px;
+
+    @include media-breakpoint-only(xs) {
+      height: 75px;
+    }
+  }
+  
+  .acshb-toolbar-logo {
+    .acshb-toolbar-button {
+      cursor: pointer;
+    }
+  }
+}
+// ACSHB-TOOLBAR END

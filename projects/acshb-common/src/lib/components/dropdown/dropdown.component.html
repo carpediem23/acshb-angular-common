@@ -1,7 +1,7 @@
 <div class="acshb-dropdown dropdown">
     <button class="btn dropdown-toggle" [ngClass]="{'btn-primary': color === 'primary'}" type="button" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false" (click)="onToggle($event)">
-        Dropdown button
+        {{title}}
     </button>
     <div class="dropdown-menu" [ngClass]="{'show': toggle}" aria-labelledby="dropdownMenuButton">
         <ul class="m-0 p-0">

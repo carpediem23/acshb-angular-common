@@ -35,4 +35,8 @@ export class TestViewComponent implements OnInit {
   onAlertError() {
     this.alertService.error('İşlem yapılırken hata meydana geldi', 'Başlık', false, '0');
   }
+
+  onMenuToggle() {
+    console.log('menu toggled');
+  }
 }

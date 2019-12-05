@@ -1,1 +1,17 @@
-<p>toolbar works!</p>
+<header class="acshb-toolbar d-flex flex-row justify-content-between align-items-center px-3 py-1 bg-white shadow-sm">
+    <div class="acshb-toolbar-logo d-flex">
+        <div class="acshb-toolbar-button my-auto d-block" title="Menü" (click)="onMenuToggle($event)">
+            <h3 class="m-0">
+                <acshb-icon icon="faBars"></acshb-icon>
+            </h3>
+        </div>
+        <img [src]="logoUrl" />
+    </div>
+    <div class="acshb-toolbar-title text-wrap m-3 d-none d-lg-block d-xl-block">
+        <h5 class="font-weight-light">{{title}}</h5>
+    </div>
+    <div class="acshb-toolbar-tools d-flex">
+        <acshb-dropdown [title]="fullname" [data]="[{key: 0, value: 0, title: 'osman'}, {key: 1, value: 1, title: 'alptuğ'}]"
+            (selectcallback)="onToolbarSelect($event)" color="secondary"></acshb-dropdown>
+    </div>
+</header>

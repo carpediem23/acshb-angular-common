@@ -14,6 +14,7 @@ import {
   styleUrls: ['./dropdown.component.scss']
 })
 export class DropdownComponent {
+  @Input() title;
   @Input() data = [];
   @Input() color = 'primary';
   @Output() selectcallback = new EventEmitter();
