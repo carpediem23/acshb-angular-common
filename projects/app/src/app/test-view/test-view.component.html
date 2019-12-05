@@ -41,4 +41,12 @@
     <acshb-button className="btn btn-info" (clicked)="onAlertInfo()">Alert Info</acshb-button>
     <acshb-button className="btn btn-warning" (clicked)="onAlertWarning()">Alert Warning</acshb-button>
     <acshb-button className="btn btn-danger" (clicked)="onAlertError()">Alert Error</acshb-button>
+    <acshb-modal [show]="true" title="Modal Başlığı" (onSubmitEvent)="onModalSubmit()" (onCloseEvent)="onModalClose()" >
+        <div class="conteiner-fluid">
+            <div class="row">
+                <div class="col-sm-6">içerik</div>
+                <div class="col-sm-6">içerik</div>
+            </div>
+        </div>
+    </acshb-modal>
 </acshb-wrapper>

@@ -39,4 +39,12 @@ export class TestViewComponent implements OnInit {
   onMenuToggle() {
     console.log('menu toggled');
   }
+
+  onModalSubmit() {
+    console.log('on modal submit');
+  }
+
+  onModalClose() {
+    console.log('on modal close');
+  }
 }

@@ -1,1 +1,19 @@
-<p>modal works!</p>
+<div class="acshb-modal modal" tabindex="-1" role="dialog" [ngStyle]="{'display': show ? 'block' : 'none'}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{title}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Modal Kapat" (click)="onClose()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ng-content></ng-content>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onClose()">Kapat</button>
+                <button type="button" class="btn btn-primary" (click)="onSubmit()">Tamam</button>
+            </div>
+        </div>
+    </div>
+</div>
