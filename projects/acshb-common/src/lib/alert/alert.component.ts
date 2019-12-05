@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { Subscription } from 'rxjs';
-
 import { Alert, AlertType } from './alert.model';
 import { AlertService } from './alert.service';
 
@@ -11,32 +10,28 @@ import { AlertService } from './alert.service';
 })
 export class AlertComponent implements OnInit, OnDestroy {
   @Input() id: string;
-  public alerts: Alert[] = [];
-  public subscription: Subscription;
+  alerts: Alert[] = [];
+  subscription: Subscription;
 
-  constructor(private alertService: AlertService) { }
+  constructor(private alertService: AlertService) {}
 
   ngOnInit() {
     this.subscription = this.alertService.onAlert(this.id)
       .subscribe(alert => {
         if (!alert.message) {
-          // clear alerts when an empty alert is received
           this.alerts = [];
           return;
         }
 
-        // add alert to array
         this.alerts.push(alert);
       });
   }
 
   ngOnDestroy() {
-    // unsubscribe to avoid memory leaks
     this.subscription.unsubscribe();
   }
 
   removeAlert(alert: Alert) {
-    // remove specified alert from array
     this.alerts = this.alerts.filter(x => x !== alert);
   }
 
@@ -45,7 +40,6 @@ export class AlertComponent implements OnInit, OnDestroy {
       return;
     }
 
-    // return css class based on alert type
     switch (alert.type) {
       case AlertType.Success:
         return 'acshb-alert-success';

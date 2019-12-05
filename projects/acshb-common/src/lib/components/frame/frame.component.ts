@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IconTypes } from '../../enums/icon-types.enum';
 
 @Component({
@@ -6,17 +6,13 @@ import { IconTypes } from '../../enums/icon-types.enum';
   templateUrl: './frame.component.html',
   styleUrls: ['./frame.component.scss']
 })
-export class FrameComponent implements OnInit {
+export class FrameComponent {
   @Input() title: string;
   @Input() icon: string;
   @Input() loading: boolean;
   @Input() bordered: boolean;
-  public iconTypes = IconTypes;
-  public toggle = false;
-
-  constructor() { }
-
-  ngOnInit() { }
+  iconTypes: any = IconTypes;
+  toggle: any = false;
 
   onToggleClick(e) {
     e.preventDefault();

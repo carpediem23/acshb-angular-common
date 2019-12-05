@@ -8,8 +8,8 @@ import { IconTypes } from '../../enums/icon-types.enum';
 })
 export class AccordionComponent implements OnInit {
   @Input() title: string;
-  public iconTypes = IconTypes;
-  public toggle = false;
+  iconTypes: any = IconTypes;
+  toggle: boolean = false;
 
   constructor() { }
 

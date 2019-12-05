@@ -3,8 +3,6 @@ import {
   Input,
   Output,
   EventEmitter,
-  ViewEncapsulation,
-  OnInit,
   HostListener
 } from '@angular/core';
 
@@ -14,14 +12,14 @@ import {
   styleUrls: ['./dropdown.component.scss']
 })
 export class DropdownComponent {
-  @Input() title;
-  @Input() data = [];
-  @Input() color = 'primary';
-  @Output() selectcallback = new EventEmitter();
-  public toggle = false;
+  @Input() title: string;
+  @Input() data: Array<any> = [];
+  @Input() color: string = 'primary';
+  @Output() onSelectEvent: EventEmitter<any> = new EventEmitter();
+  toggle = false;
 
   onSelect(d) {
-    this.selectcallback.emit(d);
+    this.onSelectEvent.emit(d);
   }
 
   onToggle(e) {
