@@ -9,8 +9,8 @@ import { Alert, AlertType } from './alert.model';
  *
  * @export
  * @class AlertService
- * @description bu alert servisidir. nasıl çalıştığını anlatabiliriz.
- * 
+ * @description Alert servisidir. ekranda alert çıkartmak için kullanılır.
+ * @example this.alertService.success('İçerik', 'Başlık', true, 'alert_success')
  */
 @Injectable({
     providedIn: 'root'
@@ -35,13 +35,22 @@ export class AlertService {
 	
 	/**
 	 * 
-	 * @param alertId 
-	 * @description method açıklaması
+	 * @param alertId nullable string
+	 * @description alert çağrısı yapıldıkça bu method tetiklenir.
 	 */
     onAlert(alertId?: string): Observable<Alert> {
         return this.subject.asObservable().pipe();
     }
 
+    /**
+	 * 
+	 * @param {string} message ekranda gösterilmek istenilen mesajdır.
+     * @param {string?} title ekranda gösterilmek istenilen alert' in başlığıdır.
+     * @param {boolean?} timer eğer belli bir süre sonra kaybolması isteniliyorsa kullanılmalıdır. 
+     * @param {string?} alertId aler' e ait olan kimliktir.
+     * @return {void}
+	 * @description Ekranda 'başarılı' alert göstermek için çağırılır.
+	 */
     success(message: string, title?: string, timer?: boolean, alertId?: string) {
         this.alert(new Alert({ message, title, timer, type: AlertType.Success, alertId }));
     }
