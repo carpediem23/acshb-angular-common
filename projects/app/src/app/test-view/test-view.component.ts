@@ -7,6 +7,8 @@ import { AlertService } from 'projects/acshb-common/src/lib/alert/alert.service'
   styleUrls: ['./test-view.component.scss']
 })
 export class TestViewComponent implements OnInit {
+  modalOpen: boolean = true;
+
   constructor(private alertService: AlertService) {
   }
 
@@ -41,10 +43,12 @@ export class TestViewComponent implements OnInit {
   }
 
   onModalSubmit() {
+    this.modalOpen = false;
     console.log('on modal submit');
   }
 
   onModalClose() {
+    this.modalOpen = false;
     console.log('on modal close');
   }
 }

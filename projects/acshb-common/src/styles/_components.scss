@@ -284,6 +284,14 @@
 
 // ACSHB-MODAL START
 .acshb-modal {
-    background-color: rgba($black, .5)
+    background-color: rgba($black, .5);
+    
+    .modal-content {
+      max-height: calc(100vh - 60px);
+
+      .modal-body {
+        overflow-y: auto;
+      }
+    }
 }
 // ACSHB-MODAL END
