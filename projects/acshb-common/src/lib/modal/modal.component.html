@@ -12,7 +12,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onClose()">Kapat</button>
-                <button type="button" class="btn btn-primary" (click)="onSubmit()">Tamam</button>
+                <button *ngIf="confirm" type="button" class="btn btn-primary" (click)="onSubmit()">Tamam</button>
             </div>
         </div>
     </div>

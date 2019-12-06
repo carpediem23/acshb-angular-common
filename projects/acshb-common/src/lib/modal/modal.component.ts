@@ -9,6 +9,7 @@ import { Component, ViewEncapsulation, Input, EventEmitter, Output, OnInit } fro
 export class ModalComponent implements OnInit {
   @Input() title: string;
   @Input() show: boolean;
+  @Input() confirm: boolean;
   @Output() onCloseEvent: EventEmitter<any> = new EventEmitter();
   @Output() onSubmitEvent: EventEmitter<any> = new EventEmitter();
 
