@@ -7,6 +7,7 @@ import { ComponentsModule } from '../../../acshb-common/src/lib/components/compo
 import { AlertModule } from '../../../acshb-common/src/lib/alert/alert.module';
 import { ModalModule } from '../../../acshb-common/src/lib/modal/modal.module';
 import { TestViewComponent } from './test-view/test-view.component';
+import { FormModule } from './form/form.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { TestViewComponent } from './test-view/test-view.component';
     ComponentsModule,
     ModalModule,
     AlertModule.forRoot(),
+    FormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

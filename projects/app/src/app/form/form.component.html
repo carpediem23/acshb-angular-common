@@ -1,0 +1,10 @@
+<form role="form" *ngIf="formElements.length > 0" [formGroup]="formGroup">
+    <div *ngFor="let element of formElements" [ngSwitch]="element.type" class="form-group">
+        <label [for]="element.name">{{element.label}}</label>
+        <input class="form-control" [id]="element.name" [name]="element.name" [type]="element.type"
+            [required]="element.required" *ngSwitchCase="'text'" />
+        <input class="form-control" [id]="element.name" [name]="element.name" [type]="element.type"
+            [required]="element.required" *ngSwitchCase="'number'" />
+    </div>
+    <button role="button" class="button" type="submit">Submit</button>
+</form>

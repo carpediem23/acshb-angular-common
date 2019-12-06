@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertService } from 'projects/acshb-common/src/lib/alert/alert.service';
+import { FormElement, FormElementTypes } from '../form/form-element/form-element.model';
 
 @Component({
   selector: 'app-test-view',
@@ -7,12 +8,18 @@ import { AlertService } from 'projects/acshb-common/src/lib/alert/alert.service'
   styleUrls: ['./test-view.component.scss']
 })
 export class TestViewComponent implements OnInit {
-  modalOpen: boolean = true;
+  modalOpen: boolean = false;
+  formElements: FormElement[];
 
   constructor(private alertService: AlertService) {
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.formElements = [
+      new FormElement({name: 'name', key: 'name', type: FormElementTypes.Text, required: true}),
+      new FormElement({name: 'age', key: 'age', type: FormElementTypes.Number})
+    ];
+   }
 
   onClicked(e: MouseEvent) {
     alert(e);
