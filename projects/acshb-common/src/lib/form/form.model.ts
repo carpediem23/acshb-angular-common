@@ -45,6 +45,9 @@ export class FormElement implements IFormElement {
             case FormElementTypes.Text:
                 this.defaultValue = options.defaultValue || '';
                 break;
+            case FormElementTypes.Tckn:
+                this.defaultValue = options.defaultValue || '';
+                break;
             case FormElementTypes.Number:
                 this.defaultValue = options.defaultValue || 0;
                 break;
@@ -79,6 +82,7 @@ export interface IFormElement {
 
 export enum FormElementTypes {
     Text = 'text',
+    Tckn = 'tckn',
     Dropdown = 'dropdown',
     Number = 'number',
     Checkbox = 'checkbox'

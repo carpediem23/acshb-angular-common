@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, SimpleChanges, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { FormElement, FormElementTypes } from './form.model';
+import { isValidTckn } from './tckn.validation';
 
 @Component({
   selector: 'acshb-form',
@@ -44,6 +45,7 @@ export class FormComponent implements OnInit {
         if(e.maxLength) validations.push(Validators.maxLength(e.maxLength));
         if(e.min) validations.push(Validators.min(e.min));
         if(e.max) validations.push(Validators.max(e.max));
+        if(e.type === FormElementTypes.Tckn) validations.push(isValidTckn); 
 
         formObject[e.name] = new FormControl(e.defaultValue, validations);
         return null;

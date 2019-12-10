@@ -3,8 +3,8 @@
         [ngClass]="{'form-check': element.type === 'checkbox'}">
         <div *ngSwitchCase="'text'">
             <label [attr.for]="element.name">{{element.label}}</label>
-            <input [pattern]="element.pattern" class="form-control" [formControlName]="element.name" [id]="element.name"
-                [name]="element.name" [type]="element.type" [required]="element.required"
+            <input class="form-control" [id]="element.name"
+            [name]="element.name" [type]="element.type" [pattern]="element.pattern" [formControlName]="element.name" [required]="element.required"
                 [minlength]="element.minLength" [maxlength]=element.maxLength />
             <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
                 class="alert alert-danger">
@@ -22,6 +22,20 @@
                 </div>
             </div>
         </div>
+        <div *ngSwitchCase="'tckn'">
+                <label [attr.for]="element.name">{{element.label}}</label>
+                <input acshbNumber class="form-control" [id]="element.name"
+                [name]="element.name" [type]="element.type" [formControlName]="element.name" [required]="element.required" />
+                <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="formGroup.controls[element.name].errors.required">
+                        Bu alan gereklidir.
+                    </div>
+                    <div *ngIf="formGroup.controls[element.name].errors.tckn">
+                        Giridğiniz Tc Kimlik Numarası doğru değildir.
+                    </div>
+                </div>
+            </div>
         <div *ngSwitchCase="'number'">
             <label [attr.for]="element.name">{{element.label}}</label>
             <input style="text-transform: uppercase;" class="form-control" [formControlName]="element.name"

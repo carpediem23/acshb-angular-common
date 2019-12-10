@@ -18,6 +18,7 @@ export class TestViewComponent implements OnInit {
     this.formElements = [
       new FormElement({name: 'name', key: 'name', type: FormElementTypes.Text, required: true, minLength: 5, maxLength: 10, pattern: '[a-zA-Z ]*'}),
       new FormElement({name: 'age', key: 'age', type: FormElementTypes.Number, min: 5, max: 10}),
+      new FormElement({name: 'tckn', key: 'tckn', type: FormElementTypes.Tckn, required: true}),
       new FormElement({name: 'remember', key: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla'})
     ];
    }
