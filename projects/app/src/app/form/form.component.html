@@ -1,10 +1,50 @@
-<form role="form" *ngIf="formElements.length > 0" [formGroup]="formGroup">
-    <div *ngFor="let element of formElements" [ngSwitch]="element.type" class="form-group">
-        <label [for]="element.name">{{element.label}}</label>
-        <input class="form-control" [id]="element.name" [name]="element.name" [type]="element.type"
-            [required]="element.required" *ngSwitchCase="'text'" />
-        <input class="form-control" [id]="element.name" [name]="element.name" [type]="element.type"
-            [required]="element.required" *ngSwitchCase="'number'" />
+<form role="form" *ngIf="formElements.length > 0" [formGroup]="formGroup" (ngSubmit)="onSubmit($event, formGroup)">
+    <div class="form-group" *ngFor="let element of formElements" [ngSwitch]="element.type"
+        [ngClass]="{'form-check': element.type === 'checkbox'}">
+        <div *ngSwitchCase="'text'">
+            <label [attr.for]="element.name">{{element.label}}</label>
+            <input [pattern]="element.pattern" class="form-control" [formControlName]="element.name" [id]="element.name"
+                [name]="element.name" [type]="element.type" [required]="element.required"
+                [minlength]="element.minLength" [maxlength]=element.maxLength />
+            <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
+                class="alert alert-danger">
+                <div *ngIf="formGroup.controls[element.name].errors.required">
+                    Bu alan gereklidir.
+                </div>
+                <div *ngIf="formGroup.controls[element.name].errors.minlength">
+                    En az {{element.minLength}} karakter olabilir.
+                </div>
+                <div *ngIf="formGroup.controls[element.name].errors.maxlength">
+                    En fazla {{element.maxLength}} karakter olabilir.
+                </div>
+                <div *ngIf="formGroup.controls[element.name].errors.pattern">
+                    Girilen bilgi yanlızca harflerden oluşabilir.
+                </div>
+            </div>
+        </div>
+        <div *ngSwitchCase="'number'">
+            <label [attr.for]="element.name">{{element.label}}</label>
+            <input style="text-transform: uppercase;" class="form-control" [formControlName]="element.name" [id]="element.name" [name]="element.name"
+                [type]="element.type" [required]="element.required" [min]="element.min" [max]="element.max" />
+            <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
+                class="alert alert-danger">
+                <div *ngIf="formGroup.controls[element.name].errors.required">
+                    Bu alan gereklidir.
+                </div>
+                <div *ngIf="formGroup.controls[element.name].errors.min">
+                    En az {{element.min ? element.min : 0}} olmalıdır.
+                </div>
+                <div *ngIf="formGroup.controls[element.name].errors.max">
+                    En fazla {{element.max}} den büyük olmalıdır.
+                </div>
+            </div>
+        </div>
+        <div *ngSwitchCase="'checkbox'">
+            <input class="form-check-input" [id]="element.name" [name]="element.name" type="checkbox"
+                [formControlName]="element.name" />
+            <label class="form-check-label" [attr.for]="element.name">{{element.label}}</label>
+
+        </div>
     </div>
-    <button role="button" class="button" type="submit">Submit</button>
+    <button role="button" class="button" type="submit" [disabled]="formGroup.invalid">Submit</button>
 </form>

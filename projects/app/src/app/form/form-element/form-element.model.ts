@@ -9,10 +9,11 @@ export class FormElement implements IFormElement {
     max?: number;
     minLength?: number;
     maxLength?: number;
+    pattern?: string;
     isTckn?: boolean;
     col?: number;
 
-    constructor( options: {
+    constructor(options: {
         key: string,
         name: string,
         type: string,
@@ -23,32 +24,38 @@ export class FormElement implements IFormElement {
         max?: number,
         minLength?: number,
         maxLength?: number,
+        pattern?: string,
         isTckn?: boolean,
         col?: number
     }) {
         this.key = options.key || '';
         this.name = options.name || '';
         this.type = options.type || FormElementTypes.Text;
-        this.label = options.label || null;
-        this.required = options.required || null;
-        this.min = options.min || null;
-        this.max = options.max || null;
-        this.minLength = options.minLength || null;
-        this.maxLength = options.maxLength || null;
-        this.isTckn = options.isTckn || null;
-        this.col = options.col || null;
+        this.label = options.label || this.name;
+        this.required = options.required || undefined;
+        this.min = options.min || undefined;
+        this.max = options.max || undefined;
+        this.minLength = options.minLength || undefined;
+        this.maxLength = options.maxLength || undefined;
+        this.pattern = options.pattern || undefined;
+        this.isTckn = options.isTckn || undefined;
+        this.col = options.col || 12;
 
         switch (options.type || FormElementTypes.Text) {
             case FormElementTypes.Text:
                 this.defaultValue = options.defaultValue || '';
                 break;
             case FormElementTypes.Number:
-                    this.defaultValue = options.defaultValue || 0;
+                this.defaultValue = options.defaultValue || 0;
                 break;
             case FormElementTypes.Dropdown:
-                    this.defaultValue = options.defaultValue || [];
+                this.defaultValue = options.defaultValue || [];
+                break;
+            case FormElementTypes.Checkbox:
+                this.defaultValue = options.defaultValue || false;
                 break;
             default:
+                this.defaultValue = options.defaultValue || '';
                 break;
         }
     }
@@ -65,6 +72,7 @@ export interface IFormElement {
     max?: number,
     minLength?: number,
     maxLength?: number,
+    pattern?: string,
     isTckn?: boolean,
     col?: number
 }
@@ -72,5 +80,6 @@ export interface IFormElement {
 export enum FormElementTypes {
     Text = 'text',
     Dropdown = 'dropdown',
-    Number = 'number'
+    Number = 'number',
+    Checkbox = 'checkbox'
 }

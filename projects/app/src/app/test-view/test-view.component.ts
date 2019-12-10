@@ -16,10 +16,15 @@ export class TestViewComponent implements OnInit {
 
   ngOnInit() {
     this.formElements = [
-      new FormElement({name: 'name', key: 'name', type: FormElementTypes.Text, required: true}),
-      new FormElement({name: 'age', key: 'age', type: FormElementTypes.Number})
+      new FormElement({name: 'name', key: 'name', type: FormElementTypes.Text, required: true, minLength: 5, maxLength: 10, pattern: '[a-zA-Z ]*'}),
+      new FormElement({name: 'age', key: 'age', type: FormElementTypes.Number, min: 5, max: 10}),
+      new FormElement({name: 'remember', key: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla'})
     ];
    }
+
+  onSubmit(form) {
+    console.log(form);
+  }
 
   onClicked(e: MouseEvent) {
     alert(e);
