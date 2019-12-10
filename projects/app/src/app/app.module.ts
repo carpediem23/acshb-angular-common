@@ -6,8 +6,8 @@ import { LayoutModule } from '../../../acshb-common/src/lib/layout/layout.module
 import { ComponentsModule } from '../../../acshb-common/src/lib/components/components.module';
 import { AlertModule } from '../../../acshb-common/src/lib/alert/alert.module';
 import { ModalModule } from '../../../acshb-common/src/lib/modal/modal.module';
+import { FormModule } from '../../../acshb-common/src/lib/form/form.module';
 import { TestViewComponent } from './test-view/test-view.component';
-import { FormModule } from './form/form.module';
 
 @NgModule({
   declarations: [
