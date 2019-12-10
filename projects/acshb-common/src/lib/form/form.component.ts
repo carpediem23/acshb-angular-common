@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, SimpleChanges, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { FormElement, FormElementTypes } from './form-element/form-element.model';
+import { FormElement, FormElementTypes } from './form.model';
 
 @Component({
   selector: 'acshb-form',

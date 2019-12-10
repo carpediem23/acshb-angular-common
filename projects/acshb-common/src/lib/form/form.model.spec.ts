@@ -1,4 +1,4 @@
-import { FormElement } from './form-element.model';
+import { FormElement } from './form.model';
 
 describe('FormElement', () => {
   it('should create an instance', () => {
