@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertService } from 'projects/acshb-common/src/lib/alert/alert.service';
-import { FormElement, FormElementTypes } from '../form/form-element/form-element.model';
+import { FormElement, FormElementTypes } from 'projects/acshb-common/src/lib/form/form-element/form-element.model';
 
 @Component({
   selector: 'app-test-view',
