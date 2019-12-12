@@ -9,6 +9,7 @@ import { isValidTckn } from './directives/tckn.validation';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnChanges {
+  @Input() submitText: string;
   @Input() formElements: FormElement[];
   @Output() submitCallback: EventEmitter<any>;
   formGroup: FormGroup;
