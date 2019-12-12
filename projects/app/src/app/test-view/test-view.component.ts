@@ -72,4 +72,8 @@ export class TestViewComponent implements OnInit {
     this.modalOpen = false;
     console.log('on modal close');
   }
+
+  onModalOpen() {
+    this.modalOpen = true;
+  }
 }
