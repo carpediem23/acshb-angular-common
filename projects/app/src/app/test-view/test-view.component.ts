@@ -18,16 +18,24 @@ export class TestViewComponent implements OnInit {
     this.formElements = [
       new FormElement({
         name: 'name',
-        key: 'name',
         type: FormElementTypes.Text,
         required: true,
         minLength: 5,
         maxLength: 10,
         pattern: '[a-zA-Z ]*'
       }),
-      new FormElement({ name: 'age', key: 'age', type: FormElementTypes.Number, min: 5, max: 10 }),
-      new FormElement({ name: 'tckn', key: 'tckn', type: FormElementTypes.Tckn, required: true }),
-      new FormElement({ name: 'remember', key: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla' })
+      new FormElement({ name: 'age', type: FormElementTypes.Number, min: 5, max: 10 }),
+      new FormElement({ name: 'tckn', type: FormElementTypes.Tckn, required: true }),
+      new FormElement({ name: 'secim', type: FormElementTypes.Select, data: [
+        { id: 0, label: 'Seçenek 1' },
+        { id: 1, label: 'Seçenek 2' }
+      ], required: true }),
+      new FormElement({ name: 'coklusecim', type: FormElementTypes.MultiSelect, data: [
+        { id: 0, label: 'Seçenek 1' },
+        { id: 1, label: 'Seçenek 2' },
+        { id: 2, label: 'Seçenek 3' }
+      ], required: true }),
+      new FormElement({ name: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla' })
     ];
   }
 

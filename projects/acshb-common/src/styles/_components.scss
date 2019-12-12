@@ -1,3 +1,5 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
 // ACSHB-FRAME START
 .acshb-frame {
   position: relative;
@@ -295,3 +297,20 @@
     }
 }
 // ACSHB-MODAL END
+
+// ACSHB-FORM START
+.ng-option-marked {
+  background-color: transparent !important;
+}
+
+.ng-option-selected {
+  background-color: transparent !important;
+}
+
+.ng-select-focused {
+  .ng-select-container {
+    border-color: lighten($component-active-bg, 25%) !important;
+    box-shadow: $input-btn-focus-box-shadow !important;
+  }
+}
+// ACSHB-FORM END

@@ -1,12 +1,14 @@
-import { Component, Input, SimpleChanges, Output, EventEmitter, OnChanges } from '@angular/core';
+import { Component, Input, SimpleChanges, Output, EventEmitter, OnChanges, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { FormElement, FormElementTypes } from './models/form.model';
 import { isValidTckn } from './directives/tckn.validation';
+import { NgSelectConfig } from '@ng-select/ng-select';
 
 @Component({
   selector: 'acshb-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  styleUrls: ['./form.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class FormComponent implements OnChanges {
   @Input() submitText: string;
@@ -14,8 +16,13 @@ export class FormComponent implements OnChanges {
   @Output() submitCallback: EventEmitter<any>;
   formGroup: FormGroup;
   types = FormElementTypes;
+  selectedItems;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private config: NgSelectConfig) {
+    this.config.notFoundText = 'Sonuç bulunamadı';
+    this.config.clearAllText = 'Hepsini sil';
+    this.config.typeToSearchText = 'Arayın';
+    this.config.bindValue = 'id';
     this.submitCallback = new EventEmitter<any>();
     this.formGroup = this.formBuilder.group(this.setFormGroup(this.formElements));
   }

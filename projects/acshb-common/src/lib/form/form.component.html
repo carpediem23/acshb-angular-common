@@ -8,7 +8,7 @@
                 [minlength]="element.minLength" [maxlength]=element.maxLength />
             <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
                 class="alert alert-danger">
-                <div *ngIf="formGroup.controls[element.name].errors['reqiured']">
+                <div *ngIf="formGroup.controls[element.name].errors['required']">
                     Bu alan gereklidir.
                 </div>
                 <div *ngIf="formGroup.controls[element.name].errors['minlength']">
@@ -59,6 +59,31 @@
                 [formControlName]="element.name" />
             <label class="form-check-label" [attr.for]="element.name">{{element.label}}</label>
 
+        </div>
+        <div *ngSwitchCase="'select'">
+            <label [attr.for]="element.name">{{element.label}}</label>
+            <ng-select appearance="outline" class="acshb-select" [formControlName]="element.name" [items]="element.data"
+                [placeholder]="element.name + ' seçiniz' | titlecase" [labelForId]="element.name">
+            </ng-select>
+            <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
+                class="alert alert-danger">
+                <div *ngIf="formGroup.controls[element.name].errors['required']">
+                    Bu alan gereklidir.
+                </div>
+            </div>
+        </div>
+        <div *ngSwitchCase="'multiselect'">
+            <label [attr.for]="element.name">{{element.label}}</label>
+            <ng-select class="acshb-multiselect" [multiple]="true" [closeOnSelect]="false"
+                [formControlName]="element.name" [items]="element.data"
+                [placeholder]="element.name + ' seçiniz' | titlecase" [labelForId]="element.name">
+            </ng-select>
+            <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
+                class="alert alert-danger">
+                <div *ngIf="formGroup.controls[element.name].errors['required']">
+                    Bu alan gereklidir.
+                </div>
+            </div>
         </div>
     </div>
     <button role="button" class="btn btn-primary" type="submit" [disabled]="formGroup.invalid"

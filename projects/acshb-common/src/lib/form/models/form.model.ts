@@ -1,5 +1,4 @@
 export class FormElement implements IFormElement {
-    key: string;
     name: string;
     type: string;
     defaultValue?: any;
@@ -11,10 +10,10 @@ export class FormElement implements IFormElement {
     maxLength?: number;
     pattern?: string;
     isTckn?: boolean;
+    data?: Array<any>;
     col?: number;
 
     constructor(options: {
-        key: string,
         name: string,
         type: string,
         defaultValue?: any,
@@ -26,9 +25,9 @@ export class FormElement implements IFormElement {
         maxLength?: number,
         pattern?: string,
         isTckn?: boolean,
+        data?: Array<any>,
         col?: number
     }) {
-        this.key = options.key || '';
         this.name = options.name || '';
         this.type = options.type || FormElementTypes.Text;
         this.label = options.label || this.name;
@@ -39,6 +38,7 @@ export class FormElement implements IFormElement {
         this.maxLength = options.maxLength || undefined;
         this.pattern = options.pattern || undefined;
         this.isTckn = options.isTckn || undefined;
+        this.data = options.data || [];
         this.col = options.col || 12;
 
         switch (options.type || FormElementTypes.Text) {
@@ -51,8 +51,9 @@ export class FormElement implements IFormElement {
             case FormElementTypes.Number:
                 this.defaultValue = options.defaultValue || 0;
                 break;
-            case FormElementTypes.Dropdown:
-                this.defaultValue = options.defaultValue || [];
+            case FormElementTypes.Select:
+            case FormElementTypes.MultiSelect:
+                this.defaultValue = options.defaultValue || (this.data ? this.data : []);
                 break;
             case FormElementTypes.Checkbox:
                 this.defaultValue = options.defaultValue || false;
@@ -65,7 +66,6 @@ export class FormElement implements IFormElement {
 }
 
 export interface IFormElement {
-    key: string;
     name: string;
     type: string;
     defaultValue?: any;
@@ -77,13 +77,15 @@ export interface IFormElement {
     maxLength?: number;
     pattern?: string;
     isTckn?: boolean;
+    data?: Array<any>;
     col?: number;
 }
 
 export enum FormElementTypes {
     Text = 'text',
     Tckn = 'tckn',
-    Dropdown = 'dropdown',
+    Select = 'select',
+    MultiSelect = 'multiselect',
     Number = 'number',
     Checkbox = 'checkbox'
 }
