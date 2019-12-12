@@ -10,7 +10,7 @@ export class AccordionComponent implements OnInit {
   @Input() title: string;
   @Input() open: boolean;
   iconTypes: any = IconTypes;
-  toggle: boolean = false;
+  toggle = false;
 
   constructor() { }
 

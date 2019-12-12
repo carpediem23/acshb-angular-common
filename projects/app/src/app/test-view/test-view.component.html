@@ -4,7 +4,7 @@
     <acshb-icon icon="faAdjust" color="#000"></acshb-icon>
     <acshb-button className="btn btn-primary" text="Osman" (clicked)="onClicked($event)"></acshb-button>
     <acshb-dropdown title="Dropdown" [data]="[{key: 0, value: 0, title: 'osman'}, {key: 1, value: 1, title: 'alptuğ'}]"
-        (onSelectEvent)="onSelected($event)" color="primary"></acshb-dropdown>
+        (selectCallback)="onSelected($event)" color="primary"></acshb-dropdown>
     <acshb-frame title="2016 Bütçe Personel Giderleri (₺) - Default" icon="faChartBar">
         <h5>Special title treatment</h5>
         <p>With supporting text below as a natural lead-in to additional content.</p>
@@ -42,7 +42,7 @@
     <acshb-button className="btn btn-info" (clicked)="onAlertInfo()">Alert Info</acshb-button>
     <acshb-button className="btn btn-warning" (clicked)="onAlertWarning()">Alert Warning</acshb-button>
     <acshb-button className="btn btn-danger" (clicked)="onAlertError()">Alert Error</acshb-button>
-    <acshb-modal [show]="modalOpen" title="Modal Başlığı" (onSubmitEvent)="onModalSubmit()" (onCloseEvent)="onModalClose()">
+    <acshb-modal [show]="modalOpen" title="Modal Başlığı" (submitCallback)="onModalSubmit()" (closeCallback)="onModalClose()">
         <div class="conteiner-fluid">
             <div class="row">
                 <div class="col-sm-12">
@@ -122,5 +122,5 @@
         kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da
         içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri
         içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.</p>
-    <acshb-form [formElements]="formElements" (onSubmitEvent)="onSubmit($event)"></acshb-form>
+    <acshb-form [formElements]="formElements" (submitCallback)="onSubmit($event)"></acshb-form>
 </acshb-wrapper>

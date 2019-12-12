@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
-import { Alert, AlertType } from './alert.model';
+import { Alert, AlertType } from '../models/alert.model';
 
 /**
- *
- *
  * @export
  * @class AlertService
  * @description Alert servisidir. ekranda alert çıkartmak için kullanılır.
@@ -28,10 +26,9 @@ export class AlertService {
                 }
             }
         });
-	}
-	
-	/**
-	 * 
+    }
+
+    /**
 	 * @param {string?} alertId alert kimliği.
 	 * @description alert çağrısı yapıldıkça bu method tetiklenir.
 	 */
@@ -40,12 +37,11 @@ export class AlertService {
     }
 
     /**
-	 * 
+	 *
 	 * @param {string} message ekranda gösterilmek istenilen mesajdır.
      * @param {string?} title ekranda gösterilmek istenilen alert' in başlığıdır.
-     * @param {boolean?} timer eğer belli bir süre sonra kaybolması isteniliyorsa kullanılmalıdır. 
+     * @param {boolean?} timer eğer belli bir süre sonra kaybolması isteniliyorsa kullanılmalıdır.
      * @param {string?} alertId alert' e ait olan kimliktir.
-     * @return {void}
 	 * @description Ekranda 'başarılı' alert göstermek için çağırılır.
 	 */
     success(message: string, title?: string, timer?: boolean, alertId?: string) {
@@ -53,12 +49,11 @@ export class AlertService {
     }
 
     /**
-	 * 
+	 *
 	 * @param {string} message ekranda gösterilmek istenilen mesajdır.
      * @param {string?} title ekranda gösterilmek istenilen alert' in başlığıdır.
-     * @param {boolean?} timer eğer belli bir süre sonra kaybolması isteniliyorsa kullanılmalıdır. 
+     * @param {boolean?} timer eğer belli bir süre sonra kaybolması isteniliyorsa kullanılmalıdır.
      * @param {string?} alertId alert' e ait olan kimliktir.
-     * @return {void}
 	 * @description Ekranda 'hata' alert göstermek için çağırılır.
 	 */
     error(message: string, title?: string, timer?: boolean, alertId?: string) {
@@ -66,12 +61,11 @@ export class AlertService {
     }
 
     /**
-	 * 
+	 *
 	 * @param {string} message ekranda gösterilmek istenilen mesajdır.
      * @param {string?} title ekranda gösterilmek istenilen alert' in başlığıdır.
-     * @param {boolean?} timer eğer belli bir süre sonra kaybolması isteniliyorsa kullanılmalıdır. 
+     * @param {boolean?} timer eğer belli bir süre sonra kaybolması isteniliyorsa kullanılmalıdır.
      * @param {string?} alertId alert' e ait olan kimliktir.
-     * @return {void}
 	 * @description Ekranda 'bilgi' alert göstermek için çağırılır.
 	 */
     info(message: string, title?: string, timer?: boolean, alertId?: string) {
@@ -79,12 +73,11 @@ export class AlertService {
     }
 
     /**
-	 * 
+	 *
 	 * @param {string} message ekranda gösterilmek istenilen mesajdır.
      * @param {string?} title ekranda gösterilmek istenilen alert' in başlığıdır.
-     * @param {boolean?} timer eğer belli bir süre sonra kaybolması isteniliyorsa kullanılmalıdır. 
+     * @param {boolean?} timer eğer belli bir süre sonra kaybolması isteniliyorsa kullanılmalıdır.
      * @param {string?} alertId alert' e ait olan kimliktir.
-     * @return {void}
 	 * @description Ekranda 'uyarı' alert göstermek için çağırılır.
 	 */
     warning(message: string, title?: string, timer?: boolean, alertId?: string) {
@@ -92,9 +85,8 @@ export class AlertService {
     }
 
     /**
-	 * 
+	 *
 	 * @param {Alert} alert
-     * @return {void}
 	 * @description Servisi alert geldiğinie dair bilgilendirir.
 	 */
     alert(alert: Alert) {
@@ -103,9 +95,8 @@ export class AlertService {
     }
 
     /**
-	 * 
+	 *
 	 * @param {string?} alertId
-     * @return {void}
 	 * @description İlgili alert' i siler.
 	 */
     clear(alertId?: string) {

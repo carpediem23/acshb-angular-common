@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Alert } from '../alert.model';
+import { Alert } from '../models/alert.model';
 
 @Component({
   selector: 'acshb-alert-item',

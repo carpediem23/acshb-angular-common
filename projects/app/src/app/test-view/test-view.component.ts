@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertService } from 'projects/acshb-common/src/lib/alert/alert.service';
-import { FormElement, FormElementTypes } from 'projects/acshb-common/src/lib/form/form.model';
+import { AlertService } from 'projects/acshb-common/src/lib/alert/services/alert.service';
+import { FormElement, FormElementTypes } from 'projects/acshb-common/src/lib/form/models/form.model';
 
 @Component({
   selector: 'app-test-view',
@@ -8,7 +8,7 @@ import { FormElement, FormElementTypes } from 'projects/acshb-common/src/lib/for
   styleUrls: ['./test-view.component.scss']
 })
 export class TestViewComponent implements OnInit {
-  modalOpen: boolean = false;
+  modalOpen = false;
   formElements: FormElement[];
 
   constructor(private alertService: AlertService) {
@@ -16,12 +16,20 @@ export class TestViewComponent implements OnInit {
 
   ngOnInit() {
     this.formElements = [
-      new FormElement({name: 'name', key: 'name', type: FormElementTypes.Text, required: true, minLength: 5, maxLength: 10, pattern: '[a-zA-Z ]*'}),
-      new FormElement({name: 'age', key: 'age', type: FormElementTypes.Number, min: 5, max: 10}),
-      new FormElement({name: 'tckn', key: 'tckn', type: FormElementTypes.Tckn, required: true}),
-      new FormElement({name: 'remember', key: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla'})
+      new FormElement({
+        name: 'name',
+        key: 'name',
+        type: FormElementTypes.Text,
+        required: true,
+        minLength: 5,
+        maxLength: 10,
+        pattern: '[a-zA-Z ]*'
+      }),
+      new FormElement({ name: 'age', key: 'age', type: FormElementTypes.Number, min: 5, max: 10 }),
+      new FormElement({ name: 'tckn', key: 'tckn', type: FormElementTypes.Tckn, required: true }),
+      new FormElement({ name: 'remember', key: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla' })
     ];
-   }
+  }
 
   onSubmit(form) {
     console.log(form);

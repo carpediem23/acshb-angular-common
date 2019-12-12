@@ -2,17 +2,17 @@ import { AbstractControl } from '@angular/forms';
 
 export const isValidTckn = (control: AbstractControl) => {
     if (control.value !== '' && !isTckn(control.value)) {
-        return {tckn: true};
+        return { tckn: true };
     }
 
     return null;
-}
+};
 
 const isTckn = val => {
-    let tckn = String(val);
+    const tckn = String(val);
     let result = true;
 
-    if (isNaN(Number(tckn))) result = false;
+    if (isNaN(Number(tckn))) { result = false; }
 
     if (tckn.length !== 11) {
         result = false;
@@ -40,7 +40,7 @@ const isTckn = val => {
         }
     }
 
-    if (Number(tckn.substr(9, 1)) !== total) false;
+    if (Number(tckn.substr(9, 1)) !== total) { return false; }
 
     total =
         Number(tckn.substr(0, 1)) +
@@ -56,7 +56,7 @@ const isTckn = val => {
 
     total %= 10;
 
-    if (Number(tckn.substr(10, 1)) !== total) result = false;
+    if (Number(tckn.substr(10, 1)) !== total) { result = false; }
 
     return result;
 };

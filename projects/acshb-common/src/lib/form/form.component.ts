@@ -1,51 +1,47 @@
-import { Component, OnInit, Input, SimpleChanges, Output, EventEmitter } from '@angular/core';
+import { Component, Input, SimpleChanges, Output, EventEmitter, OnChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { FormElement, FormElementTypes } from './form.model';
-import { isValidTckn } from './tckn.validation';
+import { FormElement, FormElementTypes } from './models/form.model';
+import { isValidTckn } from './directives/tckn.validation';
 
 @Component({
   selector: 'acshb-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements OnInit {
+export class FormComponent implements OnChanges {
   @Input() formElements: FormElement[];
-  @Output() onSubmitEvent: EventEmitter<any>;
+  @Output() submitCallback: EventEmitter<any>;
   formGroup: FormGroup;
   types = FormElementTypes;
 
   constructor(private formBuilder: FormBuilder) {
-    this.onSubmitEvent = new EventEmitter<any>();
+    this.submitCallback = new EventEmitter<any>();
     this.formGroup = this.formBuilder.group(this.setFormGroup(this.formElements));
-   }
+  }
 
-  ngOnInit() {}
-
-  ngOnChanges(changes: SimpleChanges) {
+  ngOnChanges() {
     this.formGroup = this.formBuilder.group(this.setFormGroup(this.formElements));
   }
 
   onSubmit(e, form) {
-    console.log(form);
-    
-    if(this.onSubmitEvent) {
-      this.onSubmitEvent.emit(form.value);
+    if (this.submitCallback) {
+      this.submitCallback.emit(form.value);
     }
   }
 
   setFormGroup(elements: FormElement[]) {
     const formObject = {};
 
-    if(elements) {
+    if (elements) {
       elements.map(e => {
         const validations = [];
 
-        if(e.required) validations.push(Validators.required);
-        if(e.minLength) validations.push(Validators.minLength(e.minLength));
-        if(e.maxLength) validations.push(Validators.maxLength(e.maxLength));
-        if(e.min) validations.push(Validators.min(e.min));
-        if(e.max) validations.push(Validators.max(e.max));
-        if(e.type === FormElementTypes.Tckn) validations.push(isValidTckn); 
+        if (e.required) { validations.push(Validators.required); }
+        if (e.minLength) { validations.push(Validators.minLength(e.minLength)); }
+        if (e.maxLength) { validations.push(Validators.maxLength(e.maxLength)); }
+        if (e.min) { validations.push(Validators.min(e.min)); }
+        if (e.max) { validations.push(Validators.max(e.max)); }
+        if (e.type === FormElementTypes.Tckn) { validations.push(isValidTckn); }
 
         formObject[e.name] = new FormControl(e.defaultValue, validations);
         return null;

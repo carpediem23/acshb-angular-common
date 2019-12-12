@@ -11,9 +11,9 @@ export class NumberDirective {
   }
 
    @HostListener('input', ['$event']) onValueChange(e: any) {
-    const isNumber = isNaN(parseInt(e.target.value));
+    const isNumber = isNaN(parseInt(e.target.value, 10));
 
-      if(isNumber) {
+    if (isNumber) {
         this.element.nativeElement.value = this.element.nativeElement.value.slice(this.element.nativeElement.value.length, 1);
       }
   }

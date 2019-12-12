@@ -14,12 +14,12 @@ import {
 export class DropdownComponent {
   @Input() title: string;
   @Input() data: Array<any> = [];
-  @Input() color: string = 'primary';
-  @Output() onSelectEvent: EventEmitter<any> = new EventEmitter();
+  @Input() color = 'primary';
+  @Output() selectCallback: EventEmitter<any> = new EventEmitter<any>();
   toggle = false;
 
   onSelect(d) {
-    this.onSelectEvent.emit(d);
+    this.selectCallback.emit(d);
   }
 
   onToggle(e) {

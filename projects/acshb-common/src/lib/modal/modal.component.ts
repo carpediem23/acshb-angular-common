@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, Input, EventEmitter, Output, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, Input, EventEmitter, Output, OnInit, OnChanges, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'acshb-modal',
@@ -6,16 +6,14 @@ import { Component, ViewEncapsulation, Input, EventEmitter, Output, OnInit } fro
   styleUrls: ['./modal.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent implements OnInit, OnChanges, OnDestroy {
   @Input() title: string;
   @Input() show: boolean;
   @Input() confirm: boolean;
-  @Output() onCloseEvent: EventEmitter<any> = new EventEmitter();
-  @Output() onSubmitEvent: EventEmitter<any> = new EventEmitter();
+  @Output() closeCallback: EventEmitter<any> = new EventEmitter();
+  @Output() submitCallback: EventEmitter<any> = new EventEmitter();
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     this.checkModalAndHadleScroll();
   }
 
@@ -28,23 +26,21 @@ export class ModalComponent implements OnInit {
   }
 
   onClose() {
-    if (this.onCloseEvent) {
-      this.onCloseEvent.emit();
+    if (this.closeCallback) {
+      this.closeCallback.emit();
     }
   }
 
   onSubmit() {
-    if (this.onSubmitEvent) {
-      this.onSubmitEvent.emit();
+    if (this.submitCallback) {
+      this.submitCallback.emit();
     }
   }
 
   checkModalAndHadleScroll() {
     if (this.show) {
       document.body.classList.add('overflow-hidden');
-    }
-
-    else {
+    } else {
       document.body.classList.remove('overflow-hidden');
     }
   }

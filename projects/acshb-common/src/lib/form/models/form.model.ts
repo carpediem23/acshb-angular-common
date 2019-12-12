@@ -65,19 +65,19 @@ export class FormElement implements IFormElement {
 }
 
 export interface IFormElement {
-    key: string,
-    name: string,
-    type: string,
-    defaultValue?: any,
-    label?: string,
-    required?: boolean,
-    min?: number,
-    max?: number,
-    minLength?: number,
-    maxLength?: number,
-    pattern?: string,
-    isTckn?: boolean,
-    col?: number
+    key: string;
+    name: string;
+    type: string;
+    defaultValue?: any;
+    label?: string;
+    required?: boolean;
+    min?: number;
+    max?: number;
+    minLength?: number;
+    maxLength?: number;
+    pattern?: string;
+    isTckn?: boolean;
+    col?: number;
 }
 
 export enum FormElementTypes {

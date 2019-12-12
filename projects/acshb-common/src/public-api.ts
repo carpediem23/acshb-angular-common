@@ -7,5 +7,5 @@ export * from './lib/components/components.module';
 export * from './lib/alert/alert.module';
 export * from './lib/modal/modal.module';
 export * from './lib/form/form.module';
-export * from './lib/alert/alert.service';
-export * from './lib/form/form.model';
+export * from './lib/alert/services/alert.service';
+export * from './lib/form/models/form.model';

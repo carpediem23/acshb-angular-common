@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Alert, AlertType } from './alert.model';
-import { AlertService } from './alert.service';
+import { Alert, AlertType } from './models/alert.model';
+import { AlertService } from './services/alert.service';
 
 @Component({
   selector: 'acshb-alert',

@@ -12,6 +12,6 @@
     </div>
     <div class="acshb-toolbar-tools d-flex">
         <acshb-dropdown [title]="fullname" [data]="[{key: 0, value: 0, title: 'osman'}, {key: 1, value: 1, title: 'alptuğ'}]"
-            (onSelectEvent)="onToolbarSelect($event)" color="secondary"></acshb-dropdown>
+            (selectCallback)="onToolbarSelect($event)" color="secondary"></acshb-dropdown>
     </div>
 </header>
