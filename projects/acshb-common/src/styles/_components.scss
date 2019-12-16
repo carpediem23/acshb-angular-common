@@ -313,4 +313,8 @@
     box-shadow: $input-btn-focus-box-shadow !important;
   }
 }
+
+.ng-value {
+  background-color: lighten(theme-color("primary"), 25) !important;
+}
 // ACSHB-FORM END

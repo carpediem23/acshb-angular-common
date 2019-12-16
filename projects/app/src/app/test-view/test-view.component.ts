@@ -35,6 +35,7 @@ export class TestViewComponent implements OnInit {
         { id: 1, label: 'Seçenek 2' },
         { id: 2, label: 'Seçenek 3' }
       ], required: true }),
+      new FormElement({ name: 'date', type: FormElementTypes.Date, required: true }),
       new FormElement({ name: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla' })
     ];
   }

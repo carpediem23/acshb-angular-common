@@ -85,6 +85,17 @@
                 </div>
             </div>
         </div>
+        <div *ngSwitchCase="'date'">
+            <label [attr.for]="element.name">{{element.label}}</label>
+            <input class="form-control" [id]="element.name" [name]="element.name" [type]="element.type"
+             [formControlName]="element.name" [required]="element.required" />
+            <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
+                class="alert alert-danger">
+                <div *ngIf="formGroup.controls[element.name].errors['required']">
+                    Bu alan gereklidir.
+                </div>
+            </div>
+        </div>
     </div>
     <button role="button" class="btn btn-primary" type="submit" [disabled]="formGroup.invalid"
         [title]="submitText">{{submitText ? submitText : 'Gönder'}}</button>

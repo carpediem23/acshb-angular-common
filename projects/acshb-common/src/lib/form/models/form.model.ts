@@ -38,7 +38,7 @@ export class FormElement implements IFormElement {
         this.maxLength = options.maxLength || undefined;
         this.pattern = options.pattern || undefined;
         this.isTckn = options.isTckn || undefined;
-        this.data = options.data || [];
+        this.data = options.data || undefined;
         this.col = options.col || 12;
 
         switch (options.type || FormElementTypes.Text) {
@@ -57,6 +57,9 @@ export class FormElement implements IFormElement {
                 break;
             case FormElementTypes.Checkbox:
                 this.defaultValue = options.defaultValue || false;
+                break;
+            case FormElementTypes.Date:
+                this.defaultValue = options.defaultValue ? options.defaultValue.toISOString().substring(0, 10) : null;
                 break;
             default:
                 this.defaultValue = options.defaultValue || '';
@@ -87,5 +90,6 @@ export enum FormElementTypes {
     Select = 'select',
     MultiSelect = 'multiselect',
     Number = 'number',
-    Checkbox = 'checkbox'
+    Checkbox = 'checkbox',
+    Date = 'date'
 }
