@@ -43,7 +43,8 @@
     <acshb-button className="btn btn-info" (clicked)="onAlertInfo()">Alert Info</acshb-button>
     <acshb-button className="btn btn-warning" (clicked)="onAlertWarning()">Alert Warning</acshb-button>
     <acshb-button className="btn btn-danger" (clicked)="onAlertError()">Alert Error</acshb-button>
-    <acshb-modal [show]="modalOpen" title="Modal Başlığı" (submitCallback)="onModalSubmit()" (closeCallback)="onModalClose()">
+    <acshb-modal [show]="modalOpen" title="Modal Başlığı" (submitCallback)="onModalSubmit()"
+        (closeCallback)="onModalClose()">
         <div class="conteiner-fluid">
             <div class="row">
                 <div class="col-sm-12">
@@ -123,5 +124,11 @@
         kalmamış, aynı zamanda pek değişmeden elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da
         içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus PageMaker gibi Lorem Ipsum sürümleri
         içeren masaüstü yayıncılık yazılımları ile popüler olmuştur.</p>
-    <acshb-form submitText="Formu Gönder" [formElements]="formElements" (submitCallback)="onSubmit($event)"></acshb-form>
+    <acshb-form submitText="Formu Gönder" [formElements]="formElements" (submitCallback)="onSubmit($event)">
+    </acshb-form>
+    <ng-table [config]="config" (tableChanged)="onChangeTable(config)" (cellClicked)="onCellClick($event)" [rows]="rows" [columns]="columns">
+    </ng-table>
+    <pagination *ngIf="config.paging" class="pagination-sm" (numPages)="numPages = $event" (pageChanged)="onChangeTable(config, $event)" [totalItems]="length" [itemsPerPage]="itemsPerPage" [maxSize]="maxSize" [totalItems]="rows.length" [boundaryLinks]="true"
+    [rotate]="false" previousText="&lsaquo;" nextText="&rsaquo;"
+        firstText="&laquo;" lastText="&raquo;"></pagination>
 </acshb-wrapper>

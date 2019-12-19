@@ -8,6 +8,8 @@ import { AlertModule } from '../../../acshb-common/src/lib/alert/alert.module';
 import { ModalModule } from '../../../acshb-common/src/lib/modal/modal.module';
 import { FormModule } from '../../../acshb-common/src/lib/form/form.module';
 import { TestViewComponent } from './test-view/test-view.component';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { Ng2TableModule } from 'ng2-table/ng2-table';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { TestViewComponent } from './test-view/test-view.component';
     ComponentsModule,
     ModalModule,
     AlertModule.forRoot(),
-    FormModule
+    FormModule,
+    PaginationModule.forRoot(),
+    Ng2TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
