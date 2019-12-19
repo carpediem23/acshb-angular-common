@@ -7,6 +7,7 @@ import { ComponentsModule } from '../../../acshb-common/src/lib/components/compo
 import { AlertModule } from '../../../acshb-common/src/lib/alert/alert.module';
 import { ModalModule } from '../../../acshb-common/src/lib/modal/modal.module';
 import { FormModule } from '../../../acshb-common/src/lib/form/form.module';
+import { DatatableModule } from '../../../acshb-common/src/lib/datatable/datatable.module';
 import { TestViewComponent } from './test-view/test-view.component';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { Ng2TableModule } from 'ng2-table/ng2-table';
@@ -19,13 +20,14 @@ import { Ng2TableModule } from 'ng2-table/ng2-table';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    PaginationModule.forRoot(),
+    Ng2TableModule,
     LayoutModule,
     ComponentsModule,
     ModalModule,
     AlertModule.forRoot(),
     FormModule,
-    PaginationModule.forRoot(),
-    Ng2TableModule
+    DatatableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
