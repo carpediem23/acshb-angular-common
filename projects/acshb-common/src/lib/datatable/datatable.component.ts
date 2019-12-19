@@ -27,10 +27,12 @@ export class DatatableComponent implements OnInit, OnChanges {
    }
 
   ngOnInit() {
+    this.config.sorting = {columns: this.columns};
     this.onChangeTable(this.config);
   }
 
   ngOnChanges(changes: SimpleChanges) {
+    this.config.sorting = {columns: this.columns};
     this.onChangeTable(this.config);
   }
 
@@ -46,8 +48,8 @@ export class DatatableComponent implements OnInit, OnChanges {
     }
 
     const columns = this.config.sorting.columns || [];
-    let columnName = void 0;
-    let sort = void 0;
+    let columnName;
+    let sort;
 
     for (const col of columns) {
       if (col.sort !== '' && col.sort !== false) {

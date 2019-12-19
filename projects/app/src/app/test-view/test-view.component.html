@@ -215,9 +215,9 @@
       { name: 'Osman', position: 'Pozisyon B', office: 'Ofis 2' }
     ]"
     [columns]="[
-      { title: 'Name', name: 'name' },
-      { title: 'Position', name: 'position', sort: true },
-      { title: 'Office', name: 'office', sort: 'asc' }
+      { title: 'Name', name: 'name', filtering: {filterString: '', placeholder: 'Filter by position'}, sort: 'asc' },
+      { title: 'Position', name: 'position' },
+      { title: 'Office', name: 'office' }
     ]"
     [itemsPerPage]="3"
   ></acshb-datatable>
