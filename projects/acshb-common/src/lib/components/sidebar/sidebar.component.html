@@ -1,0 +1,28 @@
+<div class="acshb-sidebar border-right bg-white">
+    <ul class="p-0 list-group list-unstyled">
+        <li *ngFor="let item of items" class="acshb-sidebar-item list-group-item px-3 pt-3 text-center"
+            [ngClass]="{activeLink: item.url === activePath}" (click)="onLinkClicked($event, item)">
+            <a *ngIf="!item.children" class="acshb-sidebar-link text-dark" data-toggle="collapse" href="/">
+                <h3 class="font-weight-light">
+                    <acshb-icon [icon]="item.icon"></acshb-icon>
+                </h3>
+                <h6 class="font-weight-light">{{item.title}}</h6>
+            </a>
+            <div *ngIf="item.children" class="acshb-sidebar-link">
+                <h3 *ngIf="item.icon" class="font-weight-light">
+                    <acshb-icon [icon]="item.icon"></acshb-icon>
+                </h3>
+                <h6 class="font-weight-light">{{item.title}}</h6>
+                <acshb-icon icon="faChevronDown"></acshb-icon>
+            </div>
+            <ul *ngIf="item.children" class="collapse list-unstyled bg-light mx-n3 p-0">
+                <li *ngFor="let child of item.children"
+                    class="acshb-sidebar-item acshb-sidebar-sub-item p-3 text-center">
+                    <a class="acshb-sidebar-link text-dark" href="/none">
+                        <h6 class="font-weight-light">{{child.title}}</h6>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

@@ -284,6 +284,38 @@
 }
 // ACSHB-TOOLBAR END
 
+// ACSHB-SIDEBAR START
+.acshb-sidebar {
+  position: relative;
+  min-width: 120px;
+  min-height: 100vh;
+  transition: $transition-base;
+
+  .activeLink {
+    .acshb-sidebar-link {
+      color: theme-color("primary") !important;
+
+      h3, h6 {
+        color: theme-color("priamry") !important;
+
+        svg {
+          stroke: theme-color("primary") !important;
+          color: theme-color("primary") !important;
+        }
+      }
+    }
+  }
+
+  .acshb-sidebar-item {
+    cursor: pointer;
+
+    .acshb-sidebar-link {
+      text-decoration: none;
+    }
+  }
+}
+// ACSHB-SIDEBAR END
+
 // ACSHB-MODAL START
 .acshb-modal {
     background-color: rgba($black, .5);

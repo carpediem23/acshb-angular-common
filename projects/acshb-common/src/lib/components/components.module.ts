@@ -7,13 +7,14 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { FrameComponent } from './frame/frame.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { LoaderComponent } from './loader/loader.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FontAwesomeModule
   ],
-  declarations: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent],
-  exports: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent]
+  declarations: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent, SidebarComponent],
+  exports: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent, SidebarComponent]
 })
 export class ComponentsModule { }
