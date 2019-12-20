@@ -5,6 +5,13 @@
     logoUrl="assets/img/armali-logo-tr.svg"
     (menuToggleCallback)="onMenuToggle()"
   ></acshb-toolbar>
+  <acshb-sidebar [items]="[
+    {id: 0, name: 'link0', title: 'Link 1', url: '/', icon: 'faHome'},
+    {id: 1, name: 'link1', title: 'Link 2', url: '/link1', icon: 'faHome'},
+    {id: 1, name: 'link1', title: 'Link 2', url: '/link2', icon: 'faHome', children: [
+      {id: 11, name: 'link11', title: 'Link 2.1', url: '/link21'}
+    ]}
+  ]" activePath="/"></acshb-sidebar>
   <acshb-icon icon="faAdjust" color="#000"></acshb-icon>
   <acshb-button className="btn btn-primary" (clicked)="onModalOpen()"
     >Modal Aç</acshb-button

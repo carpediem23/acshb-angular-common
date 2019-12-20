@@ -15,6 +15,9 @@ export class SidebarComponent implements OnInit {
   }
 
   onLinkClicked(e, item) {
+    e.stopPropagation();
+    e.preventDefault();
+
     if (item.children) {
       // çocukları olan link tıklandı state değiştir
       const element = e.currentTarget.querySelector('ul');
@@ -29,5 +32,10 @@ export class SidebarComponent implements OnInit {
     } else {
       // note: link tıklandı dışarı fırlat
     }
+  }
+
+  onTest(e) {
+    e.stopPropagation();
+    e.preventDefault();
   }
 }

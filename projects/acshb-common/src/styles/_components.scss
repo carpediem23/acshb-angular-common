@@ -304,6 +304,11 @@
         }
       }
     }
+
+    svg {
+      stroke: theme-color("primary") !important;
+      color: theme-color("primary") !important;
+    }
   }
 
   .acshb-sidebar-item {
