@@ -15,7 +15,7 @@
                 <h6 class="font-weight-light">{{item.title}}</h6>
                 <acshb-icon icon="faChevronDown"></acshb-icon>
             </div>
-            <ul *ngIf="item.children" class="collapse list-unstyled bg-light mx-n3 p-0" (click)="onTest($event)">
+            <ul *ngIf="item.children" class="collapse list-unstyled bg-light mx-n3 p-0">
                 <li *ngFor="let child of item.children"
                     class="acshb-sidebar-item acshb-sidebar-sub-item p-3 text-center">
                     <a class="acshb-sidebar-link text-dark" [href]="child.url">

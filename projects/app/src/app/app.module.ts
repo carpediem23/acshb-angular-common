@@ -12,15 +12,27 @@ import { TestViewComponent } from './test-view/test-view.component';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { Ng2TableModule } from 'ng2-table/ng2-table';
 import { SidebarService } from './services/sidebar.service';
+import { HomePageComponent } from './home-page/home-page.component';
+import { ComponentsPageComponent } from './components-page/components-page.component';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './routes/routes';
+import { ButtonsViewComponent } from './components-page/buttons-view/buttons-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestViewComponent
+    TestViewComponent,
+    HomePageComponent,
+    ComponentsPageComponent,
+    ButtonsViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true }
+    ),
     PaginationModule.forRoot(),
     Ng2TableModule,
     LayoutModule,

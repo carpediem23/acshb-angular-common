@@ -8,7 +8,44 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <div class="app">
-    <app-test-view></app-test-view>
+  <acshb-wrapper>
+    <acshb-toolbar
+      fullname="Alptuğ Türkiş"
+      title="T.C. Aile, Çalışma ve Sosyal Hizmetler Bakanlığı"
+      logoUrl="assets/img/armali-logo-tr.svg"
+      (menuToggleCallback)="onMenuToggle()"
+    ></acshb-toolbar>
+    <div class="d-flex">
+      <acshb-sidebar
+        [items]="[
+          {
+            id: 0,
+            name: 'link0',
+            title: 'Ana Sayfa',
+            url: '/',
+            icon: 'faHome'
+          },
+          { id: 1, name: 'link1', title: 'Test', url: '/test', icon: 'faVial' },
+          {
+            id: 1,
+            name: 'link1',
+            title: 'Komponentler',
+            url: '/components',
+            icon: 'faBezierCurve',
+            children: [
+              { id: 11, name: 'link11', title: 'Button', url: '/components/buttons' }
+            ]
+          }
+        ]"
+        activePath="/"
+        [open]="sidebarToggled"
+        (linkClickedEvent)="onSidebarLinkClicked($event)"
+      ></acshb-sidebar>
+      <div class="p-4 w-100">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </acshb-wrapper>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -18,7 +55,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-
-<router-outlet></router-outlet>

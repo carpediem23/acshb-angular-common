@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'acshb-sidebar',
@@ -9,6 +9,7 @@ export class SidebarComponent implements OnInit {
   @Input() items;
   @Input() activePath;
   @Input() open;
+  @Output() linkClickedEvent: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
@@ -32,10 +33,13 @@ export class SidebarComponent implements OnInit {
 
     } else {
       // note: link tıklandı dışarı fırlat
+      if (this.linkClickedEvent) {
+        this.linkClickedEvent.emit(item);
+      }
     }
   }
 
-  onTest(e) {
+  onChildClicked(e) {
     e.stopPropagation();
     e.preventDefault();
   }
