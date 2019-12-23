@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlertService } from 'projects/acshb-common/src/lib/alert/services/alert.service';
 import { FormElement, FormElementTypes } from 'projects/acshb-common/src/lib/form/models/form.model';
 import { SidebarService } from './services/sidebar.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,51 +10,71 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  modalOpen = false;
-  formElements: FormElement[];
-  sidebarToggled = true;
-  activeRouteUrl = '/';
+  modalOpen;
+  formElements;
+  sidebarToggled;
+  routes;
 
   constructor(
     private alertService: AlertService,
     private sidebarService: SidebarService,
-    private route: ActivatedRoute,
     private router: Router
-    ) {}
+    ) {
+        this.modalOpen = false;
+        this.formElements = [
+          new FormElement({
+            name: 'name',
+            type: FormElementTypes.Text,
+            required: true,
+            minLength: 5,
+            maxLength: 10,
+            pattern: '[a-zA-Z ]*'
+          }),
+          new FormElement({ name: 'age', type: FormElementTypes.Number, min: 5, max: 10 }),
+          new FormElement({ name: 'tckn', type: FormElementTypes.Tckn, required: true }),
+          new FormElement({
+            name: 'secim', type: FormElementTypes.Select, data: [
+              { id: 0, label: 'Seçenek 1' },
+              { id: 1, label: 'Seçenek 2' }
+            ], required: true
+          }),
+          new FormElement({
+            name: 'coklusecim', type: FormElementTypes.MultiSelect, data: [
+              { id: 0, label: 'Seçenek 1' },
+              { id: 1, label: 'Seçenek 2' },
+              { id: 2, label: 'Seçenek 3' }
+            ], required: true
+          }),
+          new FormElement({ name: 'date', type: FormElementTypes.Date, required: true }),
+          new FormElement({ name: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla' })
+        ];
+        this.sidebarToggled = true;
+        this.routes = [
+          {
+            id: 0,
+            name: 'home',
+            title: 'Ana Sayfa',
+            url: '/',
+            icon: 'faHome'
+          },
+          { id: 1, name: 'test', title: 'Test', url: '/test', icon: 'faVial' },
+          {
+            id: 1,
+            name: 'link1',
+            title: 'Komponentler',
+            url: '/components',
+            icon: 'faBezierCurve',
+            children: [
+              { id: 11, name: 'buttons', title: 'Buttons', url: '/components/buttons' }
+            ]
+          }
+        ];
+    }
 
-  ngOnInit() {
-    this.formElements = [
-      new FormElement({
-        name: 'name',
-        type: FormElementTypes.Text,
-        required: true,
-        minLength: 5,
-        maxLength: 10,
-        pattern: '[a-zA-Z ]*'
-      }),
-      new FormElement({ name: 'age', type: FormElementTypes.Number, min: 5, max: 10 }),
-      new FormElement({ name: 'tckn', type: FormElementTypes.Tckn, required: true }),
-      new FormElement({
-        name: 'secim', type: FormElementTypes.Select, data: [
-          { id: 0, label: 'Seçenek 1' },
-          { id: 1, label: 'Seçenek 2' }
-        ], required: true
-      }),
-      new FormElement({
-        name: 'coklusecim', type: FormElementTypes.MultiSelect, data: [
-          { id: 0, label: 'Seçenek 1' },
-          { id: 1, label: 'Seçenek 2' },
-          { id: 2, label: 'Seçenek 3' }
-        ], required: true
-      }),
-      new FormElement({ name: 'date', type: FormElementTypes.Date, required: true }),
-      new FormElement({ name: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla' })
-    ];
-  }
+  ngOnInit() {}
 
   onSidebarLinkClicked(link) {
     this.router.navigate([link.url]);
-    this.activeRouteUrl = this.router.url;
   }
 
   onSubmit(form) {

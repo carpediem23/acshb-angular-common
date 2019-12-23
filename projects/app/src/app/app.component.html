@@ -17,26 +17,7 @@
     ></acshb-toolbar>
     <div class="d-flex">
       <acshb-sidebar
-        [items]="[
-          {
-            id: 0,
-            name: 'link0',
-            title: 'Ana Sayfa',
-            url: '/',
-            icon: 'faHome'
-          },
-          { id: 1, name: 'link1', title: 'Test', url: '/test', icon: 'faVial' },
-          {
-            id: 1,
-            name: 'link1',
-            title: 'Komponentler',
-            url: '/components',
-            icon: 'faBezierCurve',
-            children: [
-              { id: 11, name: 'link11', title: 'Button', url: '/components/buttons' }
-            ]
-          }
-        ]"
+        [items]="routes"
         [open]="sidebarToggled"
         (linkClickedEvent)="onSidebarLinkClicked($event)"
       ></acshb-sidebar>

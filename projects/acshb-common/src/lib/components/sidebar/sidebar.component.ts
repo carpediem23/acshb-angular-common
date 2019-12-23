@@ -9,9 +9,9 @@ export class SidebarComponent implements OnInit {
   @Input() items;
   @Input() open;
   @Output() linkClickedEvent: EventEmitter<any> = new EventEmitter();
-  activePath = '/';
+  activePath = window.location.pathname;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }
