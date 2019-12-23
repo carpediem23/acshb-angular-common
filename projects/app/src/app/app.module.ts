@@ -11,6 +11,7 @@ import { DatatableModule } from '../../../acshb-common/src/lib/datatable/datatab
 import { TestViewComponent } from './test-view/test-view.component';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { Ng2TableModule } from 'ng2-table/ng2-table';
+import { SidebarService } from './services/sidebar.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { Ng2TableModule } from 'ng2-table/ng2-table';
     FormModule,
     DatatableModule
   ],
-  providers: [],
+  providers: [SidebarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

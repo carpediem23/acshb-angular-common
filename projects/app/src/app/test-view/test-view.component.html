@@ -3,12 +3,12 @@
     logoUrl="assets/img/armali-logo-tr.svg" (menuToggleCallback)="onMenuToggle()"></acshb-toolbar>
   <div class="d-flex">
     <acshb-sidebar [items]="[
-    {id: 0, name: 'link0', title: 'Link 1', url: '/', icon: 'faHome'},
-    {id: 1, name: 'link1', title: 'Link 2', url: '/link1', icon: 'faPhone'},
-    {id: 1, name: 'link1', title: 'Link 2', url: '/link2', icon: 'faPlus', children: [
-      {id: 11, name: 'link11', title: 'Link 2.1', url: '/link21'}
+    {id: 0, name: 'link0', title: 'Ana Sayfa', url: '/', icon: 'faHome'},
+    {id: 1, name: 'link1', title: 'Test', url: '/test', icon: 'faVial'},
+    {id: 1, name: 'link1', title: 'Komponentler', url: '/components', icon: 'faBezierCurve', children: [
+      {id: 11, name: 'link11', title: 'Button', url: '/button'}
     ]}
-  ]" activePath="/"></acshb-sidebar>
+  ]" activePath="/" [open]="sidebarToggled"></acshb-sidebar>
     <div class="p-4">
       <acshb-icon icon="faAdjust" color="#000"></acshb-icon>
       <acshb-button className="btn btn-primary" (clicked)="onModalOpen()">Modal Aç</acshb-button>

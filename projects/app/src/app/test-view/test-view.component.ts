@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AlertService } from 'projects/acshb-common/src/lib/alert/services/alert.service';
 import { FormElement, FormElementTypes } from 'projects/acshb-common/src/lib/form/models/form.model';
+import { SidebarService } from '../services/sidebar.service';
 
 @Component({
   selector: 'app-test-view',
@@ -11,8 +12,9 @@ import { FormElement, FormElementTypes } from 'projects/acshb-common/src/lib/for
 export class TestViewComponent implements OnInit {
   modalOpen = false;
   formElements: FormElement[];
+  sidebarToggled = true;
 
-  constructor(private alertService: AlertService) {}
+  constructor(private alertService: AlertService, private sidebarService: SidebarService) {}
 
   ngOnInit() {
     this.formElements = [
@@ -69,6 +71,8 @@ export class TestViewComponent implements OnInit {
   }
 
   onMenuToggle() {
+    this.sidebarToggled = !this.sidebarService.open;
+    this.sidebarService.toggleSidebar(this.sidebarToggled);
     console.log('menu toggled');
   }
 
