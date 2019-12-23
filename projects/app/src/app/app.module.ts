@@ -29,10 +29,7 @@ import { ButtonsViewComponent } from './components-page/buttons-view/buttons-vie
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true }
-    ),
+    RouterModule.forRoot(appRoutes),
     PaginationModule.forRoot(),
     Ng2TableModule,
     LayoutModule,

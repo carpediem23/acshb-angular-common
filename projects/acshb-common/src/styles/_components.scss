@@ -294,6 +294,8 @@
   transition: $transition-base;
 
   .activeLink {
+    border-left: 3px solid theme-color("primary");
+
     .acshb-sidebar-link {
       color: theme-color("primary") !important;
 

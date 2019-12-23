@@ -17,7 +17,9 @@
             </div>
             <ul *ngIf="item.children" class="collapse list-unstyled bg-light mx-n3 p-0">
                 <li *ngFor="let child of item.children"
-                    class="acshb-sidebar-item acshb-sidebar-sub-item p-3 text-center">
+                    (click)="onSubLinkClicked($event, child)"
+                    class="acshb-sidebar-item acshb-sidebar-sub-item p-3 text-center"
+                    [ngClass]="{activeLink: child.url === activePath}">
                     <a class="acshb-sidebar-link text-dark" [href]="child.url">
                         <h6 class="font-weight-light">{{child.title}}</h6>
                     </a>

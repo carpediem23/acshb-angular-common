@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   modalOpen = false;
   formElements: FormElement[];
   sidebarToggled = true;
+  activeRouteUrl = '/';
 
   constructor(
     private alertService: AlertService,
@@ -49,14 +50,11 @@ export class AppComponent implements OnInit {
       new FormElement({ name: 'date', type: FormElementTypes.Date, required: true }),
       new FormElement({ name: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla' })
     ];
-
-    console.log(this);
-
   }
 
   onSidebarLinkClicked(link) {
-    this.router.navigate(link.url);
-    console.log(link);
+    this.router.navigate([link.url]);
+    this.activeRouteUrl = this.router.url;
   }
 
   onSubmit(form) {

@@ -7,9 +7,9 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   @Input() items;
-  @Input() activePath;
   @Input() open;
   @Output() linkClickedEvent: EventEmitter<any> = new EventEmitter();
+  activePath = '/';
 
   constructor() { }
 
@@ -21,7 +21,6 @@ export class SidebarComponent implements OnInit {
     e.preventDefault();
 
     if (item.children) {
-      // çocukları olan link tıklandı state değiştir
       const element = e.currentTarget.querySelector('ul');
       const collapsed = !element.classList.contains('show');
 
@@ -32,10 +31,20 @@ export class SidebarComponent implements OnInit {
       }
 
     } else {
-      // note: link tıklandı dışarı fırlat
       if (this.linkClickedEvent) {
+        this.activePath = item.url;
         this.linkClickedEvent.emit(item);
       }
+    }
+  }
+
+  onSubLinkClicked(e, item) {
+    e.stopPropagation();
+    e.preventDefault();
+
+    if (this.linkClickedEvent) {
+      this.activePath = item.url;
+      this.linkClickedEvent.emit(item);
     }
   }
 
