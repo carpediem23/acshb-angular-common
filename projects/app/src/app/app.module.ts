@@ -17,6 +17,7 @@ import { ComponentsPageComponent } from './components-page/components-page.compo
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes/routes';
 import { ButtonsViewComponent } from './components-page/buttons-view/buttons-view.component';
+import { IconsViewComponent } from './components-page/icons-view/icons-view.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ButtonsViewComponent } from './components-page/buttons-view/buttons-vie
     TestViewComponent,
     HomePageComponent,
     ComponentsPageComponent,
-    ButtonsViewComponent
+    ButtonsViewComponent,
+    IconsViewComponent
   ],
   imports: [
     BrowserModule,

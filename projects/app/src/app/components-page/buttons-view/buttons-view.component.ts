@@ -1,16 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-buttons-view',
   templateUrl: './buttons-view.component.html',
   styleUrls: ['./buttons-view.component.scss']
 })
-export class ButtonsViewComponent implements OnInit {
-
+export class ButtonsViewComponent {
   constructor() { }
-
-  ngOnInit() {
-  }
 
   onClicked(e: MouseEvent) {
     console.log(e);
