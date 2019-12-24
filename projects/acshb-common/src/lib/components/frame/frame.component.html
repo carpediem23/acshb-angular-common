@@ -8,12 +8,12 @@
                 </span>
                 <span>{{this.title}}</span>
             </h6>
-            <a href="/" role="button" aria-label="Paneli Aç / Kapat" (click)="onToggleClick($event)">
+            <a *ngIf="collapsable" href="/" role="button" aria-label="Paneli Aç / Kapat" (click)="onToggleClick($event)">
                 <acshb-icon [icon]="toggle ? iconTypes.Up : iconTypes.Down"></acshb-icon>
             </a>
         </div>
     </div>
-    <div class="acshb-card-body card-body" [ngClass]="{'acshb-frame-toggled': toggle}">
+    <div class="acshb-card-body card-body" [ngClass]="{'acshb-frame-toggled': (collapsable ? toggle : false)}">
         <acshb-loader *ngIf="loading"></acshb-loader>
         <ng-content></ng-content>
     </div>

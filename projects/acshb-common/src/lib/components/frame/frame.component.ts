@@ -11,6 +11,7 @@ export class FrameComponent {
   @Input() icon: string;
   @Input() loading: boolean;
   @Input() bordered: boolean;
+  @Input() collapsable: boolean;
   iconTypes: any = IconTypes;
   toggle: any = false;
 
