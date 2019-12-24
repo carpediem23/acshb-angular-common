@@ -1,98 +1,105 @@
 <form role="form" *ngIf="formElements.length > 0" [formGroup]="formGroup" (ngSubmit)="onSubmit($event, formGroup)">
-    <div class="form-group" *ngFor="let element of formElements" [ngSwitch]="element.type"
-        [ngClass]="{'form-check': element.type === 'checkbox'}">
-        <div *ngSwitchCase="'text'">
-            <label [attr.for]="element.name">{{element.label}}</label>
-            <input class="form-control" [id]="element.name" [name]="element.name" [type]="element.type"
-                [pattern]="element.pattern" [formControlName]="element.name" [required]="element.required"
-                [minlength]="element.minLength" [maxlength]=element.maxLength />
-            <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
-                class="alert alert-danger">
-                <div *ngIf="formGroup.controls[element.name].errors['required']">
-                    Bu alan gereklidir.
-                </div>
-                <div *ngIf="formGroup.controls[element.name].errors['minlength']">
-                    En az {{element.minLength}} karakter olabilir.
-                </div>
-                <div *ngIf="formGroup.controls[element.name].errors['maxlength']">
-                    En fazla {{element.maxLength}} karakter olabilir.
-                </div>
-                <div *ngIf="formGroup.controls[element.name].errors['pattern']">
-                    Girilen bilgi yanlızca harflerden oluşabilir.
-                </div>
-            </div>
-        </div>
-        <div *ngSwitchCase="'tckn'">
-            <label [attr.for]="element.name">{{element.label}}</label>
-            <input acshbNumber class="form-control" [id]="element.name" [name]="element.name" [type]="element.type"
-                [formControlName]="element.name" [required]="element.required" />
-            <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
-                class="alert alert-danger">
-                <div *ngIf="formGroup.controls[element.name].errors['required']">
-                    Bu alan gereklidir.
-                </div>
-                <div *ngIf="formGroup.controls[element.name].errors['tckn']">
-                    Giridğiniz Tc Kimlik Numarası doğru değildir.
+    <div class="form-row">
+        <div *ngFor="let element of formElements" [ngSwitch]="element.type"
+            [class]="element.type === 'checkbox' ? '' : 'col-md-' + element.col"
+            [ngClass]="{'form-check': element.type === 'checkbox', 'form-group': true}">
+            <div *ngSwitchCase="'text'">
+                <label [attr.for]="element.name">{{element.label}}</label>
+                <input class="form-control" [id]="element.name" [name]="element.name" [type]="element.type"
+                    [pattern]="element.pattern" [formControlName]="element.name" [required]="element.required"
+                    [minlength]="element.minLength" [maxlength]=element.maxLength [placeholder]="element.placeholder" />
+                <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="formGroup.controls[element.name].errors['required']">
+                        Bu alan gereklidir.
+                    </div>
+                    <div *ngIf="formGroup.controls[element.name].errors['minlength']">
+                        En az {{element.minLength}} karakter olabilir.
+                    </div>
+                    <div *ngIf="formGroup.controls[element.name].errors['maxlength']">
+                        En fazla {{element.maxLength}} karakter olabilir.
+                    </div>
+                    <div *ngIf="formGroup.controls[element.name].errors['pattern']">
+                        Girilen bilgi yanlızca harflerden oluşabilir.
+                    </div>
                 </div>
             </div>
-        </div>
-        <div *ngSwitchCase="'number'">
-            <label [attr.for]="element.name">{{element.label}}</label>
-            <input style="text-transform: uppercase;" class="form-control" [formControlName]="element.name"
-                [id]="element.name" [name]="element.name" [type]="element.type" [required]="element.required"
-                [min]="element.min" [max]="element.max" />
-            <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
-                class="alert alert-danger">
-                <div *ngIf="formGroup.controls[element.name].errors['required']">
-                    Bu alan gereklidir.
-                </div>
-                <div *ngIf="formGroup.controls[element.name].errors['min']">
-                    En az {{element.min ? element.min : 0}} olmalıdır.
-                </div>
-                <div *ngIf="formGroup.controls[element.name].errors['max']">
-                    En fazla {{element.max}} den büyük olmalıdır.
+            <div *ngSwitchCase="'tckn'">
+                <label [attr.for]="element.name">{{element.label}}</label>
+                <input acshbNumber class="form-control" [id]="element.name" [name]="element.name" [type]="element.type"
+                    [formControlName]="element.name" [required]="element.required"
+                    [placeholder]="element.placeholder" />
+                <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="formGroup.controls[element.name].errors['required']">
+                        Bu alan gereklidir.
+                    </div>
+                    <div *ngIf="formGroup.controls[element.name].errors['tckn']">
+                        Giridğiniz Tc Kimlik Numarası doğru değildir.
+                    </div>
                 </div>
             </div>
-        </div>
-        <div *ngSwitchCase="'checkbox'">
-            <input class="form-check-input" [id]="element.name" [name]="element.name" type="checkbox"
-                [formControlName]="element.name" />
-            <label class="form-check-label" [attr.for]="element.name">{{element.label}}</label>
+            <div *ngSwitchCase="'number'">
+                <label [attr.for]="element.name">{{element.label}}</label>
+                <input class="form-control" [formControlName]="element.name" [id]="element.name" [name]="element.name"
+                    type="number" [required]="element.required" [min]="element.min" [max]="element.max"
+                    [placeholder]="element.placeholder" />
+                <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="formGroup.controls[element.name].errors['required']">
+                        Bu alan gereklidir.
+                    </div>
+                    <div *ngIf="formGroup.controls[element.name].errors['min']">
+                        En az {{element.min ? element.min : 0}} olmalıdır.
+                    </div>
+                    <div *ngIf="formGroup.controls[element.name].errors['max']">
+                        En fazla {{element.max}} olmalıdır.
+                    </div>
+                </div>
+            </div>
+            <div *ngSwitchCase="'checkbox'">
+                <input class="form-check-input" [id]="element.name" [name]="element.name" type="checkbox"
+                    [formControlName]="element.name" />
+                <label class="form-check-label" [attr.for]="element.name">{{element.label}}</label>
 
-        </div>
-        <div *ngSwitchCase="'select'">
-            <label [attr.for]="element.name">{{element.label}}</label>
-            <ng-select appearance="outline" class="acshb-select" [formControlName]="element.name" [items]="element.data"
-                [placeholder]="element.name + ' seçiniz' | titlecase" [labelForId]="element.name">
-            </ng-select>
-            <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
-                class="alert alert-danger">
-                <div *ngIf="formGroup.controls[element.name].errors['required']">
-                    Bu alan gereklidir.
+            </div>
+            <div *ngSwitchCase="'select'">
+                <label [attr.for]="element.name">{{element.label}}</label>
+                <ng-select appearance="outline" class="acshb-select" [formControlName]="element.name"
+                    [items]="element.data"
+                    [placeholder]="element.placeholder ? element.placeholder : (element.name + ' seçiniz' | titlecase)"
+                    [labelForId]="element.name">
+                </ng-select>
+                <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="formGroup.controls[element.name].errors['required']">
+                        Bu alan gereklidir.
+                    </div>
                 </div>
             </div>
-        </div>
-        <div *ngSwitchCase="'multiselect'">
-            <label [attr.for]="element.name">{{element.label}}</label>
-            <ng-select class="acshb-multiselect" [multiple]="true" [closeOnSelect]="false"
-                [formControlName]="element.name" [items]="element.data"
-                [placeholder]="element.name + ' seçiniz' | titlecase" [labelForId]="element.name">
-            </ng-select>
-            <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
-                class="alert alert-danger">
-                <div *ngIf="formGroup.controls[element.name].errors['required']">
-                    Bu alan gereklidir.
+            <div *ngSwitchCase="'multiselect'">
+                <label [attr.for]="element.name">{{element.label}}</label>
+                <ng-select class="acshb-multiselect" [multiple]="true" [closeOnSelect]="false"
+                    [formControlName]="element.name" [items]="element.data"
+                    [placeholder]="element.placeholder ? element.placeholder : (element.name + ' seçiniz' | titlecase)"
+                    [labelForId]="element.name">
+                </ng-select>
+                <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="formGroup.controls[element.name].errors['required']">
+                        Bu alan gereklidir.
+                    </div>
                 </div>
             </div>
-        </div>
-        <div *ngSwitchCase="'date'">
-            <label [attr.for]="element.name">{{element.label}}</label>
-            <input class="form-control" [id]="element.name" [name]="element.name" [type]="element.type"
-             [formControlName]="element.name" [required]="element.required" />
-            <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
-                class="alert alert-danger">
-                <div *ngIf="formGroup.controls[element.name].errors['required']">
-                    Bu alan gereklidir.
+            <div *ngSwitchCase="'date'">
+                <label [attr.for]="element.name">{{element.label}}</label>
+                <input class="form-control" [id]="element.name" [name]="element.name" [type]="element.type"
+                    [formControlName]="element.name" [required]="element.required" />
+                <div *ngIf="formGroup.controls[element.name].errors && formGroup.controls[element.name].invalid && (formGroup.controls[element.name].dirty || formGroup.controls[element.name].touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="formGroup.controls[element.name].errors['required']">
+                        Bu alan gereklidir.
+                    </div>
                 </div>
             </div>
         </div>

@@ -12,6 +12,7 @@ export class FormElement implements IFormElement {
     isTckn?: boolean;
     data?: Array<any>;
     col?: number;
+    placeholder?: string;
 
     constructor(options: {
         name: string,
@@ -26,7 +27,8 @@ export class FormElement implements IFormElement {
         pattern?: string,
         isTckn?: boolean,
         data?: Array<any>,
-        col?: number
+        col?: number,
+        placeholder?: string;
     }) {
         this.name = options.name || '';
         this.type = options.type || FormElementTypes.Text;
@@ -40,6 +42,7 @@ export class FormElement implements IFormElement {
         this.isTckn = options.isTckn || undefined;
         this.data = options.data || undefined;
         this.col = options.col || 12;
+        this.placeholder = options.placeholder || undefined;
 
         switch (options.type || FormElementTypes.Text) {
             case FormElementTypes.Text:
@@ -82,6 +85,7 @@ export interface IFormElement {
     isTckn?: boolean;
     data?: Array<any>;
     col?: number;
+    placeholder?: string;
 }
 
 export enum FormElementTypes {
