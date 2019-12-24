@@ -66,7 +66,8 @@ export class AppComponent implements OnInit {
             icon: 'faBezierCurve',
             children: [
               { id: 11, name: 'buttons', title: 'Buttons', url: '/components/buttons' },
-              { id: 12, name: 'frames', title: 'Frames', url: '/components/frames' }
+              { id: 12, name: 'frames', title: 'Frames', url: '/components/frames' },
+              { id: 13, name: 'icons', title: 'Icons', url: '/components/icons' }
             ]
           }
         ];

@@ -11,6 +11,7 @@ export class IconComponent implements OnInit, OnChanges {
   @Input() color: string;
   @Input() spin: boolean;
   @Input() class: string;
+  @Input() size: string;
   selectedIcon: string;
   selectedColor: object;
 
