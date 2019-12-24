@@ -21,6 +21,7 @@ import { IconsViewComponent } from './components-page/icons-view/icons-view.comp
 import { FramesViewComponent } from './components-page/frames-view/frames-view.component';
 import { AccordionsViewComponent } from './components-page/accordions-view/accordions-view.component';
 import { DropdownsViewComponent } from './components-page/dropdowns-view/dropdowns-view.component';
+import { AlertsViewComponent } from './components-page/alerts-view/alerts-view.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DropdownsViewComponent } from './components-page/dropdowns-view/dropdow
     IconsViewComponent,
     FramesViewComponent,
     AccordionsViewComponent,
-    DropdownsViewComponent
+    DropdownsViewComponent,
+    AlertsViewComponent
   ],
   imports: [
     BrowserModule,

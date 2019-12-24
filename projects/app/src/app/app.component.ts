@@ -69,7 +69,8 @@ export class AppComponent implements OnInit {
               { id: 12, name: 'frames', title: 'Frames', url: '/components/frames' },
               { id: 13, name: 'icons', title: 'Icons', url: '/components/icons' },
               { id: 14, name: 'accordions', title: 'Accordions', url: '/components/accordions' },
-              { id: 15, name: 'dropdowns', title: 'Dropdowns', url: '/components/dropdowns' }
+              { id: 15, name: 'dropdowns', title: 'Dropdowns', url: '/components/dropdowns' },
+              { id: 16, name: 'alerts', title: 'Alerts', url: '/components/alerts' }
             ]
           }
         ];
