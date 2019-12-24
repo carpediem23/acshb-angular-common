@@ -7,6 +7,7 @@ import { IconsViewComponent } from '../components-page/icons-view/icons-view.com
 import { AccordionsViewComponent } from '../components-page/accordions-view/accordions-view.component';
 import { DropdownsViewComponent } from '../components-page/dropdowns-view/dropdowns-view.component';
 import { AlertsViewComponent } from '../components-page/alerts-view/alerts-view.component';
+import { ModalsViewComponent } from '../components-page/modals-view/modals-view.component';
 
 export const appRoutes: Routes = [
     {path: '', component: HomePageComponent},
@@ -16,5 +17,6 @@ export const appRoutes: Routes = [
     {path: 'components/icons', component: IconsViewComponent},
     {path: 'components/accordions', component: AccordionsViewComponent},
     {path: 'components/dropdowns', component: DropdownsViewComponent},
-    {path: 'components/alerts', component: AlertsViewComponent}
+    {path: 'components/alerts', component: AlertsViewComponent},
+    {path: 'components/modals', component: ModalsViewComponent}
 ];

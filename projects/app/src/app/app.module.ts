@@ -22,6 +22,7 @@ import { FramesViewComponent } from './components-page/frames-view/frames-view.c
 import { AccordionsViewComponent } from './components-page/accordions-view/accordions-view.component';
 import { DropdownsViewComponent } from './components-page/dropdowns-view/dropdowns-view.component';
 import { AlertsViewComponent } from './components-page/alerts-view/alerts-view.component';
+import { ModalsViewComponent } from './components-page/modals-view/modals-view.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AlertsViewComponent } from './components-page/alerts-view/alerts-view.c
     FramesViewComponent,
     AccordionsViewComponent,
     DropdownsViewComponent,
-    AlertsViewComponent
+    AlertsViewComponent,
+    ModalsViewComponent
   ],
   imports: [
     BrowserModule,
