@@ -67,7 +67,8 @@ export class AppComponent implements OnInit {
             children: [
               { id: 11, name: 'buttons', title: 'Buttons', url: '/components/buttons' },
               { id: 12, name: 'frames', title: 'Frames', url: '/components/frames' },
-              { id: 13, name: 'icons', title: 'Icons', url: '/components/icons' }
+              { id: 13, name: 'icons', title: 'Icons', url: '/components/icons' },
+              { id: 14, name: 'accordions', title: 'Accordions', url: '/components/accordions' }
             ]
           }
         ];

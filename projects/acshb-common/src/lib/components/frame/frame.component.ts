@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { IconTypes } from '../../enums/icon-types.enum';
 
 @Component({
   selector: 'acshb-frame',
@@ -12,7 +11,6 @@ export class FrameComponent {
   @Input() loading: boolean;
   @Input() bordered: boolean;
   @Input() collapsable: boolean;
-  iconTypes: any = IconTypes;
   toggle: any = false;
 
   onToggleClick(e) {

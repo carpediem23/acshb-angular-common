@@ -9,7 +9,7 @@
                 <span>{{this.title}}</span>
             </h6>
             <a *ngIf="collapsable" href="/" role="button" aria-label="Paneli Aç / Kapat" (click)="onToggleClick($event)">
-                <acshb-icon [icon]="toggle ? iconTypes.Up : iconTypes.Down"></acshb-icon>
+                <acshb-icon [icon]="toggle ? 'faAngleUp': 'faAngleDown'"></acshb-icon>
             </a>
         </div>
     </div>

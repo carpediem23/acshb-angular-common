@@ -19,6 +19,7 @@ import { appRoutes } from './routes/routes';
 import { ButtonsViewComponent } from './components-page/buttons-view/buttons-view.component';
 import { IconsViewComponent } from './components-page/icons-view/icons-view.component';
 import { FramesViewComponent } from './components-page/frames-view/frames-view.component';
+import { AccordionsViewComponent } from './components-page/accordions-view/accordions-view.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FramesViewComponent } from './components-page/frames-view/frames-view.c
     ComponentsPageComponent,
     ButtonsViewComponent,
     IconsViewComponent,
-    FramesViewComponent
+    FramesViewComponent,
+    AccordionsViewComponent
   ],
   imports: [
     BrowserModule,

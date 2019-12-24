@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IconTypes } from '../../enums/icon-types.enum';
 
 @Component({
   selector: 'acshb-accordion',
@@ -9,7 +8,6 @@ import { IconTypes } from '../../enums/icon-types.enum';
 export class AccordionComponent implements OnInit {
   @Input() title: string;
   @Input() open: boolean;
-  iconTypes: any = IconTypes;
   toggle = false;
 
   constructor() { }
