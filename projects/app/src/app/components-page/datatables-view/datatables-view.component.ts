@@ -1,32 +1,58 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { DatatablesViewService } from './datatables-view.service';
 
 @Component({
   selector: 'app-datatables-view',
   templateUrl: './datatables-view.component.html',
   styleUrls: ['./datatables-view.component.scss']
 })
-export class DatatablesViewComponent {
+export class DatatablesViewComponent implements OnInit {
   columns;
   data;
   config;
 
-  constructor() {
+  constructor(private service: DatatablesViewService) {
+    this.initialize();
+  }
+
+  initialize() {
     this.columns = [
       {
-        title: 'İsim',
+        name: 'postId',
+        title: 'Post Numarası',
+        sort: false
+      },
+      {
+        name: 'id',
+        title: 'Id',
+        sort: false
+      },
+      {
         name: 'name',
-        filtering: { filterString: '', placeholder: 'İsme göre ara' },
+        title: 'İsim',
+        filtering: { placeholder: 'İsme göre ara' },
+        sort: false
+      },
+      {
+        name: 'body',
+        title: 'İçerik',
+        filtering: { placeholder: 'İçeriğe göre ara' },
         sort: 'asc'
       },
-      { title: 'Departman', name: 'position' },
-      { title: 'Ofis', name: 'office' }
+      {
+        name: 'email',
+        title: 'E-Posta',
+        filtering: { placeholder: 'E-Posta ya göre ara' },
+        sort: 'asc'
+      }
     ];
-    this.data = [
-      { name: 'Alptuğ', position: 'Pozisyon A', office: 'Ofis 1' },
-      { name: 'Osman', position: 'Pozisyon B', office: 'Ofis 2' },
-      { name: 'Osman', position: 'Pozisyon B', office: 'Ofis 2' },
-      { name: 'Osman', position: 'Pozisyon B', office: 'Ofis 2' },
-      { name: 'Osman', position: 'Pozisyon B', office: 'Ofis 2' }
-    ];
+    this.data = [];
+  }
+
+  ngOnInit(): void {
+    this.service.fetch().subscribe((data: any) => {
+      this.data = data;
+    });
   }
 }

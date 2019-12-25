@@ -25,6 +25,7 @@ import { AlertsViewComponent } from './components-page/alerts-view/alerts-view.c
 import { ModalsViewComponent } from './components-page/modals-view/modals-view.component';
 import { FormsViewComponent } from './components-page/forms-view/forms-view.component';
 import { DatatablesViewComponent } from './components-page/datatables-view/datatables-view.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { DatatablesViewComponent } from './components-page/datatables-view/datat
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     PaginationModule.forRoot(),
