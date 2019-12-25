@@ -24,7 +24,7 @@ export class FormsViewComponent implements OnInit {
         maxLength: 64,
         label: 'İsminiz',
         placeholder: 'İsim',
-        col: 6
+        col: 4
       }),
       new FormElement({
         name: 'lastname',
@@ -34,14 +34,15 @@ export class FormsViewComponent implements OnInit {
         maxLength: 64,
         label: 'Soyadı',
         placeholder: 'Soyadınız',
-        col: 6
+        col: 4
       }),
       new FormElement({
         name: 'pattern',
         type: FormElementTypes.Text,
         pattern: '[a-zA-Z ]*',
         label: 'Pattern',
-        placeholder: 'Yanlızca harfler'
+        placeholder: 'Yanlızca harfler',
+        col: 4
       }),
       new FormElement({
         name: 'age',
@@ -86,7 +87,8 @@ export class FormsViewComponent implements OnInit {
       }),
       new FormElement({
         name: 'date',
-        type: FormElementTypes.Date
+        type: FormElementTypes.Date,
+        label: 'Doğum Günü'
       }),
       new FormElement({
         name: 'remember',
