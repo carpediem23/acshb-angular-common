@@ -9,6 +9,7 @@ import { DropdownsViewComponent } from '../components-page/dropdowns-view/dropdo
 import { AlertsViewComponent } from '../components-page/alerts-view/alerts-view.component';
 import { ModalsViewComponent } from '../components-page/modals-view/modals-view.component';
 import { FormsViewComponent } from '../components-page/forms-view/forms-view.component';
+import { DatatablesViewComponent } from '../components-page/datatables-view/datatables-view.component';
 
 export const appRoutes: Routes = [
     {path: '', component: HomePageComponent},
@@ -20,5 +21,6 @@ export const appRoutes: Routes = [
     {path: 'components/dropdowns', component: DropdownsViewComponent},
     {path: 'components/alerts', component: AlertsViewComponent},
     {path: 'components/modals', component: ModalsViewComponent},
-    {path: 'components/forms', component: FormsViewComponent}
+    {path: 'components/forms', component: FormsViewComponent},
+    {path: 'components/datatables', component: DatatablesViewComponent}
 ];

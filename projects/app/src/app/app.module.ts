@@ -24,6 +24,7 @@ import { DropdownsViewComponent } from './components-page/dropdowns-view/dropdow
 import { AlertsViewComponent } from './components-page/alerts-view/alerts-view.component';
 import { ModalsViewComponent } from './components-page/modals-view/modals-view.component';
 import { FormsViewComponent } from './components-page/forms-view/forms-view.component';
+import { DatatablesViewComponent } from './components-page/datatables-view/datatables-view.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FormsViewComponent } from './components-page/forms-view/forms-view.comp
     DropdownsViewComponent,
     AlertsViewComponent,
     ModalsViewComponent,
-    FormsViewComponent
+    FormsViewComponent,
+    DatatablesViewComponent
   ],
   imports: [
     BrowserModule,
