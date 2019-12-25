@@ -7,8 +7,7 @@ import { NgSelectConfig } from '@ng-select/ng-select';
 @Component({
   selector: 'acshb-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnChanges {
   @Input() submitText: string;
