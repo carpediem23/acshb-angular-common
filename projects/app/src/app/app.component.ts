@@ -73,7 +73,8 @@ export class AppComponent implements OnInit {
               { id: 16, name: 'alerts', title: 'Alerts', url: '/components/alerts' },
               { id: 17, name: 'modals', title: 'Modals', url: '/components/modals' },
               { id: 18, name: 'forms', title: 'Forms', url: '/components/forms' },
-              { id: 19, name: 'datatables', title: 'Datatables', url: '/components/datatables' }
+              { id: 19, name: 'datatables', title: 'Datatables', url: '/components/datatables' },
+              { id: 20, name: 'charts', title: 'Charts', url: '/components/charts' }
             ]
           }
         ];

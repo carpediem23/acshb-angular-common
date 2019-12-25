@@ -8,6 +8,7 @@ import { AlertModule } from '../../../acshb-common/src/lib/alert/alert.module';
 import { ModalModule } from '../../../acshb-common/src/lib/modal/modal.module';
 import { FormModule } from '../../../acshb-common/src/lib/form/form.module';
 import { DatatableModule } from '../../../acshb-common/src/lib/datatable/datatable.module';
+import { ChartModule } from '../../../acshb-common/src/lib/chart/chart.module';
 import { TestViewComponent } from './test-view/test-view.component';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { Ng2TableModule } from 'ng2-table/ng2-table';
@@ -26,6 +27,7 @@ import { ModalsViewComponent } from './components-page/modals-view/modals-view.c
 import { FormsViewComponent } from './components-page/forms-view/forms-view.component';
 import { DatatablesViewComponent } from './components-page/datatables-view/datatables-view.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChartsViewComponent } from './components-page/charts-view/charts-view.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     AlertsViewComponent,
     ModalsViewComponent,
     FormsViewComponent,
-    DatatablesViewComponent
+    DatatablesViewComponent,
+    ChartsViewComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { HttpClientModule } from '@angular/common/http';
     ModalModule,
     AlertModule.forRoot(),
     FormModule,
-    DatatableModule
+    DatatableModule,
+    ChartModule
   ],
   providers: [SidebarService],
   bootstrap: [AppComponent]

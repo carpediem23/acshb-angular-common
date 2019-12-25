@@ -10,6 +10,7 @@ import { AlertsViewComponent } from '../components-page/alerts-view/alerts-view.
 import { ModalsViewComponent } from '../components-page/modals-view/modals-view.component';
 import { FormsViewComponent } from '../components-page/forms-view/forms-view.component';
 import { DatatablesViewComponent } from '../components-page/datatables-view/datatables-view.component';
+import { ChartsViewComponent } from '../components-page/charts-view/charts-view.component';
 
 export const appRoutes: Routes = [
     {path: '', component: HomePageComponent},
@@ -22,5 +23,6 @@ export const appRoutes: Routes = [
     {path: 'components/alerts', component: AlertsViewComponent},
     {path: 'components/modals', component: ModalsViewComponent},
     {path: 'components/forms', component: FormsViewComponent},
-    {path: 'components/datatables', component: DatatablesViewComponent}
+    {path: 'components/datatables', component: DatatablesViewComponent},
+    {path: 'components/charts', component: ChartsViewComponent}
 ];
