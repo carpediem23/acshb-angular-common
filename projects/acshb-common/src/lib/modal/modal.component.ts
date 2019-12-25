@@ -1,10 +1,9 @@
-import { Component, ViewEncapsulation, Input, EventEmitter, Output, OnInit, OnChanges, OnDestroy } from '@angular/core';
+import { Component, Input, EventEmitter, Output, OnInit, OnChanges, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'acshb-modal',
   templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit, OnChanges, OnDestroy {
   @Input() title: string;
