@@ -8,6 +8,7 @@ import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/cor
 export class DatatableComponent implements OnInit, OnChanges {
   @Input() data: Array<any> = [];
   @Input() columns: Array<any> = [];
+  @Input() search: false;
   @Input() itemsPerPage = 1;
   @Input() classNames = '';
   config;

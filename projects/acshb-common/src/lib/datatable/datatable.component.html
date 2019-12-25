@@ -1,4 +1,12 @@
 <div class="acshb-datatable">
+  <div *ngIf="search" class="row">
+    <div class="col-md-12 mb-4">
+      <input *ngIf="config.filtering" placeholder="Tabloda ara"
+             [ngTableFiltering]="config.filtering"
+             class="form-control"
+             (tableChanged)="onChangeTable(config)"/>
+    </div>
+  </div>
   <ng-table
     [config]="config"
     (tableChanged)="onChangeTable(config)"
