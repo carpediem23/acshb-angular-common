@@ -8,13 +8,14 @@ import { Component } from '@angular/core';
 export class DatatablesViewComponent {
   columns;
   data;
+  config;
 
   constructor() {
     this.columns = [
       {
         title: 'İsim',
         name: 'name',
-        filtering: { filterString: '', placeholder: 'Filter by position' },
+        filtering: { filterString: '', placeholder: 'İsme göre ara' },
         sort: 'asc'
       },
       { title: 'Departman', name: 'position' },

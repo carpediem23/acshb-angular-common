@@ -6,9 +6,10 @@ import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/cor
   styleUrls: ['./datatable.component.scss']
 })
 export class DatatableComponent implements OnInit, OnChanges {
-  @Input() data = [];
-  @Input() columns = [];
+  @Input() data: Array<any> = [];
+  @Input() columns: Array<any> = [];
   @Input() itemsPerPage = 1;
+  @Input() classNames = '';
   config;
   rows;
   page = 1;
@@ -21,7 +22,7 @@ export class DatatableComponent implements OnInit, OnChanges {
       paging: true,
       sorting: {columns: this.columns},
       filtering: {filterString: ''},
-      className: ['table-responsive', 'table-bordered']
+      className: this.classNames
     };
     this.length = this.data.length;
    }
@@ -33,6 +34,7 @@ export class DatatableComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     this.config.sorting = {columns: this.columns};
+    this.config.className = this.classNames;
     this.onChangeTable(this.config);
   }
 

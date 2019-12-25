@@ -9,7 +9,7 @@
   </ng-table>
   <pagination
     *ngIf="config.paging"
-    class="pagination-sm"
+    class=""
     (numPages)="numPages = $event"
     (pageChanged)="onChangeTable(config, $event)"
     [totalItems]="length"
