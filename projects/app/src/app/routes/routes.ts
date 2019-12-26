@@ -11,6 +11,7 @@ import { ModalsViewComponent } from '../components-page/modals-view/modals-view.
 import { FormsViewComponent } from '../components-page/forms-view/forms-view.component';
 import { DatatablesViewComponent } from '../components-page/datatables-view/datatables-view.component';
 import { ChartsViewComponent } from '../components-page/charts-view/charts-view.component';
+import { CardsViewComponent } from '../components-page/cards-view/cards-view.component';
 
 export const appRoutes: Routes = [
     {path: '', component: HomePageComponent},
@@ -24,5 +25,6 @@ export const appRoutes: Routes = [
     {path: 'components/modals', component: ModalsViewComponent},
     {path: 'components/forms', component: FormsViewComponent},
     {path: 'components/datatables', component: DatatablesViewComponent},
-    {path: 'components/charts', component: ChartsViewComponent}
+    {path: 'components/charts', component: ChartsViewComponent},
+    {path: 'components/cards', component: CardsViewComponent}
 ];

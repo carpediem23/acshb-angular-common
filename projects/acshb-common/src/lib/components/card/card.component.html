@@ -1,0 +1,21 @@
+<div [class]="'acshb-card card' + ' ' + classNames">
+    <div class="p-2">
+        <div class="row">
+            <div class="col-md-4 d-flex justify-content-center align-items-center p-2">
+                <div class="text-center">
+                    <acshb-icon [icon]="icon" color="#f55145" size="3x"></acshb-icon>
+                </div>
+            </div>
+            <div class="col-md-8 d-flex justify-content-center align-items-center p-2">
+                <div class="numbers">
+                    <p class="m-0">{{title}}</p>
+                    <h2 class="m-0 font-weight-normal">{{value}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="footer px-4 py-2">
+            <hr class="mt-0" />
+            <div class="stats">{{footer}}</div>
+        </div>
+    </div>
+</div>

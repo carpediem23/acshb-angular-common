@@ -28,6 +28,7 @@ import { FormsViewComponent } from './components-page/forms-view/forms-view.comp
 import { DatatablesViewComponent } from './components-page/datatables-view/datatables-view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ChartsViewComponent } from './components-page/charts-view/charts-view.component';
+import { CardsViewComponent } from './components-page/cards-view/cards-view.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ChartsViewComponent } from './components-page/charts-view/charts-view.c
     ModalsViewComponent,
     FormsViewComponent,
     DatatablesViewComponent,
-    ChartsViewComponent
+    ChartsViewComponent,
+    CardsViewComponent
   ],
   imports: [
     BrowserModule,

@@ -74,7 +74,8 @@ export class AppComponent implements OnInit {
               { id: 17, name: 'modals', title: 'Modals', url: '/components/modals' },
               { id: 18, name: 'forms', title: 'Forms', url: '/components/forms' },
               { id: 19, name: 'datatables', title: 'Datatables', url: '/components/datatables' },
-              { id: 20, name: 'charts', title: 'Charts', url: '/components/charts' }
+              { id: 20, name: 'charts', title: 'Charts', url: '/components/charts' },
+              { id: 21, name: 'cards', title: 'Cards', url: '/components/cards' }
             ]
           }
         ];

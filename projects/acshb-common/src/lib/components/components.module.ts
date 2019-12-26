@@ -8,13 +8,14 @@ import { FrameComponent } from './frame/frame.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { LoaderComponent } from './loader/loader.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FontAwesomeModule
   ],
-  declarations: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent, SidebarComponent],
-  exports: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent, SidebarComponent]
+  declarations: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent, SidebarComponent, CardComponent],
+  exports: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent, SidebarComponent, CardComponent]
 })
 export class ComponentsModule { }
