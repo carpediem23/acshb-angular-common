@@ -361,3 +361,31 @@
   background-color: lighten(theme-color("primary"), 25) !important;
 }
 // ACSHB-FORM END
+
+// ACSHB-DATATABLE START
+.acshb-datatable {
+  .fa-chevron-down {
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    font-family: inherit;
+  
+    &::after {
+      content: "↓";
+    }
+  }
+  
+  .fa-chevron-up {
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    font-family: inherit;
+  
+    &::after {
+      content: "↑";
+    }
+  }
+}
+// ACSHB-DATATABLE END

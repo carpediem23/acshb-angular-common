@@ -3,7 +3,7 @@
         <h6>{{title}}</h6>
         <acshb-icon [icon]="toggle ? 'faAngleUp': 'faAngleDown'"></acshb-icon>
     </div>
-    <div *ngIf="toggle" class="acshb-accordion-body animated fadeInDown" [ngClass]="{'show': toggle}">
+    <div *ngIf="toggle" class="acshb-accordion-body" [ngClass]="{'show': toggle}">
         <ng-content></ng-content>
     </div>
 </div>
