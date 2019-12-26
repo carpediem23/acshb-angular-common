@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, ViewEncapsulation } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Alert, AlertType } from './models/alert.model';
 import { AlertService } from './services/alert.service';
