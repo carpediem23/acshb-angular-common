@@ -61,9 +61,9 @@ export class AppComponent implements OnInit {
           {
             id: 1,
             name: 'link1',
-            title: 'Komponentler',
+            title: 'Kılavuz',
             url: '/components',
-            icon: 'faBezierCurve',
+            icon: 'faShoppingBasket',
             children: [
               { id: 11, name: 'buttons', title: 'Buttons', url: '/components/buttons' },
               { id: 12, name: 'frames', title: 'Frames', url: '/components/frames' },
