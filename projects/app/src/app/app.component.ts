@@ -12,7 +12,6 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   modalOpen;
   formElements;
-  sidebarToggled;
   routes;
 
   constructor(
@@ -48,7 +47,6 @@ export class AppComponent implements OnInit {
           new FormElement({ name: 'date', type: FormElementTypes.Date, required: true }),
           new FormElement({ name: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla' })
         ];
-        this.sidebarToggled = true;
         this.routes = [
           {
             id: 0,
@@ -113,12 +111,6 @@ export class AppComponent implements OnInit {
 
   onAlertError() {
     this.alertService.error('İşlem yapılırken hata meydana geldi', 'Başlık', false, '0');
-  }
-
-  onMenuToggle() {
-    this.sidebarToggled = !this.sidebarService.open;
-    this.sidebarService.toggleSidebar(this.sidebarToggled);
-    console.log('menu toggled');
   }
 
   onModalSubmit() {

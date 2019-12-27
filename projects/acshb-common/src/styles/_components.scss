@@ -266,6 +266,9 @@
 
 // ACSHB-TOOLBAR START
 .acshb-toolbar {
+  position: relative;
+  z-index: 99;
+
   img {
     height: 75px;
 
@@ -273,7 +276,7 @@
       height: 75px;
     }
   }
-  
+
   .acshb-toolbar-logo {
     .acshb-toolbar-button {
       cursor: pointer;
@@ -297,7 +300,8 @@
     .acshb-sidebar-link {
       color: theme-color("primary") !important;
 
-      h3, h6 {
+      h3,
+      h6 {
         color: theme-color("priamry") !important;
 
         svg {
@@ -320,24 +324,39 @@
       text-decoration: none;
     }
   }
+
+  @media screen and (max-width: 992px) {
+    width: 0;
+    min-width: 0;
+  }
 }
 
 .sidebarOpen {
   margin-left: 0;
+
+  @media screen and (max-width: 992px) {
+    position: absolute;
+    top: 81px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    border: 0 !important;
+    z-index: 19;
+  }
 }
 // ACSHB-SIDEBAR END
 
 // ACSHB-MODAL START
 .acshb-modal {
-    background-color: rgba($black, .5);
-    
-    .modal-content {
-      max-height: calc(100vh - 60px);
+  background-color: rgba($black, 0.5);
 
-      .modal-body {
-        overflow-y: auto;
-      }
+  .modal-content {
+    max-height: calc(100vh - 60px);
+
+    .modal-body {
+      overflow-y: auto;
     }
+  }
 }
 // ACSHB-MODAL END
 
@@ -370,19 +389,19 @@
     width: 20px;
     height: 20px;
     font-family: inherit;
-  
+
     &::after {
       content: "↓";
     }
   }
-  
+
   .fa-chevron-up {
     display: block;
     float: right;
     width: 20px;
     height: 20px;
     font-family: inherit;
-  
+
     &::after {
       content: "↑";
     }

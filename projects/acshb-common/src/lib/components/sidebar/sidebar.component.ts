@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, HostListener } from '@angular/core';
+import { SidebarService } from 'projects/app/src/app/services/sidebar.service';
 
 @Component({
   selector: 'acshb-sidebar',
@@ -7,13 +8,32 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   @Input() items;
-  @Input() open;
   @Output() linkClickedEvent: EventEmitter<any> = new EventEmitter();
   activePath = window.location.pathname;
+  breakpointSize = 992;
 
-  constructor() {}
+  get isOpen() {
+    return this.sidebarService.open;
+  }
+
+  constructor(private sidebarService: SidebarService) {}
 
   ngOnInit() {
+  }
+
+  @HostListener('window:resize', [])
+  onResize() {
+    if (this.sidebarService.isMobileSize) {
+      if (this.sidebarService.open) {
+        this.sidebarService.toggleSidebar(false);
+        document.body.classList.remove('overflow-hidden');
+      }
+    } else {
+      if (!this.sidebarService.open) {
+        this.sidebarService.toggleSidebar(true);
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
   }
 
   onLinkClicked(e, item) {

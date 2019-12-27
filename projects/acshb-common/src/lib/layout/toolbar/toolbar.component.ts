@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { SidebarService } from 'projects/app/src/app/services/sidebar.service';
 
 @Component({
   selector: 'acshb-toolbar',
@@ -11,13 +12,17 @@ export class ToolbarComponent {
   @Input() fullname: string;
   @Output() menuToggleCallback: EventEmitter<any> = new EventEmitter();
 
+  constructor(private sidebarService: SidebarService) {}
+
   onToolbarSelect(e) {
     console.log(e);
   }
 
   onMenuToggle(e) {
-    if (this.menuToggleCallback) {
-      this.menuToggleCallback.emit();
+    if (this.sidebarService.open) {
+      this.sidebarService.toggleSidebar(false);
+    } else {
+      this.sidebarService.toggleSidebar(true);
     }
   }
 }
