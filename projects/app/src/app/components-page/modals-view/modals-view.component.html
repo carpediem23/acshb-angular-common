@@ -1,5 +1,6 @@
 <div class="modals">
     <h3>MODALLAR</h3>
+    <hr />
     <acshb-button className="btn btn-primary" (clicked)="onModalOpen()">Modal Aç</acshb-button>
     <acshb-modal [show]="modalOpen" title="Modal Başlığı" (submitCallback)="onModalSubmit()"
         (closeCallback)="onModalClose()">
@@ -59,4 +60,23 @@
             </div>
         </div>
     </acshb-modal>
+    <hr />
+    <div class="component-props">
+        <p className="lead">Özellikler</p>
+        <p>
+            <b>title => string / </b>Modal komponentinin başlığı.
+        </p>
+        <p>
+            <b>show => boolean / </b>Modal komponentini görünür yapar.
+        </p>
+        <p>
+            <b>confirm => boolean / </b>Modal komponentinine 'Tamam' butonu ekler.
+        </p>
+        <p>
+            <b>submitCallback => func / </b>Tamam butonu tıklandı callback.
+        </p>
+        <p>
+            <b>closeCallback => func / </b>İptal butonu tıklandı callback.
+        </p>
+    </div>
 </div>

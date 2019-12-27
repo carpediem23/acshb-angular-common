@@ -1,12 +1,28 @@
 <div class="datatables">
   <h3>Tablolar</h3>
+  <hr />
   <div>
-    <acshb-datatable
-      [data]="data"
-      [columns]="columns"
-      [itemsPerPage]="25"
-      [search]="true"
-      [classNames]="['table-responsive']"
-    ></acshb-datatable>
+    <acshb-datatable [data]="data" [columns]="columns" [itemsPerPage]="25" [search]="true"
+      [classNames]="['table-responsive']"></acshb-datatable>
+  </div>
+  <hr />
+  <div class="component-props">
+    <p className="lead">Özellikler</p>
+    <p>
+      <b>columns => Array / </b>Datatable columns verisi Json olarak set edilir. Json özellikleri aşağıda
+      verilmiştir.
+    </p>
+    <p>
+      <b>name => string / </b>Json scheme daki field ismi.
+    </p>
+    <p>
+      <b>title => string / </b>Tabloda görüntülenmek istenilen başlık.
+    </p>
+    <p>
+      <b>sort => boolean/string / </b>Tabloda sıralama özelliği istenilirse verilmelidir. 'asc' veya 'desc' olarak set edilir. İstenmiyorsa false olarak set edilmelidir.
+    </p>
+    <p>
+      <b>filtering => object / </b>Tabloda ilgili alanda arama yapılma istenilirse set edilmelidir. Yanlızca 'placeholder' isminde alan ile set edilmelidir.
+    </p>
   </div>
 </div>

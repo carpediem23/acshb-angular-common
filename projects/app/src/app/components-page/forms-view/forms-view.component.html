@@ -1,7 +1,46 @@
 <div class="forms">
     <h3>FORMLAR</h3>
+    <hr />
     <div>
         <acshb-form submitText="Formu Gönder" [formElements]="formElements" (submitCallback)="onSubmit($event)">
         </acshb-form>
+    </div>
+    <hr />
+    <div class="component-props">
+        <p className="lead">Özellikler</p>
+        <p>
+            <b>formElements => Array:FormElement / </b>Form verisi Json olarak set edilir. Json özellikleri aşağıda
+            verilmiştir.
+        </p>
+        <p>
+            <b>name => string</b>Forma eklenen input' un ismi.
+        </p>
+        <p>
+            <b>type => FormElementTypes</b>Text, Number, Tckn, Checkbox, Select, MultiSelect, Date olarak set edilir.
+        </p>
+        <p>
+            <b>required => boolean / </b>required validasyonu.
+        </p>
+        <p>
+            <b>minLength => number / </b>minLength validasyonu.
+        </p>
+        <p>
+            <b>maxLength => number / </b>maxLength validasyonu.
+        </p>
+        <p>
+            <b>min => number / </b>min validasyonu.
+        </p>
+        <p>
+            <b>max => number / </b>max validasyonu.
+        </p>
+        <p>
+            <b>label => string / </b>Label özelliği.
+        </p>
+        <p>
+            <b>placeholder => string / </b>Placeholder özelliği.
+        </p>
+        <p>
+            <b>submitCallback => func / </b>Submit callback.
+        </p>
     </div>
 </div>

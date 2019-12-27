@@ -1,19 +1,36 @@
 <div class="dropdowns">
-    <h3>DROPDOWNS</h3>
-    <div class="d-block">
-        <acshb-dropdown title="Dropdown Tıkla" [data]="[
+  <h3>DROPDOWNS</h3>
+  <hr />
+  <div class="d-block">
+    <acshb-dropdown title="Dropdown Tıkla" [data]="[
         { key: 0, value: 0, title: 'Seçenek 1' },
         { key: 1, value: 1, title: 'Seçenek 2' },
         { key: 1, value: 1, title: 'Seçenek 3' },
         { key: 1, value: 1, title: 'Seçenek 4' },
         { key: 1, value: 1, title: 'Seçenek 5' }
       ]" color="primary" (selectCallback)="onSelected($event)"></acshb-dropdown>
-        <acshb-dropdown title="Dropdown Tıkla" [data]="[
+    <acshb-dropdown title="Dropdown Tıkla" [data]="[
         { key: 0, value: 0, title: 'Seçenek 1' },
         { key: 1, value: 1, title: 'Seçenek 2' },
         { key: 1, value: 1, title: 'Seçenek 3' },
         { key: 1, value: 1, title: 'Seçenek 4' },
         { key: 1, value: 1, title: 'Seçenek 5' }
       ]" color="secondary" (selectCallback)="onSelected($event)"></acshb-dropdown>
-    </div>
+  </div>
+  <hr />
+  <div class="component-props">
+    <p className="lead">Özellikler</p>
+    <p>
+      <b>title => string / </b>Dropdown komponentinin başlığı.
+    </p>
+    <p>
+      <b>data => array / </b>İçerisine eklenmek istenilen elemanlar. Json olarak tanımlanır. <b class="font-italic">Örnek scheme: name: 'name', value: 0, title: 'title'</b>
+    </p>
+    <p>
+      <b>color => string / </b>İçerik olarak eklenmek istenen node.
+    </p>
+    <p>
+      <b>selectCallback => func / </b>İçerik olarak eklenmek istenen node.
+    </p>
+  </div>
 </div>
