@@ -9,7 +9,7 @@ export class SidebarComponent implements OnChanges {
   @Input() items;
   @Input() open = true;
   @Output() linkClickedEvent: EventEmitter<any> = new EventEmitter();
-  private activePath = window.location.pathname;
+  activePath = window.location.pathname;
   private breakpointSize = 992;
 
   get isMobileSize() {
