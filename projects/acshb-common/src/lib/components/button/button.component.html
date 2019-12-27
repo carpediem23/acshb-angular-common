@@ -1,4 +1,4 @@
-<button [className]="className" (click)="onClicked($event)" [disabled]="disabled ||loading">
+<button [className]="className" (click)="onClicked($event)" [disabled]="disabled ||loading" [title]="title">
     <span *ngIf="loading">
         <acshb-icon icon="faSpinner" color="#FFF" [spin]="true"></acshb-icon>
     </span>

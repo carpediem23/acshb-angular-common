@@ -1,33 +1,72 @@
 <div class="buttons">
     <h3>BUTONLAR</h3>
-    <div class="d-flex justify-content-around align-items-center py-4">
-        <acshb-button className="btn btn-primary" text="Primary Buton" (clicked)="onClicked($event)"></acshb-button>
-        <acshb-button className="btn btn-secondary" text="Secondary Buton" (clicked)="onClicked($event)"></acshb-button>
-        <acshb-button className="btn btn-success" text="Success Buton" (clicked)="onClicked($event)"></acshb-button>
-        <acshb-button className="btn btn-warning" text="Warning Buton" (clicked)="onClicked($event)"></acshb-button>
-        <acshb-button className="btn btn-danger" text="Danger Buton" (clicked)="onClicked($event)"></acshb-button>
+    <hr />
+    <div class="d-flex py-4">
+        <acshb-button className="btn btn-primary mr-4" text="Primary Buton" (clicked)="onClicked($event)" title="Primary Buton">
+        </acshb-button>
+        <acshb-button className="btn btn-secondary mr-4" text="Secondary Buton" (clicked)="onClicked($event)" title="Secondary Buton">
+        </acshb-button>
+        <acshb-button className="btn btn-success mr-4" text="Success Buton" (clicked)="onClicked($event)" title="Success Buton">
+        </acshb-button>
+        <acshb-button className="btn btn-warning mr-4" text="Warning Buton" (clicked)="onClicked($event)" title="Warning Buton">
+        </acshb-button>
+        <acshb-button className="btn btn-danger mr-4" text="Danger Buton" (clicked)="onClicked($event)" title="Danger Buton"></acshb-button>
     </div>
-    <div class="d-flex justify-content-around align-items-center py-4">
-        <acshb-button className="btn btn-outline-primary" text="Primary Outline Buton" (clicked)="onClicked($event)">
+    <div class="d-flex py-4">
+        <acshb-button className="btn btn-outline-primary mr-4" text="Primary Outline Buton"
+            (clicked)="onClicked($event)">
         </acshb-button>
-        <acshb-button className="btn btn-outline-secondary" text="Secondary Outline Buton" (clicked)="onClicked($event)">
+        <acshb-button className="btn btn-outline-success mr-4" text="Success Outline Buton"
+            (clicked)="onClicked($event)">
         </acshb-button>
-        <acshb-button className="btn btn-outline-success" text="Success Outline Buton" (clicked)="onClicked($event)">
+        <acshb-button className="btn btn-outline-warning mr-4" text="Warning Outline Buton"
+            (clicked)="onClicked($event)">
         </acshb-button>
-        <acshb-button className="btn btn-outline-warning" text="Warning Outline Buton" (clicked)="onClicked($event)">
+        <acshb-button className="btn btn-outline-danger mr-4" text="Danger Outline Buton" (clicked)="onClicked($event)">
         </acshb-button>
-        <acshb-button className="btn btn-outline-danger" text="Danger Outline Buton" (clicked)="onClicked($event)">
+        <acshb-button className="btn btn-outline-secondary mr-4" text="Secondary Outline Buton"
+            (clicked)="onClicked($event)">
         </acshb-button>
     </div>
-    <div class="d-flex justify-content-around align-items-center py-4">
-        <acshb-button className="btn btn-primary" text="Disabled Primary Buton" (clicked)="onClicked($event)" [disabled]="true"></acshb-button>
-        <acshb-button className="btn btn-secondary" text="Disabled Secondary Buton" (clicked)="onClicked($event)" [disabled]="true"></acshb-button>
+    <div class="d-flex py-4">
+        <acshb-button className="btn btn-primary mr-4" text="Disabled Primary Buton" (clicked)="onClicked($event)"
+            [disabled]="true"></acshb-button>
+        <acshb-button className="btn btn-secondary mr-4" text="Disabled Secondary Buton" (clicked)="onClicked($event)"
+            [disabled]="true"></acshb-button>
     </div>
-    <div class="d-flex justify-content-around align-items-center py-4">
-        <acshb-button className="btn btn-primary btn-lg" text="Primary Buton Large" (clicked)="onClicked($event)"></acshb-button>
-        <acshb-button className="btn btn-primary btn-sm" text="Primary Buton Small" (clicked)="onClicked($event)"></acshb-button>
+    <div class="d-flex py-4">
+        <acshb-button className="btn btn-primary btn-lg mr-4" text="Primary Buton Large" (clicked)="onClicked($event)">
+        </acshb-button>
+        <acshb-button className="btn btn-primary btn-sm mr-4" text="Primary Buton Small" (clicked)="onClicked($event)">
+        </acshb-button>
     </div>
     <div class="py-4">
-        <acshb-button className="btn btn-primary btn-block" text="Block Buton" (clicked)="onClicked($event)"></acshb-button>
+        <acshb-button [loading]="true" className="btn btn-primary" text="Loading Buton" (clicked)="onClicked($event)">
+        </acshb-button>
     </div>
+    <div class="py-4">
+        <acshb-button className="btn btn-primary btn-block" text="Block Buton" (clicked)="onClicked($event)">
+        </acshb-button>
+    </div>
+    <hr />
+    <div class="component-props">
+        <p className="lead">Özellikler</p>
+        <p>
+            <b>text => string / </b>Butonun yazısı için kullanılır isteğe bağlıdır. İstendiğinde child olarak yazı eklenebilir.
+        </p>
+        <p>
+            <b>title => string / </b>Butonuna html title özelliği ekler.
+        </p>
+        <p>
+            <b>loading => boolean / </b>Botunu disable yapıp yüklenme animasyonu
+            ekler.
+        </p>
+        <p>
+            <b>disabled => boolean / </b>Botunu disable yapar.
+        </p>
+        <p>
+            <b>clicked => func / </b>Click eventi callback.
+        </p>
+    </div>
+
 </div>
