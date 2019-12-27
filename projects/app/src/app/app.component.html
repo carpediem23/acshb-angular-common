@@ -13,10 +13,12 @@
       fullname="Alptuğ Türkiş"
       title="T.C. Aile, Çalışma ve Sosyal Hizmetler Bakanlığı"
       logoUrl="assets/img/armali-logo-tr.svg"
+      (menuToggleCallback)="onMenuToggle()"
     ></acshb-toolbar>
     <div class="d-flex">
       <acshb-sidebar
         [items]="routes"
+        [open]="sidebarToggled"
         (linkClickedEvent)="onSidebarLinkClicked($event)"
       ></acshb-sidebar>
       <div class="p-4 w-100">

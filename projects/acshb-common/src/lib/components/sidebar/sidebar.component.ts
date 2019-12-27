@@ -1,37 +1,37 @@
-import { Component, OnInit, Input, EventEmitter, Output, HostListener } from '@angular/core';
-import { SidebarService } from 'projects/app/src/app/services/sidebar.service';
+import { Component, Input, EventEmitter, Output, HostListener, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'acshb-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnChanges {
   @Input() items;
+  @Input() open = true;
   @Output() linkClickedEvent: EventEmitter<any> = new EventEmitter();
-  activePath = window.location.pathname;
-  breakpointSize = 992;
+  private activePath = window.location.pathname;
+  private breakpointSize = 992;
 
-  get isOpen() {
-    return this.sidebarService.open;
+  get isMobileSize() {
+    return window.innerWidth < this.breakpointSize;
   }
 
-  constructor(private sidebarService: SidebarService) {}
-
-  ngOnInit() {
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes.open && changes.open.previousValue !== changes.open.currentValue) {
+      this.open = changes.open.currentValue;
+    }
   }
 
   @HostListener('window:resize', [])
   onResize() {
-    if (this.sidebarService.isMobileSize) {
-      if (this.sidebarService.open) {
-        this.sidebarService.toggleSidebar(false);
-        document.body.classList.remove('overflow-hidden');
+    if (window.innerWidth < this.breakpointSize) {
+      if (this.open) {
+        this.open = false;
       }
     } else {
-      if (!this.sidebarService.open) {
-        this.sidebarService.toggleSidebar(true);
+      if (!this.open) {
         document.body.classList.remove('overflow-hidden');
+        this.open = true;
       }
     }
   }

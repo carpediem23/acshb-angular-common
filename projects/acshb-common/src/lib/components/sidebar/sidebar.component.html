@@ -1,4 +1,4 @@
-<div class="acshb-sidebar border-right bg-white" [ngClass]="{'sidebarOpen': isOpen }">
+<div class="acshb-sidebar border-right bg-white" [ngClass]="{'sidebarOpen': open}">
     <ul class="p-0 list-group list-unstyled">
         <li *ngFor="let item of items" class="acshb-sidebar-item list-group-item px-3 pt-3 text-center"
             [ngClass]="{activeLink: item.url === activePath}" (click)="onLinkClicked($event, item)">

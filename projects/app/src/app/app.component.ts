@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertService } from 'projects/acshb-common/src/lib/alert/services/alert.service';
 import { FormElement, FormElementTypes } from 'projects/acshb-common/src/lib/form/models/form.model';
-import { SidebarService } from './services/sidebar.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,11 +11,11 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   modalOpen;
   formElements;
+  sidebarToggled;
   routes;
 
   constructor(
     private alertService: AlertService,
-    private sidebarService: SidebarService,
     private router: Router
     ) {
         this.modalOpen = false;
@@ -47,6 +46,7 @@ export class AppComponent implements OnInit {
           new FormElement({ name: 'date', type: FormElementTypes.Date, required: true }),
           new FormElement({ name: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla' })
         ];
+        this.sidebarToggled = true;
         this.routes = [
           {
             id: 0,
@@ -111,6 +111,11 @@ export class AppComponent implements OnInit {
 
   onAlertError() {
     this.alertService.error('İşlem yapılırken hata meydana geldi', 'Başlık', false, '0');
+  }
+
+  onMenuToggle() {
+    this.sidebarToggled = !this.sidebarToggled;
+    console.log('menu toggled');
   }
 
   onModalSubmit() {

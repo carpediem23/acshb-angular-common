@@ -12,7 +12,6 @@ import { ChartModule } from 'projects/acshb-common/src/lib/chart/chart.module';
 import { TestViewComponent } from './test-view/test-view.component';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { Ng2TableModule } from 'ng2-table/ng2-table';
-import { SidebarService } from './services/sidebar.service';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ComponentsPageComponent } from './components-page/components-page.component';
 import { RouterModule } from '@angular/router';
@@ -63,7 +62,7 @@ import { CardsViewComponent } from './components-page/cards-view/cards-view.comp
     DatatableModule,
     ChartModule
   ],
-  providers: [SidebarService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
