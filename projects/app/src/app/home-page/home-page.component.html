@@ -1,351 +1,470 @@
 <div class="dashboard">
-    <div class="row">
-        <div class="col-lg-3 mb-4">
-            <acshb-card title="Personel" value="1286" footer="ACSHB - 2019" classNames="border-light shadow-sm"
-                icon="faUserFriends"></acshb-card>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <acshb-card title="Genel Müdürlük" value="864" footer="ACSHB - 2019" classNames="border-light shadow-sm"
-                icon="faBuilding"></acshb-card>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <acshb-card title="Daire Başkanlığı" value="8" footer="ACSHB - 2019" classNames="border-light shadow-sm"
-                icon="faWifi"></acshb-card>
-        </div>
-        <div class="col-lg-3 mb-4">
-            <acshb-card title="İl Müdürlükleri" value="81" footer="ACSHB - 2019" classNames="border-light shadow-sm"
-                icon="faTachometerAlt"></acshb-card>
-        </div>
+  <div class="row">
+    <div class="col-lg-3 mb-4">
+      <acshb-card
+        title="Personel"
+        value="1286"
+        footer="ACSHB - 2019"
+        classNames="border-light shadow-sm"
+        icon="faUserFriends"
+      ></acshb-card>
     </div>
-    <div class="row">
-        <div class="col-lg-6 mb-4">
-            <acshb-frame title="2016 Bütçe Personel Giderleri (₺) - Default" icon="faChartBar" [collapsable]="true"
-                [bordered]="true">
-                <acshb-chart [config]="chartConfig1"></acshb-chart>
-            </acshb-frame>
-        </div>
-        <div class="col-lg-6 mb-4">
-            <acshb-frame title="2016 Yılı Bütçe Grafiği (₺)" icon="faChartBar" [collapsable]="true" [bordered]="true">
-                <acshb-chart [config]="chartConfig2"></acshb-chart>
-            </acshb-frame>
-        </div>
+    <div class="col-lg-3 mb-4">
+      <acshb-card
+        title="Genel Müdürlük"
+        value="864"
+        footer="ACSHB - 2019"
+        classNames="border-light shadow-sm"
+        icon="faBuilding"
+      ></acshb-card>
     </div>
-    <div class="row">
-        <div class="col-lg-6 mb-4">
-            <acshb-frame title="2015-2016 Bütçe Giderlerinin Gelişimi (₺)" icon="faChartLine" [collapsable]="true"
-                [bordered]="true">
-                <acshb-chart [config]="chartConfig3"></acshb-chart>
-                <table class="table table-responsive mt-5">
-                    <thead>
-                        <tr>
-                            <th scope="col">Aylar</th>
-                            <th scope="col">2015</th>
-                            <th scope="col">2016</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Ocak</td>
-                            <td>1.079.903.874</td>
-                            <td>1.151.377.582</td>
-                        </tr>
-                        <tr>
-                            <td>Şubat</td>
-                            <td>2.076.553.516</td>
-                            <td>1.367.006.629</td>
-                        </tr>
-                        <tr>
-                            <td>Mart</td>
-                            <td>1.063.743.817</td>
-                            <td>2.526.168.729</td>
-                        </tr>
-                        <tr>
-                            <td>Nisan</td>
-                            <td>1.130.616.396</td>
-                            <td>1.467.092.014</td>
-                        </tr>
-                        <tr>
-                            <td>Mayıs</td>
-                            <td>2.128.618.428</td>
-                            <td>1.423.845.167</td>
-                        </tr>
-                        <tr>
-                            <td>Haziran</td>
-                            <td>1.122.017.910</td>
-                            <td>2.675.849.430</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </acshb-frame>
-        </div>
-        <div class="col-lg-6 mb-4">
-            <acshb-frame title="Kullanım Tablosu" icon="faChartLine" [collapsable]="true" [bordered]="true">
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th class="text-center w-1">
-                                    <i class="icon-people"></i>
-                                </th>
-                                <th>Kullanıcı</th>
-                                <th>Kullanım</th>
-                                <th>Aktivite</th>
-                                <th class="text-center">Memnuniyet</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center align-middle">
-                                    <img src="https://via.placeholder.com/55" class="rounded-circle" alt="Dummy" />
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div>Ramazan SARI</div>
-                                    <div class="sm text-muted">
-                                        Kayıt: Mart 19, 2019
-                                    </div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="clearfix">
-                                        <div class="float-right">
-                                            <small class="sm text-muted">
-                                                Alan Kullanımı
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <span>42 %</span>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="sm text-muted">Son Görülme</div>
-                                    <div>4 dakika önce</div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <span role="img" aria-label="smiley">
-                                        😜
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle">
-                                    <img src="https://via.placeholder.com/55" class="rounded-circle" alt="Dummy" />
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div>Alptuğ TÜRKİŞ</div>
-                                    <div class="sm text-muted">
-                                        Kayıt: Mart 11, 2019
-                                    </div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="clearfix">
-                                        <div class="float-right">
-                                            <small class="sm text-muted">
-                                                Alan Kullanımı
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <span>80 %</span>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="sm text-muted">Son Görülme</div>
-                                    <div>8 dakika önce</div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <span role="img" aria-label="smiley">
-                                        😈
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle">
-                                    <img src="https://via.placeholder.com/55" class="rounded-circle" alt="Dummy" />
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div>Ramazan SARI</div>
-                                    <div class="sm text-muted">
-                                        Kayıt: Mart 19, 2019
-                                    </div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="clearfix">
-                                        <div class="float-right">
-                                            <small class="sm text-muted">
-                                                Alan Kullanımı
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <span>62 %</span>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="sm text-muted">Son Görülme</div>
-                                    <div>4 dakika önce</div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <span role="img" aria-label="smiley">
-                                        😜
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle">
-                                    <img src="https://via.placeholder.com/55" class="rounded-circle" alt="Dummy" />
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div>Alptuğ TÜRKİŞ</div>
-                                    <div class="sm text-muted">
-                                        Kayıt: Mart 11, 2019
-                                    </div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="clearfix">
-                                        <div class="float-right">
-                                            <small class="sm text-muted">
-                                                Alan Kullanımı
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <span>80%</span>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="sm text-muted">Son Görülme</div>
-                                    <div>8 dakika önce</div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <span role="img" aria-label="smiley">
-                                        😈
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle">
-                                    <img src="https://via.placeholder.com/55" class="rounded-circle" alt="Dummy" />
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div>Ramazan SARI</div>
-                                    <div class="sm text-muted">
-                                        Kayıt: Mart 19, 2019
-                                    </div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="clearfix">
-                                        <div class="float-right">
-                                            <small class="sm text-muted">
-                                                Alan Kullanımı
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <span>42 %</span>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="sm text-muted">Son Görülme</div>
-                                    <div>4 dakika önce</div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <span role="img" aria-label="smiley">
-                                        😜
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle">
-                                    <img src="https://via.placeholder.com/55" class="rounded-circle" alt="Dummy" />
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div>Alptuğ TÜRKİŞ</div>
-                                    <div class="sm text-muted">
-                                        Kayıt: Mart 11, 2019
-                                    </div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="clearfix">
-                                        <div class="float-right">
-                                            <small class="sm text-muted">
-                                                Alan Kullanımı
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <span>80 %</span>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="sm text-muted">Son Görülme</div>
-                                    <div>8 dakika önce</div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <span role="img" aria-label="smiley">
-                                        😈
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle">
-                                    <img src="https://via.placeholder.com/55" class="rounded-circle" alt="Dummy" />
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div>Ramazan SARI</div>
-                                    <div class="sm text-muted">
-                                        Kayıt: Mart 19, 2019
-                                    </div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="clearfix">
-                                        <div class="float-right">
-                                            <small class="sm text-muted">
-                                                Alan Kullanımı
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <span>42 %</span>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="sm text-muted">Son Görülme</div>
-                                    <div>4 dakika önce</div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <span role="img" aria-label="smiley">
-                                        😜
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center align-middle">
-                                    <img src="https://via.placeholder.com/55" class="rounded-circle" alt="Dummy" />
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div>Alptuğ TÜRKİŞ</div>
-                                    <div class="sm text-muted">
-                                        Kayıt: Mart 11, 2019
-                                    </div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="clearfix">
-                                        <div class="float-right">
-                                            <small class="sm text-muted">
-                                                Alan Kullanımı
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <span>80 %</span>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <div class="sm text-muted">Son Görülme</div>
-                                    <div>8 dakika önce</div>
-                                </td>
-                                <td class="text-center align-middle">
-                                    <span role="img" aria-label="smiley">
-                                        😈
-                                    </span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </acshb-frame>
-        </div>
+    <div class="col-lg-3 mb-4">
+      <acshb-card
+        title="Daire Başkanlığı"
+        value="8"
+        footer="ACSHB - 2019"
+        classNames="border-light shadow-sm"
+        icon="faWifi"
+      ></acshb-card>
     </div>
-    <div class="row">
-        <div class="col-lg-6">
-            <acshb-frame title="Yeni Kullanıcı Ekle" icon="faUserPlus" [collapsable]="true" [bordered]="true">
-                <acshb-form submitText="Formu Gönder" [formElements]="formElements" (submitCallback)="onSubmit($event)">
-                </acshb-form>
-            </acshb-frame>
-        </div>
+    <div class="col-lg-3 mb-4">
+      <acshb-card
+        title="İl Müdürlükleri"
+        value="81"
+        footer="ACSHB - 2019"
+        classNames="border-light shadow-sm"
+        icon="faTachometerAlt"
+      ></acshb-card>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 mb-4">
+      <acshb-frame
+        title="2016 Bütçe Personel Giderleri (₺) - Default"
+        icon="faChartBar"
+        [collapsable]="true"
+        [bordered]="true"
+      >
+        <acshb-chart [config]="chartConfig1"></acshb-chart>
+      </acshb-frame>
+    </div>
+    <div class="col-lg-6 mb-4">
+      <acshb-frame
+        title="2016 Yılı Bütçe Grafiği (₺)"
+        icon="faChartBar"
+        [collapsable]="true"
+        [bordered]="true"
+      >
+        <acshb-chart [config]="chartConfig2"></acshb-chart>
+      </acshb-frame>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 mb-4">
+      <acshb-frame
+        title="2015-2016 Bütçe Giderlerinin Gelişimi (₺)"
+        icon="faChartLine"
+        [collapsable]="true"
+        [bordered]="true"
+      >
+        <acshb-chart [config]="chartConfig3"></acshb-chart>
+        <table class="table table-responsive mt-5">
+          <thead>
+            <tr>
+              <th scope="col">Aylar</th>
+              <th scope="col">2015</th>
+              <th scope="col">2016</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ocak</td>
+              <td>1.079.903.874</td>
+              <td>1.151.377.582</td>
+            </tr>
+            <tr>
+              <td>Şubat</td>
+              <td>2.076.553.516</td>
+              <td>1.367.006.629</td>
+            </tr>
+            <tr>
+              <td>Mart</td>
+              <td>1.063.743.817</td>
+              <td>2.526.168.729</td>
+            </tr>
+            <tr>
+              <td>Nisan</td>
+              <td>1.130.616.396</td>
+              <td>1.467.092.014</td>
+            </tr>
+            <tr>
+              <td>Mayıs</td>
+              <td>2.128.618.428</td>
+              <td>1.423.845.167</td>
+            </tr>
+            <tr>
+              <td>Haziran</td>
+              <td>1.122.017.910</td>
+              <td>2.675.849.430</td>
+            </tr>
+            <tr>
+              <td>Temmuz</td>
+              <td>1.122.017.910</td>
+              <td>2.675.849.430</td>
+            </tr>
+            <tr>
+              <td>Ağustos</td>
+              <td>1.122.017.910</td>
+              <td>2.675.849.430</td>
+            </tr>
+            <tr>
+              <td>Eylül</td>
+              <td>1.122.017.910</td>
+              <td>2.675.849.430</td>
+            </tr>
+            <tr>
+              <td>Ekim</td>
+              <td>1.122.017.910</td>
+              <td>2.675.849.430</td>
+            </tr>
+            <tr>
+              <td>Kasım</td>
+              <td>1.122.017.910</td>
+              <td>2.675.849.430</td>
+            </tr>
+          </tbody>
+        </table>
+      </acshb-frame>
+    </div>
+    <div class="col-lg-6 mb-4">
+      <acshb-frame
+        title="Kullanım Tablosu"
+        icon="faChartLine"
+        [collapsable]="true"
+        [bordered]="true"
+      >
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="text-center w-1">
+                  <i class="icon-people"></i>
+                </th>
+                <th>Kullanıcı</th>
+                <th>Kullanım</th>
+                <th>Aktivite</th>
+                <th class="text-center">Memnuniyet</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center align-middle">
+                  <img
+                    src="https://via.placeholder.com/55"
+                    class="rounded-circle"
+                    alt="Dummy"
+                  />
+                </td>
+                <td class="text-center align-middle">
+                  <div>Ramazan SARI</div>
+                  <div class="sm text-muted">
+                    Kayıt: Mart 19, 2019
+                  </div>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="clearfix">
+                    <div class="float-right">
+                      <small class="sm text-muted">
+                        Alan Kullanımı
+                      </small>
+                    </div>
+                  </div>
+                  <span>42 %</span>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="sm text-muted">Son Görülme</div>
+                  <div>4 dakika önce</div>
+                </td>
+                <td class="text-center align-middle">
+                  <span role="img" aria-label="smiley">
+                    😜
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center align-middle">
+                  <img
+                    src="https://via.placeholder.com/55"
+                    class="rounded-circle"
+                    alt="Dummy"
+                  />
+                </td>
+                <td class="text-center align-middle">
+                  <div>Alptuğ TÜRKİŞ</div>
+                  <div class="sm text-muted">
+                    Kayıt: Mart 11, 2019
+                  </div>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="clearfix">
+                    <div class="float-right">
+                      <small class="sm text-muted">
+                        Alan Kullanımı
+                      </small>
+                    </div>
+                  </div>
+                  <span>80 %</span>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="sm text-muted">Son Görülme</div>
+                  <div>8 dakika önce</div>
+                </td>
+                <td class="text-center align-middle">
+                  <span role="img" aria-label="smiley">
+                    😈
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center align-middle">
+                  <img
+                    src="https://via.placeholder.com/55"
+                    class="rounded-circle"
+                    alt="Dummy"
+                  />
+                </td>
+                <td class="text-center align-middle">
+                  <div>Ramazan SARI</div>
+                  <div class="sm text-muted">
+                    Kayıt: Mart 19, 2019
+                  </div>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="clearfix">
+                    <div class="float-right">
+                      <small class="sm text-muted">
+                        Alan Kullanımı
+                      </small>
+                    </div>
+                  </div>
+                  <span>62 %</span>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="sm text-muted">Son Görülme</div>
+                  <div>4 dakika önce</div>
+                </td>
+                <td class="text-center align-middle">
+                  <span role="img" aria-label="smiley">
+                    😜
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center align-middle">
+                  <img
+                    src="https://via.placeholder.com/55"
+                    class="rounded-circle"
+                    alt="Dummy"
+                  />
+                </td>
+                <td class="text-center align-middle">
+                  <div>Alptuğ TÜRKİŞ</div>
+                  <div class="sm text-muted">
+                    Kayıt: Mart 11, 2019
+                  </div>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="clearfix">
+                    <div class="float-right">
+                      <small class="sm text-muted">
+                        Alan Kullanımı
+                      </small>
+                    </div>
+                  </div>
+                  <span>80%</span>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="sm text-muted">Son Görülme</div>
+                  <div>8 dakika önce</div>
+                </td>
+                <td class="text-center align-middle">
+                  <span role="img" aria-label="smiley">
+                    😈
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center align-middle">
+                  <img
+                    src="https://via.placeholder.com/55"
+                    class="rounded-circle"
+                    alt="Dummy"
+                  />
+                </td>
+                <td class="text-center align-middle">
+                  <div>Ramazan SARI</div>
+                  <div class="sm text-muted">
+                    Kayıt: Mart 19, 2019
+                  </div>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="clearfix">
+                    <div class="float-right">
+                      <small class="sm text-muted">
+                        Alan Kullanımı
+                      </small>
+                    </div>
+                  </div>
+                  <span>42 %</span>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="sm text-muted">Son Görülme</div>
+                  <div>4 dakika önce</div>
+                </td>
+                <td class="text-center align-middle">
+                  <span role="img" aria-label="smiley">
+                    😜
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center align-middle">
+                  <img
+                    src="https://via.placeholder.com/55"
+                    class="rounded-circle"
+                    alt="Dummy"
+                  />
+                </td>
+                <td class="text-center align-middle">
+                  <div>Alptuğ TÜRKİŞ</div>
+                  <div class="sm text-muted">
+                    Kayıt: Mart 11, 2019
+                  </div>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="clearfix">
+                    <div class="float-right">
+                      <small class="sm text-muted">
+                        Alan Kullanımı
+                      </small>
+                    </div>
+                  </div>
+                  <span>80 %</span>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="sm text-muted">Son Görülme</div>
+                  <div>8 dakika önce</div>
+                </td>
+                <td class="text-center align-middle">
+                  <span role="img" aria-label="smiley">
+                    😈
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center align-middle">
+                  <img
+                    src="https://via.placeholder.com/55"
+                    class="rounded-circle"
+                    alt="Dummy"
+                  />
+                </td>
+                <td class="text-center align-middle">
+                  <div>Ramazan SARI</div>
+                  <div class="sm text-muted">
+                    Kayıt: Mart 19, 2019
+                  </div>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="clearfix">
+                    <div class="float-right">
+                      <small class="sm text-muted">
+                        Alan Kullanımı
+                      </small>
+                    </div>
+                  </div>
+                  <span>42 %</span>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="sm text-muted">Son Görülme</div>
+                  <div>4 dakika önce</div>
+                </td>
+                <td class="text-center align-middle">
+                  <span role="img" aria-label="smiley">
+                    😜
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center align-middle">
+                  <img
+                    src="https://via.placeholder.com/55"
+                    class="rounded-circle"
+                    alt="Dummy"
+                  />
+                </td>
+                <td class="text-center align-middle">
+                  <div>Alptuğ TÜRKİŞ</div>
+                  <div class="sm text-muted">
+                    Kayıt: Mart 11, 2019
+                  </div>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="clearfix">
+                    <div class="float-right">
+                      <small class="sm text-muted">
+                        Alan Kullanımı
+                      </small>
+                    </div>
+                  </div>
+                  <span>80 %</span>
+                </td>
+                <td class="text-center align-middle">
+                  <div class="sm text-muted">Son Görülme</div>
+                  <div>8 dakika önce</div>
+                </td>
+                <td class="text-center align-middle">
+                  <span role="img" aria-label="smiley">
+                    😈
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </acshb-frame>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <acshb-frame
+        title="Yeni Kullanıcı Ekle"
+        icon="faUserPlus"
+        [collapsable]="true"
+        [bordered]="true"
+      >
+        <acshb-form
+          submitText="Formu Gönder"
+          [formElements]="formElements"
+          (submitCallback)="onSubmit($event)"
+        >
+        </acshb-form>
+      </acshb-frame>
+    </div>
+    <div class="col-lg-6">
+      <acshb-frame
+        title="Etkinlik Takvimi"
+        icon="faCalendarAlt"
+        [collapsable]="true"
+        [bordered]="true"
+      >
+        <acshb-calendar
+          [events]="[
+            { title: 'Entegre Toplantı', date: '2020-01-01' },
+            { title: 'TÜRKSAT Toplantı', date: '2020-01-02' }
+          ]"
+        ></acshb-calendar>
+      </acshb-frame>
+    </div>
+  </div>
 </div>

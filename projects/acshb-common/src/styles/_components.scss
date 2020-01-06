@@ -408,3 +408,14 @@
   }
 }
 // ACSHB-DATATABLE END
+
+// ACSHB-CALENDAR START
+.acshb-calendar {
+  .fc-today {
+    color: $body-color;
+    background-color: lighten(theme-color("dark"), 65%) !important;
+    font-size: 1.15rem;
+    font-weight: $font-weight-bold;
+  }
+}
+// ACSHB-CALENDAR END

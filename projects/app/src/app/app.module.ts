@@ -28,6 +28,7 @@ import { DatatablesViewComponent } from './components-page/datatables-view/datat
 import { HttpClientModule } from '@angular/common/http';
 import { ChartsViewComponent } from './components-page/charts-view/charts-view.component';
 import { CardsViewComponent } from './components-page/cards-view/cards-view.component';
+import { CalendarsViewComponent } from './components-page/calendars-view/calendars-view.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CardsViewComponent } from './components-page/cards-view/cards-view.comp
     FormsViewComponent,
     DatatablesViewComponent,
     ChartsViewComponent,
-    CardsViewComponent
+    CardsViewComponent,
+    CalendarsViewComponent
   ],
   imports: [
     BrowserModule,

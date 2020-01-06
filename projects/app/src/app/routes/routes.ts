@@ -12,6 +12,7 @@ import { FormsViewComponent } from '../components-page/forms-view/forms-view.com
 import { DatatablesViewComponent } from '../components-page/datatables-view/datatables-view.component';
 import { ChartsViewComponent } from '../components-page/charts-view/charts-view.component';
 import { CardsViewComponent } from '../components-page/cards-view/cards-view.component';
+import { CalendarsViewComponent } from '../components-page/calendars-view/calendars-view.component';
 
 export const appRoutes: Routes = [
     {path: '', component: HomePageComponent},
@@ -26,5 +27,6 @@ export const appRoutes: Routes = [
     {path: 'components/forms', component: FormsViewComponent},
     {path: 'components/datatables', component: DatatablesViewComponent},
     {path: 'components/charts', component: ChartsViewComponent},
-    {path: 'components/cards', component: CardsViewComponent}
+    {path: 'components/cards', component: CardsViewComponent},
+    {path: 'components/calendars', component: CalendarsViewComponent}
 ];
