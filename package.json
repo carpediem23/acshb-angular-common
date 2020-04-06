@@ -1,10 +1,9 @@
 {
   "name": "acshb-angular-common",
   "author": "Alptuğ Türkiş",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "preinstall": "npx npm-force-resolutions",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
@@ -56,16 +55,11 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.5.3",
-    "kind-of": "^6.0.3",
-    "minimist": "^1.2.5",
     "ng-packagr": "^5.4.0",
     "protractor": "^5.4.3",
     "ts-node": "~7.0.0",
     "tsickle": "^0.37.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
-  },
-  "resolutions": {
-    "minimist": "^1.2.5"
   }
 }
