@@ -10,6 +10,7 @@ import { Ng2TableModule } from 'ng2-table/ng2-table';
     CommonModule,
     PaginationModule.forRoot(),
     Ng2TableModule
+
   ],
   exports: [DatatableComponent]
 })

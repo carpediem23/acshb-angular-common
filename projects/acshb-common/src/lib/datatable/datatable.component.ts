@@ -21,20 +21,20 @@ export class DatatableComponent implements OnInit, OnChanges {
   constructor() {
     this.config = {
       paging: true,
-      sorting: {columns: this.columns},
-      filtering: {filterString: ''},
+      sorting: { columns: this.columns },
+      filtering: { filterString: '' },
       className: this.classNames
     };
     this.length = this.data.length;
-   }
+  }
 
   ngOnInit() {
-    this.config.sorting = {columns: this.columns};
+    this.config.sorting = { columns: this.columns };
     this.onChangeTable(this.config);
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    this.config.sorting = {columns: this.columns};
+    this.config.sorting = { columns: this.columns };
     this.config.className = this.classNames;
     this.onChangeTable(this.config);
   }
@@ -111,7 +111,7 @@ export class DatatableComponent implements OnInit, OnChanges {
     return filteredData;
   }
 
-  onChangeTable(config, page = {page: this.page, itemsPerPage: this.itemsPerPage}) {
+  onChangeTable(config, page = { page: this.page, itemsPerPage: this.itemsPerPage }) {
     if (config.filtering) {
       Object.assign(this.config.filtering, config.filtering);
     }
