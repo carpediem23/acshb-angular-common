@@ -1,6 +1,6 @@
 {
   "name": "acshb-angular-common",
-  "author": "Alptuğ Türkiş",
+  "author": "T.C. Aile, Çalışma ve Sosyal Hizmetler Bakanlığı",
   "version": "1.0.0",
   "scripts": {
     "ng": "npx ng",
