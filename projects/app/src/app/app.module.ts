@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { PaginationModule } from 'ngx-bootstrap/pagination';
-import { Ng2TableModule } from 'ng2-table/ng2-table';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from 'projects/acshb-common/src/lib/layout/layout.module';
@@ -54,8 +52,6 @@ import { CalendarsViewComponent } from './components-page/calendars-view/calenda
     HttpClientModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    PaginationModule.forRoot(),
-    Ng2TableModule,
     LayoutModule,
     ComponentsModule,
     ModalModule,

@@ -12,7 +12,7 @@ import { AlertItemComponent } from './alert-item/alert-item.component';
   exports: [AlertComponent, AlertItemComponent]
 })
 export class AlertModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<AlertModule> {
     return {
       ngModule: AlertModule,
       providers: [AlertService]

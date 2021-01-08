@@ -11,7 +11,6 @@ import trLocale from '@fullcalendar/core/locales/tr';
 export class CalendarComponent implements OnInit {
   @Input() events: Array<any>;
   calendarPlugins: Array<any> = [dayGridPlugin, bootstrapPlugin];
-  locale: object = trLocale;
 
   constructor() { }
 
