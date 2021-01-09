@@ -5,7 +5,6 @@ FROM node:14.15-alpine AS deploy
 WORKDIR /usr/src/acshb-angular-common
 ENV PATH /usr/src/acshb-angular-common/node_modules/.bin:$PATH
 COPY package*.json ./
-COPY acshb-react-common-1.9.0.tgz ./
 RUN npm install --only=prod
 COPY . .
 RUN npm run build --loglevel verbose
