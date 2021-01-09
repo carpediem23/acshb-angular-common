@@ -5,7 +5,7 @@ FROM node:14.15-alpine AS deploy
 WORKDIR /usr/src/acshb-angular-common
 ENV PATH /usr/src/acshb-angular-common/node_modules/.bin:$PATH
 COPY package*.json ./
-RUN npm install --only=prod
+RUN npm install
 COPY . .
 RUN npm run build --loglevel verbose
 
