@@ -5,16 +5,16 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ".:/usr/src/acshb-react-project-template-volume"
+      - ".:/usr/src/acshb-angular-common-volume"
     env_file: .env
     environment:
       - NODE_ENV=development
     ports:
       - "${PORT}:80"
     networks:
-      - acshb-react-project-template-network
+      - acshb-angular-common-network
 volumes:
   app_data:
 networks:
-  acshb-react-project-template-network:
+  acshb-angular-common-network:
     driver: bridge
