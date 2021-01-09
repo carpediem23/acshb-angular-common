@@ -11,6 +11,7 @@ import { ModalModule } from 'projects/acshb-common/src/lib/modal/modal.module';
 import { FormModule } from 'projects/acshb-common/src/lib/form/form.module';
 import { DatatableModule } from 'projects/acshb-common/src/lib/datatable/datatable.module';
 import { ChartModule } from 'projects/acshb-common/src/lib/chart/chart.module';
+import { CalendarModule } from 'projects/acshb-common/src/lib/calendar/calendar.module';
 import { TestViewComponent } from './test-view/test-view.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ComponentsPageComponent } from './components-page/components-page.component';
@@ -58,7 +59,8 @@ import { CalendarsViewComponent } from './components-page/calendars-view/calenda
     AlertModule.forRoot(),
     FormModule,
     DatatableModule,
-    ChartModule
+    ChartModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

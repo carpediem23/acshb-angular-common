@@ -10,7 +10,6 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { LoaderComponent } from './loader/loader.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { CardComponent } from './card/card.component';
-import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   imports: [
@@ -18,7 +17,7 @@ import { CalendarComponent } from './calendar/calendar.component';
     FontAwesomeModule,
     FullCalendarModule
   ],
-  declarations: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent, SidebarComponent, CardComponent, CalendarComponent],
-  exports: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent, SidebarComponent, CardComponent, CalendarComponent]
+  declarations: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent, SidebarComponent, CardComponent],
+  exports: [ButtonComponent, IconComponent, DropdownComponent, FrameComponent, AccordionComponent, LoaderComponent, SidebarComponent, CardComponent]
 })
 export class ComponentsModule { }

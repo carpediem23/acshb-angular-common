@@ -2,6 +2,22 @@
   "name": "acshb-common",
   "version": "1.0.0",
   "author": "Alptuğ Türkiş",
+  "dependencies": {
+    "@fullcalendar/angular": "^5.5.0",
+    "@fullcalendar/bootstrap": "^5.5.0",
+    "@fullcalendar/core": "^5.5.0",
+    "@fullcalendar/daygrid": "^5.5.0",
+    "@fullcalendar/interaction": "^5.5.0",
+    "install": "^0.13.0",
+    "npm": "^6.14.11",
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-inline-fonts": "^1.2.1",
+    "gulp-sass": "^4.0.2"
+  },
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14",
@@ -16,14 +32,5 @@
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^5.2.0",
     "ngx-echarts": "^4.2.2"
-  },
-  "devDependencies": {
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-inline-fonts": "^1.2.1",
-    "gulp-sass": "^4.0.2"
-  },
-  "dependencies": {
-    "tslib": "^2.0.0"
   }
 }
