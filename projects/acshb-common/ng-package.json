@@ -16,12 +16,10 @@
     "@fullcalendar/daygrid",
     "@fullcalendar/interaction",
     "@ng-select/ng-select",
-    "@types/echarts",
     "animate.css",
     "bootstrap",
     "echarts",
-    "font-awesom",
-    "ngx-bootstrap",
-    "ngx-echarts"
+    "font-awesome",
+    "resize-observer-polyfill"
   ]
 }
