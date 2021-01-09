@@ -24,10 +24,15 @@
     "ngx-echarts": "^4.2.2"
   },
   "dependencies": {
-    "tslib": "^2.0.0",
+    "@angular/forms": "~11.0.7",
     "@fortawesome/angular-fontawesome": "^0.5.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fullcalendar/angular": "^5.5.0",
+    "@fullcalendar/bootstrap": "^5.5.0",
+    "@fullcalendar/core": "^5.5.0",
+    "@fullcalendar/daygrid": "^5.5.0",
+    "@fullcalendar/interaction": "^5.5.0",
     "@ng-select/ng-select": "^3.7.0",
     "@types/echarts": "^4.4.2",
     "animate.css": "^3.7.2",
@@ -35,6 +40,7 @@
     "echarts": "^4.5.0",
     "font-awesome": "^4.7.0",
     "ngx-bootstrap": "^5.2.0",
-    "ngx-echarts": "^4.2.2"
+    "ngx-echarts": "^4.2.2",
+    "tslib": "^2.0.0"
   }
 }

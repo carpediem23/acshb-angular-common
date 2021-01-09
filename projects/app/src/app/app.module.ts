@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LayoutModule } from 'projects/acshb-common/src/lib/layout/layout.module';
-import { ComponentsModule } from 'acshb-common/lib/components/components.module';
+import { ComponentsModule } from 'projects/acshb-common/src/lib/components/components.module';
 import { AlertModule } from 'projects/acshb-common/src/lib/alert/alert.module';
 import { ModalModule } from 'projects/acshb-common/src/lib/modal/modal.module';
 import { FormModule } from 'projects/acshb-common/src/lib/form/form.module';
