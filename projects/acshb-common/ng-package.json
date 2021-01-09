@@ -5,6 +5,23 @@
     "entryFile": "src/public-api.ts"
   },
   "whitelistedNonPeerDependencies": [
-    "tslib"
+    "tslib",
+    "@angular/forms",
+    "@fortawesome/angular-fontawesome",
+    "@fortawesome/fontawesome-svg-core",
+    "@fortawesome/free-solid-svg-icons",
+    "@fullcalendar/angular",
+    "@fullcalendar/bootstrap",
+    "@fullcalendar/core",
+    "@fullcalendar/daygrid",
+    "@fullcalendar/interaction",
+    "@ng-select/ng-select",
+    "@types/echarts",
+    "animate.css",
+    "bootstrap",
+    "echarts",
+    "font-awesom",
+    "ngx-bootstrap",
+    "ngx-echarts"
   ]
 }

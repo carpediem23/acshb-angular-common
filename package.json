@@ -29,6 +29,7 @@
     "@fullcalendar/daygrid": "^5.5.0",
     "@fullcalendar/interaction": "^5.5.0",
     "@ng-select/ng-select": "^3.7.3",
+    "acshb-common": "file:acshb-common-1.1.0.tgz",
     "bootstrap": "^4.5.3",
     "echarts": "^4.7.0",
     "ngx-echarts": "^4.2.2",
