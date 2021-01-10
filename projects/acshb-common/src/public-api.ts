@@ -5,7 +5,6 @@
 export * from './lib/layout/layout.module';
 export * from './lib/layout/toolbar/toolbar.component';
 export * from './lib/layout/sidebar/sidebar.component';
-export * from './lib/layout/wrapper/wrapper.component';
 export * from './lib/components/components.module';
 export * from './lib/components/accordion/accordion.component';
 export * from './lib/components/button/button.component';

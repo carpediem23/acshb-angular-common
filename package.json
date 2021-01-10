@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:scss": "npx scss-bundle -p scss-bundle.config.json",
-    "build:lib": "ng build acshb-common && npm run build:scss"
+    "build:lib": "ng build acshb-common --prod && npm run build:scss"
   },
   "private": true,
   "dependencies": {
