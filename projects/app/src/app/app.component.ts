@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   modalOpen;
@@ -14,71 +14,74 @@ export class AppComponent implements OnInit {
   sidebarToggled;
   routes;
 
-  constructor(
-    private alertService: AlertService,
-    private router: Router
-    ) {
-        this.modalOpen = false;
-        this.formElements = [
-          new FormElement({
-            name: 'name',
-            type: FormElementTypes.Text,
-            required: true,
-            minLength: 5,
-            maxLength: 10,
-            pattern: '[a-zA-Z ]*'
-          }),
-          new FormElement({ name: 'age', type: FormElementTypes.Number, min: 5, max: 10 }),
-          new FormElement({ name: 'tckn', type: FormElementTypes.Tckn, required: true }),
-          new FormElement({
-            name: 'secim', type: FormElementTypes.Select, data: [
-              { id: 0, label: 'Seçenek 1' },
-              { id: 1, label: 'Seçenek 2' }
-            ], required: true
-          }),
-          new FormElement({
-            name: 'coklusecim', type: FormElementTypes.MultiSelect, data: [
-              { id: 0, label: 'Seçenek 1' },
-              { id: 1, label: 'Seçenek 2' },
-              { id: 2, label: 'Seçenek 3' }
-            ], required: true
-          }),
-          new FormElement({ name: 'date', type: FormElementTypes.Date, required: true }),
-          new FormElement({ name: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla' })
-        ];
-        this.sidebarToggled = true;
-        this.routes = [
-          {
-            id: 0,
-            name: 'home',
-            title: 'Ana Sayfa',
-            url: '/',
-            icon: 'faHome'
-          },
-          { id: 1, name: 'test', title: 'Test', url: '/test', icon: 'faVial' },
-          {
-            id: 1,
-            name: 'link1',
-            title: 'Kılavuz',
-            url: '/components',
-            icon: 'faShoppingBasket',
-            children: [
-              { id: 11, name: 'buttons', title: 'Buttons', url: '/components/buttons' },
-              { id: 12, name: 'frames', title: 'Frames', url: '/components/frames' },
-              { id: 13, name: 'icons', title: 'Icons', url: '/components/icons' },
-              { id: 14, name: 'accordions', title: 'Accordions', url: '/components/accordions' },
-              { id: 15, name: 'dropdowns', title: 'Dropdowns', url: '/components/dropdowns' },
-              { id: 16, name: 'alerts', title: 'Alerts', url: '/components/alerts' },
-              { id: 17, name: 'modals', title: 'Modals', url: '/components/modals' },
-              { id: 18, name: 'forms', title: 'Forms', url: '/components/forms' },
-              { id: 19, name: 'datatables', title: 'Datatables', url: '/components/datatables' },
-              { id: 20, name: 'charts', title: 'Charts', url: '/components/charts' },
-              { id: 21, name: 'cards', title: 'Cards', url: '/components/cards' },
-              { id: 22, name: 'calendars', title: 'Calendars', url: '/components/calendars' }
-            ]
-          }
-        ];
-    }
+  constructor(private alertService: AlertService, private router: Router) {
+    this.modalOpen = false;
+    this.formElements = [
+      new FormElement({
+        name: 'name',
+        type: FormElementTypes.Text,
+        required: true,
+        minLength: 5,
+        maxLength: 10,
+        pattern: '[a-zA-Z ]*',
+      }),
+      new FormElement({ name: 'age', type: FormElementTypes.Number, min: 5, max: 10 }),
+      new FormElement({ name: 'tckn', type: FormElementTypes.Tckn, required: true }),
+      new FormElement({
+        name: 'secim',
+        type: FormElementTypes.Select,
+        data: [
+          { id: 0, label: 'Seçenek 1' },
+          { id: 1, label: 'Seçenek 2' },
+        ],
+        required: true,
+      }),
+      new FormElement({
+        name: 'coklusecim',
+        type: FormElementTypes.MultiSelect,
+        data: [
+          { id: 0, label: 'Seçenek 1' },
+          { id: 1, label: 'Seçenek 2' },
+          { id: 2, label: 'Seçenek 3' },
+        ],
+        required: true,
+      }),
+      new FormElement({ name: 'date', type: FormElementTypes.Date, required: true }),
+      new FormElement({ name: 'remember', type: FormElementTypes.Checkbox, label: 'Beni Hatırla' }),
+    ];
+    this.sidebarToggled = true;
+    this.routes = [
+      {
+        id: 0,
+        name: 'home',
+        title: 'Ana Sayfa',
+        url: '/',
+        icon: 'faHome',
+      },
+      { id: 1, name: 'test', title: 'Test', url: '/test', icon: 'faVial' },
+      {
+        id: 1,
+        name: 'link1',
+        title: 'Kılavuz',
+        url: '/components',
+        icon: 'faShoppingBasket',
+        children: [
+          { id: 11, name: 'buttons', title: 'Buttons', url: '/components/buttons' },
+          { id: 12, name: 'frames', title: 'Frames', url: '/components/frames' },
+          { id: 13, name: 'icons', title: 'Icons', url: '/components/icons' },
+          { id: 14, name: 'accordions', title: 'Accordions', url: '/components/accordions' },
+          { id: 15, name: 'dropdowns', title: 'Dropdowns', url: '/components/dropdowns' },
+          { id: 16, name: 'alerts', title: 'Alerts', url: '/components/alerts' },
+          { id: 17, name: 'modals', title: 'Modals', url: '/components/modals' },
+          { id: 18, name: 'forms', title: 'Forms', url: '/components/forms' },
+          { id: 19, name: 'datatables', title: 'Datatables', url: '/components/datatables' },
+          { id: 20, name: 'charts', title: 'Charts', url: '/components/charts' },
+          { id: 21, name: 'cards', title: 'Cards', url: '/components/cards' },
+          { id: 22, name: 'calendars', title: 'Calendars', url: '/components/calendars' },
+        ],
+      },
+    ];
+  }
 
   ngOnInit() {}
 

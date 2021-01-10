@@ -1,0 +1,6 @@
+{
+  "bundlerOptions": {
+    "entryFile": "./projects/acshb-common/src/styles/global.scss",
+    "outFile": "./dist/acshb-common/acshb-common.scss"
+  }
+}

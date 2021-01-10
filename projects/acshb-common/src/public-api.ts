@@ -4,6 +4,7 @@
 
 export * from './lib/layout/layout.module';
 export * from './lib/layout/toolbar/toolbar.component';
+export * from './lib/layout/sidebar/sidebar.component';
 export * from './lib/layout/wrapper/wrapper.component';
 export * from './lib/components/components.module';
 export * from './lib/components/accordion/accordion.component';
@@ -13,7 +14,6 @@ export * from './lib/components/dropdown/dropdown.component';
 export * from './lib/components/frame/frame.component';
 export * from './lib/components/icon/icon.component';
 export * from './lib/components/loader/loader.component';
-export * from './lib/components/sidebar/sidebar.component';
 export * from './lib/calendar/calendar.module';
 export * from './lib/calendar/calendar.component';
 export * from './lib/alert/alert.module';

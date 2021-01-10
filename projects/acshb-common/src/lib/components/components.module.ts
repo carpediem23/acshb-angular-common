@@ -7,7 +7,6 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { FrameComponent } from './frame/frame.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { LoaderComponent } from './loader/loader.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { CardComponent } from './card/card.component';
 
 @NgModule({
@@ -19,7 +18,6 @@ import { CardComponent } from './card/card.component';
     FrameComponent,
     AccordionComponent,
     LoaderComponent,
-    SidebarComponent,
     CardComponent,
   ],
   exports: [
@@ -29,7 +27,6 @@ import { CardComponent } from './card/card.component';
     FrameComponent,
     AccordionComponent,
     LoaderComponent,
-    SidebarComponent,
     CardComponent,
   ],
 })
